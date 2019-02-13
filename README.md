@@ -1,2 +1,2 @@
 # GestioneCasino
-Software per gestione di un casinò
+Casino management software
