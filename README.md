@@ -7,8 +7,8 @@ Casino management software
 
 [Documentation](documentation): the path in which the project's documentation is stored.
 
-[Gantt diagrams](gantt diagrams): the folder where the gantt diagrams used for planning are found (see chapter 1.6 of documentation, "Pianificazione").
+[Gantt diagrams]("gantt diagrams"): the folder where the gantt diagrams used for planning are found (see chapter 1.6 of documentation, "Pianificazione").
 
 [Presentation](presentation): the directory with the files relative to the project's presentation to the client.
 
-[Work diaries](work diaries): the path that contains the work diaries for each work day.
+[Work diaries]("work diaries"): the path that contains the work diaries for each work day.
