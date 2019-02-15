@@ -125,6 +125,8 @@
                         <depend id="67" type="2" difference="0" hardness="Strong"/>
                     </task>
                     <task id="67" name="Verificare condizioni di creazione utenti" meeting="false" start="2019-04-10" duration="2" complete="0" expand="true"/>
+                    <task id="68" name="Verifica login con utente" meeting="false" start="2019-03-27" duration="1" complete="0" expand="true"/>
+                    <task id="70" name="Validazione dei dati" meeting="false" start="2019-03-27" duration="1" complete="0" expand="true"/>
                 </task>
             </task>
         </task>
