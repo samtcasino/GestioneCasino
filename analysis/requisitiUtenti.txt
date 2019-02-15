@@ -1,4 +1,4 @@
-Nome
+﻿Nome
 Cognome
 Città
 Via
@@ -8,3 +8,5 @@ Email
 Sesso
 Password
 Ripeti password
+
+Registrazione --> email di conferma
