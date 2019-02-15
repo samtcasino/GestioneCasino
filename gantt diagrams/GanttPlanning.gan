@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-02-13" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.9" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-02-07" view-index="0" gantt-divider-location="903" resource-divider-location="300" version="2.8.9" locale="it">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="167" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="65" order="1"/>
-        <field id="tpd5" name="Data di fine" width="64" order="2"/>
+        <field id="tpd3" name="Nome" width="355" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="92" order="1"/>
+        <field id="tpd5" name="Data di fine" width="61" order="2"/>
+        <field id="tpd6" name="Durata" width="68" order="3"/>
+        <field id="tpd10" name="ID" width="145" order="4"/>
+        <field id="tpd9" name="Predecessori" width="163" order="5"/>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -14,7 +17,7 @@
         <day-types>
             <day-type id="0"/>
             <day-type id="1"/>
-            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <default-week id="1" name="default" sun="1" mon="1" tue="1" wed="0" thu="1" fri="0" sat="1"/>
             <only-show-weekends value="false"/>
             <overriden-day-types/>
             <days/>
@@ -33,7 +36,98 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Gestione casinò" color="#8cb6ce" meeting="false" start="2019-02-13" duration="68" complete="0" thirdDate="2019-02-13" thirdDate-constraint="0" expand="true"/>
+        <task id="0" name="Gestione Casinò" color="#000000" meeting="false" start="2019-02-15" duration="17" complete="0" thirdDate="2019-02-13" thirdDate-constraint="1" expand="true">
+            <task id="5" name="Stesura del Gantt" meeting="false" start="2019-02-15" duration="2" complete="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+                <task id="6" name="Discutere su eventuali attività" meeting="false" start="2019-02-15" duration="1" complete="0" expand="true"/>
+                <task id="7" name="Riportare le attività" meeting="false" start="2019-02-20" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="10" name="Analisi" meeting="false" start="2019-02-22" duration="1" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+                <task id="12" name="Analisi del domino" meeting="false" start="2019-02-22" duration="1" complete="0" expand="true"/>
+                <task id="13" name="Analisi dei requisiti" meeting="false" start="2019-02-22" duration="1" complete="0" expand="true"/>
+                <task id="14" name="Analisi dei costi" meeting="false" start="2019-02-22" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="15" name="Progettazione" meeting="false" start="2019-02-27" duration="1" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+                <task id="16" name="Design dell'interfaccia" meeting="false" start="2019-02-27" duration="1" complete="0" expand="true"/>
+                <task id="17" name="Design procedurale" meeting="false" start="2019-02-27" duration="1" complete="0" expand="true"/>
+                <task id="18" name="Design banca dati" meeting="false" start="2019-02-27" duration="1" complete="0" expand="true"/>
+                <task id="19" name="Infrastuttura del server" meeting="false" start="2019-02-27" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="20" name="Implemantazione" meeting="false" start="2019-03-01" duration="7" complete="0" expand="true">
+                <depend id="54" type="2" difference="0" hardness="Strong"/>
+                <task id="21" name="Installare ambiente" meeting="false" start="2019-03-01" duration="1" complete="0" expand="true">
+                    <depend id="25" type="2" difference="0" hardness="Strong"/>
+                    <task id="22" name="Installare server" meeting="false" start="2019-03-01" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="25" name="Configurare ambiente" meeting="false" start="2019-03-06" duration="2" complete="0" expand="true">
+                    <depend id="41" type="2" difference="0" hardness="Strong"/>
+                    <depend id="42" type="2" difference="0" hardness="Strong"/>
+                    <task id="26" name="Installare java" meeting="false" start="2019-03-06" duration="1" complete="0" expand="true">
+                        <depend id="37" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="33" name="Installare MySql" color="#8cb6ce" meeting="false" start="2019-03-06" duration="1" complete="0" thirdDate="2019-03-08" thirdDate-constraint="0" expand="true"/>
+                    <task id="27" name="Installare php" color="#8cb6ce" meeting="false" start="2019-03-06" duration="1" complete="0" thirdDate="2019-03-13" thirdDate-constraint="0" expand="true">
+                        <depend id="35" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="28" name="Installare jenkins" meeting="false" start="2019-03-08" duration="1" complete="0" expand="true">
+                        <task id="37" name="Configurare jenkins" color="#8cb6ce" meeting="false" start="2019-03-08" duration="1" complete="0" thirdDate="2019-03-15" thirdDate-constraint="0" expand="true"/>
+                    </task>
+                    <task id="35" name="Installare Seleniun" meeting="false" start="2019-03-08" duration="1" complete="0" expand="true">
+                        <task id="38" name="Configurare Seleninu" color="#8cb6ce" meeting="false" start="2019-03-08" duration="1" complete="0" thirdDate="2019-03-15" thirdDate-constraint="0" expand="true"/>
+                    </task>
+                    <task id="52" name="Installare phpUnit" meeting="false" start="2019-03-06" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="39" name="Realizzare Frontend" meeting="false" start="2019-03-13" duration="4" complete="0" expand="true">
+                    <task id="41" name="Pagina di benvenuto" meeting="false" start="2019-03-13" duration="2" complete="0" expand="true"/>
+                    <task id="42" name="Pagina di registrazione" meeting="false" start="2019-03-13" duration="2" complete="0" expand="true">
+                        <depend id="43" type="2" difference="0" hardness="Strong"/>
+                        <depend id="44" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="43" name="Pagina di login" meeting="false" start="2019-03-20" duration="2" complete="0" expand="true"/>
+                    <task id="44" name="Pagina sala giochi" meeting="false" start="2019-03-20" duration="2" complete="0" expand="true"/>
+                </task>
+                <task id="40" name="Realizzare Backend" meeting="false" start="2019-03-01" duration="5" complete="0" expand="true">
+                    <task id="48" name="Creare database fisico" meeting="false" start="2019-03-01" duration="1" complete="0" expand="true">
+                        <depend id="45" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="45" name="Gestione utenti" meeting="false" start="2019-03-06" duration="2" complete="0" expand="true">
+                        <depend id="49" type="2" difference="0" hardness="Strong"/>
+                        <task id="46" name="Creare/modificare/eliminare utente" meeting="false" start="2019-03-06" duration="2" complete="0" expand="true"/>
+                    </task>
+                    <task id="49" name="Gestione registrazioni" meeting="false" start="2019-03-13" duration="2" complete="0" expand="true">
+                        <task id="50" name="Controllo creazione" color="#8cb6ce" meeting="false" start="2019-03-13" duration="2" complete="0" thirdDate="2019-03-01" thirdDate-constraint="0" expand="true"/>
+                    </task>
+                </task>
+            </task>
+            <task id="54" name="Protocolli di test" meeting="false" start="2019-03-27" duration="6" complete="0" expand="true">
+                <task id="55" name="Test grafici seleniun" meeting="false" start="2019-03-27" duration="6" complete="0" expand="true">
+                    <task id="56" name="Test link pagina di benvenuto" meeting="false" start="2019-03-27" duration="4" complete="0" expand="true">
+                        <depend id="59" type="2" difference="0" hardness="Strong"/>
+                        <task id="57" name="Test link sala giochi" meeting="false" start="2019-03-27" duration="2" complete="0" expand="true">
+                            <depend id="58" type="2" difference="0" hardness="Strong"/>
+                        </task>
+                        <task id="58" name="Test link login" meeting="false" start="2019-04-03" duration="2" complete="0" expand="true"/>
+                    </task>
+                    <task id="59" name="Test login" meeting="false" start="2019-04-10" duration="2" complete="0" expand="true">
+                        <task id="61" name="Registrare nuovo utente" meeting="false" start="2019-04-10" duration="1" complete="0" expand="true">
+                            <depend id="62" type="2" difference="0" hardness="Strong"/>
+                        </task>
+                        <task id="62" name="Accedere con utente" meeting="false" start="2019-04-12" duration="1" complete="0" expand="true"/>
+                    </task>
+                </task>
+                <task id="63" name="Test logici jenkins" meeting="false" start="2019-03-27" duration="6" complete="0" expand="true">
+                    <task id="64" name="Inserire/Modificare/Eliminare dati database" meeting="false" start="2019-03-27" duration="2" complete="0" expand="true">
+                        <depend id="65" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="65" name="Creare/modificare/eliminare utenti" meeting="false" start="2019-04-03" duration="2" complete="0" expand="true">
+                        <depend id="67" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="67" name="Verificare condizioni di creazione utenti" meeting="false" start="2019-04-10" duration="2" complete="0" expand="true"/>
+                </task>
+            </task>
+        </task>
     </tasks>
     <resources/>
     <allocations/>

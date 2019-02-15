@@ -17,14 +17,4 @@ final class EmailTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         Email::fromString('username@gmail.com');
     }
-
-    public function testCanBeUsedAsString(): void
-    {
-        $this->assertEquals(
-            'user@example.com',
-            Email::fromString('user@example.com')
-        );
-    }
 }
-
-
