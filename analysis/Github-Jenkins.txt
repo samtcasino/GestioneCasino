@@ -1,5 +1,7 @@
 GUIDA:
 https://www.valuebound.com/resources/blog/continuous-integration-using-jenkins-and-github-to-automate-deployment
+
+https://gist.github.com/n0mer/fa2e2d0014ac65e8e7b7
 ------------------------------------------------------------
 
 -clone della repo di git in /var/www/html/
