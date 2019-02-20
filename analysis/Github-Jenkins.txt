@@ -1,0 +1,37 @@
+GUIDA:
+https://www.valuebound.com/resources/blog/continuous-integration-using-jenkins-and-github-to-automate-deployment
+------------------------------------------------------------
+
+-clone della repo di git in /var/www/html/
+-Installare su Jenkins la plugin di GitHub dal menu di gestione delle plugin
+-Creare nuovo lavoro su Jenkins
+   -Dargli un nome
+   -Scegliere progetto libero/freestyle
+   -Selezionare Github project
+   -Inserire il percorso SSH del progetto
+   -Sotto gestione codice sorgente scegliere Git e mettere l'URL
+   -Sotto compilazione mettere i comandi nella shell che Jenkins eseguirà
+   -Jenkins darà un errore dovuto alle chiavi ssh
+-Creare nuova chiave SSH
+   -nel server utilizzare l'utente jenkins con il comando "su jenkins"
+   -andare nella home con "cd jenkins"
+   -creare la chiave ssh con "ssh-keygen -t rsa"
+   -chiedere il file in cui salvarla, quello di default va bene
+   -chiederà la passphrase, si può lasciare vuota (GestioneCasino)
+-Copiare la chiave SSH in GitHub
+   -cd .ssh
+   -cat id_rsa.pub
+   -copiare la chiave 
+   -aprire il progetto su github.com
+   -andare sotto settings
+   -selezionare "deploy keys"
+   -selezionare "add deploy key"
+   -darle un nome ed incollare la chiave copiata in precedenza
+-Dare le credenziali su Jenkins
+   -Tornare sulla pagina di creazione del progetto jenkins lasciata in sospeso prima
+   -Andare dove da l'errore e fare Add per aggiungere le credenziali
+   -Selezionare jenkins
+   -Sotto "Kind" scegliere SSH Username with private key
+   -cliccare sul radio-button "Private Key"
+   -Andare nel server e copiare la chiave privata dal file in /var/lib/jenkins/.ssh/id_rsa
+
