@@ -24,7 +24,7 @@
             {
                 throw new InvalidArgumentException( sprintf( '"%s" is not a valid email address',$email));
             }  
-            return $email;
+            return //$email;
         }
 
         public static function tryName($object){
@@ -32,7 +32,7 @@
 	        if(!preg_match($regex,$object)){
 	            throw new InvalidArgumentException( sprintf( '"%s" is not a valid name',$object));
 	        }
-	        //return $object;
+	        return $object;
         }
 
         public static function tryDate($object){
