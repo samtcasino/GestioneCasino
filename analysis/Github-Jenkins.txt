@@ -1,5 +1,3 @@
-https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-16-04
-GUIDA:
 https://www.valuebound.com/resources/blog/continuous-integration-using-jenkins-and-github-to-automate-deployment
 
 https://gist.github.com/n0mer/fa2e2d0014ac65e8e7b7
@@ -17,23 +15,6 @@ INSTALL GUIDE https://www.digitalocean.com/community/tutorials/how-to-install-je
    -Sotto gestione codice sorgente scegliere Git e mettere l'URL
    -Sotto compilazione mettere i comandi nella shell che Jenkins eseguirà
 
-(((((((((-Jenkins darà un errore dovuto alle chiavi ssh
--Creare nuova chiave SSH
-   -nel server utilizzare l'utente jenkins con il comando "su jenkins"
-   -andare nella home con "cd jenkins"
-   -creare la chiave ssh con "ssh-keygen -t rsa"
-   -chiedere il file in cui salvarla, quello di default va bene
-   -chiederà la passphrase, si può lasciare vuota (GestioneCasino)
--Copiare la chiave SSH in GitHub
-   -cd .ssh
-   -cat id_rsa.pub
-   -copiare la chiave 
-   -aprire il progetto su github.com
-   -andare sotto settings
-   -selezionare "deploy keys"
-   -selezionare "add deploy key"
-   -darle un nome ed incollare la chiave copiata in precedenza))))))))))))
-
 -Creare webhook
    -Andare nella repo Github
    -Selezionare settings
@@ -42,7 +23,7 @@ INSTALL GUIDE https://www.digitalocean.com/community/tutorials/how-to-install-je
    -Sotto Payload URL inserire il link del server jenkins più "/github-webhook/"
    -Sotto Content type inserire "application/json"
    -Secret può essere lasciato vuoto
-   -Sotto "Which events would you like to trigger this webhook?" selezionare "Let me select individual events" e poi "commits comments"
+   -Sotto "Which events would you like to trigger this webhook?" selezionare "Just the push event"
    -Spuntare il visto di Active
    -Salvare
 
