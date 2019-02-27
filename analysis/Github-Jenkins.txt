@@ -25,7 +25,7 @@ INSTALL GUIDE https://www.digitalocean.com/community/tutorials/how-to-install-je
    -Sotto Payload URL inserire il link del server jenkins più "/github-webhook/"
    -Sotto Content type inserire "application/json"
    -Secret può essere lasciato vuoto
-   -Sotto "Which events would you like to trigger this webhook?" selezionare "Let me select individual events" e poi "commits comments"
+   -Sotto "Which events would you like to trigger this webhook?" selezionare "Just the push event"
    -Spuntare il visto di Active
    -Salvare
 
