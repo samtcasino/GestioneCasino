@@ -3,6 +3,7 @@
 	 * Classe che gestisce le connessioni ai database
 	 */
 	include "../user/user.php";
+	require "../sendMail/sendMail.php";
 
 	class Database{
 
@@ -41,15 +42,31 @@
 			echo "</table>";
 		}
 
-		public function getUserByEmail($email){
-			$this->executeQuery("select * from users where id = ".$email)->fetch();
+		public function existsUserByEmail($email){
+			return $this->executeQuery("select * from users where email = '".$email."'");
 		}
 
 		public function insertUser($user){
 			if(gettype($user) == "object"){
 				if(get_class($user) == "User"){
-					$query = "Insert into users(id,nome,cognome) values(null,'".$user->getName()."','".$user->getSurname()."')";
+					$mail = new SendMail("SGG<?rpF3FTebqx?(kgQR:hsq'mqZ!VH");
+					$name =$user->getName();
+					$surname=$user->getSurname();
+					$street=$user->getAddress();
+					$house_number=$user->getHouseNumber();
+					$zip_code=$user->getZipCode();
+					$city=$user->getCity();
+					$email=$user->getEmail();
+					$phone_number=$user->getTelephoneNumber();
+					$gender=$user->getGender();
+					$password=$user->getPassword();
+
+
+					$query = "Insert into user
+					(name,surname,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
+					values('$name','$surname','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
 					$this->executeQuery($query);
+					$mail->mailSend($email);
 				}else{
 					throw new InvalidArgumentException(get_class($user)." is not a User class");
 				}

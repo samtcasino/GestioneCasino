@@ -4,14 +4,38 @@
 	 */
 	class User
 	{
-		public function __construct($name,$surname,$birthday,$city,$zipcode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password,$repassword)
+		private $name;
+		private $surname;
+		private $birthday; 
+		private $city;
+		private $address;
+		private $houseNumber;
+		private $telephoneNumber;
+		private $email;
+		private $gender;
+		private $password;
+		private $zipCode;
+
+
+		public function __construct($name,$surname,$birthday,$city,$zipCode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password,$repassword)
 		{
+			$this->name = $name;
+			$this->surname = $surname;
+			$this->birthday = $birthday;
+			$this->city = $city;
+			$this->address = $address;
+			$this->houseNumber = $houseNumber;
+			$this->telephoneNumber = $telephoneNumber;
+			$this->email = $email;
+			$this->gender = $gender;
+			$this->zipCode = $zipCode;
+			$this->password = $password;
+
 			User::tryName($name);
 			User::tryName($surname);
 			User::tryDate($birthday);
 			User::tryName($city);
 			User::tryName($address);
-			User::tryZipCode($zipcode);
 			User::tryHouseNumber($houseNumber);
 			User::tryNumber($telephoneNumber);
 			User::tryEmail($email);
@@ -60,15 +84,8 @@
 	    }
 
 	    public static function tryHouseNumber($object){
-
-	    	$check = true;
-	        for ($i = 0; $i < strlen($object); $i++) {
-	            if(!is_numeric($object[$i]) && ($i != strlen($object)-1 || $i == 0)){
-	                $check = false;
-	            }
-	        }
-	        if(!(!(!preg_match('/^([0-9A-Za-z]{1,4})$/', $object) || $check == false))){
-	        	throw new InvalidArgumentException( sprintf( '"%s" is not a valid house number',$object));
+	        if(!is_numeric($object)){
+	            throw new InvalidArgumentException( sprintf( '"%s" is not a valid house number',$object));
 	        }
 	        return $object;
 	    }
@@ -80,12 +97,39 @@
 	        return $object;
 	    }
 
-	    public static function tryZipCode($object){
-	    	$regex = '/^\d+$/';
-	        if(!(preg_match($regex,$object) && (strlen($object) >= 4 && strlen($object) <= 5))){
-	            throw new InvalidArgumentException( sprintf( '"%s" is not a valid zip code',$object));
-	        }
-	        return $object;
+	    public function getName(){
+	    	return $this->name;
 	    }
+	    public function getSurname(){
+	    	return $this->surname;
+	    }
+	    public function getBirthday(){
+	    	return $this->birthday;
+	    }
+	    public function getCity(){
+	    	return $this->city;
+	    }
+	    public function getZipCode(){
+	    	return $this->zipCode;
+	    }
+	    public function getAddress(){
+	    	return $this->address;
+	    }
+	    public function getHouseNumber(){
+	    	return $this->houseNumber;
+	    }
+	    public function getTelephoneNumber(){
+	    	return $this->telephoneNumber;
+	    }
+	    public function getEmail(){
+	    	return $this->email;
+	    }
+	    public function getGender(){
+	    	return $this->gender;
+	    }
+	    public function getPassword(){
+	    	return $this->password;
+	    }
+
 	}		
 ?>

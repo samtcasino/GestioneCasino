@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use phpunit\Framework\TestCase;
-include '../user.php';
+include 'user.php';
 
 final class UserTestCase extends TestCase
 {
@@ -16,7 +16,7 @@ final class UserTestCase extends TestCase
 			"Capolago",
             6825,
 			"Via laveggio",
-			"11",
+			9,
 			"0788159957",
 			"carlo.pezzotti@samtrevano.ch",
 			"male",
@@ -27,7 +27,7 @@ final class UserTestCase extends TestCase
 
     public function testCannotCreateAWrongUser():void{
     	$this->expectException(InvalidArgumentException::class);
-    	$this->assertInstanceOf(null,new User(
+    	$u = new User(
 			"23423432423234",
 			"Pezzotti",
 			"2018-12-01",
@@ -35,12 +35,12 @@ final class UserTestCase extends TestCase
             6825,
 			"Via laveggio",
 			9,
-			"059957",
-			"carlo.pezzsamtrevano.ch",
-			"me",
+			"0788159957",
+			"carlo.pezzotti@samtrevano.ch",
+			"male",
 			"Password&1",
 			"Password&1"
-		));
+		);
     }
 
     public function testValidMail():void
@@ -85,13 +85,13 @@ final class UserTestCase extends TestCase
 
 
     public function testValidHouseNumber():void{
-    	$houseNumber = "11a";
+    	$houseNumber = 9;
     	$this->assertSame($houseNumber,User::tryHouseNumber($houseNumber));
     }
 
     public function testNotValidHouseNumber():void{
     	$this->expectException(InvalidArgumentException::class);
-    	$houseNumber = "11a1";
+    	$houseNumber = "4fwws2";
     	$this->assertSame($houseNumber,User::tryHouseNumber($houseNumber));
     }
 
@@ -121,19 +121,5 @@ final class UserTestCase extends TestCase
     	$this->expectException(InvalidArgumentException::class);
     	$gender = "other";
     	$this->assertSame($gender,User::tryGender($gender));
-    }
-
-
-    public function testValidZipCode():void{
-        $zipcode = 6825;
-        $this->assertSame($zipcode ,User::tryZipCode($zipcode));
-    }
-
-    public function testNotValidZipCode():void{
-        $this->expectException(InvalidArgumentException::class);
-        $zipcode = 6444825;
-        $this->assertSame($zipcode ,User::tryZipCode($zipcode));
-        $zipcode = 25;
-        $this->assertSame($zipcode ,User::tryZipCode($zipcode));
     }
 }
