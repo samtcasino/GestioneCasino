@@ -42,6 +42,4 @@
 			}
 		}
 	}
-
-	$c = new SendMail("SGG<?rpF3FTebqx?(kgQR:hsq'mqZ!VH");
 ?>
