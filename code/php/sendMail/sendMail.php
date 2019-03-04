@@ -32,7 +32,7 @@
 			$this->mail->isHTML(true);                                  // Set email format to HTML
 			$this->mail->Subject = 'Hi there! Verify your account!';
 			$cryptedMail = $email ^ $this->privateKey;
-			$this->mail->Body ='<hr>How are you? <br> <hr>This i your link:<a href="http://cashyland.tk/validate.php?id='.urlencode($cryptedMail).'">Click me!</a>';
+			$this->mail->Body ='<hr>How are you? <br> <hr>This i your link:<a href="http://cashyland.tk/GestioneCasino/code/php/validate.php?id='.urlencode($cryptedMail).'">Click me!</a>';
 
 			if(!$this->mail->send()) {
 			    echo 'Message could not be sent.';

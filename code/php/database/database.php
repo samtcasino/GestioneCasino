@@ -2,8 +2,8 @@
 	/**
 	 * Classe che gestisce le connessioni ai database
 	 */
-	include "../user/user.php";
-	require "../sendMail/sendMail.php";
+	require "user/user.php";
+	require "sendMail/sendMail.php";
 
 	class Database{
 
@@ -43,7 +43,7 @@
 		}
 
 		public function existsUserByEmail($email){
-			return $this->executeQuery("select * from users where email = '".$email."'");
+			return $this->executeQuery("select * from user where email = '".$email."'");
 		}
 
 		public function insertUser($user){
