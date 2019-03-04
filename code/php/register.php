@@ -31,11 +31,12 @@
 					$_POST["repassword"]
 				);
 			}catch(Exception $e){
-				echo $e->getMessage();
+//				echo "<script>alert($e->getMessage())</script>";
+				echo "<script>window.location.replace('http://cashyland.tk/GestioneCasinoSito/registrazione.html')</script>";
 			}
 			$database = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018");
 			$database->insertUser($u); 
-			echo "Ti è stata inviata unamail di conferma. Vai a controllare :)";
+			header("Location: ../../../GestioneCasinoSito/verificaMail.html");
 		}
 	}
 ?>
