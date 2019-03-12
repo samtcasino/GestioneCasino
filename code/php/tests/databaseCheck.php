@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use phpunit\Framework\TestCase;
-include 'database.php';
+include '../database/database.php';
 
 final class DatabaseTestCase extends TestCase
 {
