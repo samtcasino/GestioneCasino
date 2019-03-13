@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use phpunit\Framework\TestCase;
-include 'user.php';
+include 'code/php/user/user.php';
 
 final class UserTestCase extends TestCase
 {
