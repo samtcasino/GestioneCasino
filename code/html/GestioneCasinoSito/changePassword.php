@@ -83,18 +83,39 @@ http://www.tooplate.com/view/2085-neuron
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h2>Recupera la tua password!</h2>
-                    <span>Inserisci la tua mail per modificare la password. Dopodiché controlla la tua email e clicca il link di recupero.</span>
-                    <form action="../../php/password/sendLostPassword.php" method="post">
-                         <div class="col-md-12 col-sm-12">
-                              <span>Email:</span>
-                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" required>
-                         </div>
-                         <br>
-                         <div class="col-md-12 col-sm-12" id="button-login">
-                              <input name="sendMail" type="submit" class="form-control" id="sendMail" value="INVIA">
-                         </div>
-                    </form>
+                    <h2>Cambia la password!</h2>
+                    <span>Inserisci la nuova password per cambiarla</span>
+                    <?php
+                         require "../../php/loader.php";
+                         if (isset($_GET['id'])) {
+                             $id = $_GET['id'];
+                             $email = urldecode($id);
+                             $email = $email ^ $privateKey;
+
+                          if(!(gettype($db->existsUserByEmail($email)) == "boolean")){
+                                   if($_SERVER['REQUEST_METHOD'] == "POST"){
+                                        if(isset($_POST["password"]) && isset($_POST["repassword"])){
+                                             $db->executeQuery('update user set password = "'.$_POST["password"].'" where email = "'.$email.'"');
+                                        }
+                                   }else{
+                                   echo"
+                                        <body>
+                                                  <form action='changePassword.php?id=".urlencode($email^$privateKey)."' method='post'>
+                                                       <span>Password:</span>
+                                                       <input type='password' name='password'><br>
+                                                       <span>Repeat-Password:</span>
+                                                       <input type='password' name='repassword'><br>
+                                                       <input type='submit' name='' value='VAI!''>
+                                                  </form>
+                                             </body>
+                                   ";
+                                  }
+                             }else{
+                              echo "Qualcosa è andato storto :(";
+                             }
+                         }
+
+                    ?>
                </div>
 
           </div>
