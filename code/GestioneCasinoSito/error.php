@@ -4,12 +4,12 @@
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="description" content="Login Cashy Land">
-<meta name="keywords" content="Login">
+<meta name="description" content="Errore Cashy Land">
+<meta name="keywords" content="Errores">
 <meta name="author" content="gruppocasin02018">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>GestioneCasino - Login</title>
+<title>GestioneCasino - Errore</title>
 <!--
 
 Template 2085 Neuron
@@ -54,7 +54,7 @@ http://www.tooplate.com/view/2085-neuron
                     <li><a href="about.html">Giochi</a></li>
                     <li><a href="about.html">Sale</a></li>
                     <li><a href="gallery.html">Foto</a></li>
-                    <li class="active"><a href="login.html">Accedi</a></li>
+                    <li><a href="login.html">Accedi</a></li>
                </ul>
           </div>
 
@@ -67,42 +67,21 @@ http://www.tooplate.com/view/2085-neuron
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
-
                <div class="col-md-12 col-sm-12">
-                    <h1>Cashy Land Login</h1>
+                    <h1>Whopsy, c'è stato un errore</h1>
                </div>
-
           </div>
      </div>
 </section>
 
-<!-- Login Section -->
+<!-- Error Section -->
 
 <section id="login">
      <div class="container">
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h2>Accedi</h2>
-
-                    <form action="#" method="post">
-                         <div class="col-md-6 col-sm-6">
-                              <span>Email:</span>
-                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" required>
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <span>Password:</span>
-                              <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
-                              <a href="passwordForgotten.html">Hai dimenticato la password?</a>
-                         </div>
-                         <br>
-                         <div class="col-md-4 col-sm-6" id="button-register">
-                              <a href="registration.html"><input name="register" type="button" class="form-control" id="register" value="REGISTRATI"></a>
-                         </div>
-                         <div class="col-md-4 col-sm-6" id="button-login">
-                              <input name="login" type="submit" class="form-control" id="submit" value="LOGIN">
-                         </div>
-                    </fofm>
+                    <h2><?php echo $_POST['error']; ?></h2>
                </div>
 
           </div>
