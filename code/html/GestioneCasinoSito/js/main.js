@@ -1,7 +1,10 @@
-function clickRegister(){
-    window.location.replace("register.html");
-}
+//document.getElementById("errorMessage").innerHTML = getCookie("error");
 
+function clickRegister(){
+     window.location.replace("registration.html");
+}
+/*
+//Metodo che ritorna un valore in base al cookie.
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -19,4 +22,4 @@ function getCookie(cname) {
          }
     }
     return "";
-}
+}*/
