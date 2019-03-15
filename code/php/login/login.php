@@ -16,13 +16,16 @@
 					if($dbVerified == 1){
 						echo "Loggato stracazzo con successo";
 					}else{
-						echo "Non è verificato";
+						setcookie("error","Non è verificato",time()+300,"/");
+						header("Location: ../../login.html");
 					}
 				}else{
-					echo "Password sbagliata";
+					setcookie("error","Password sbagliata",time()+300,"/");
+					header("Location: ../../login.html");
 				}
 			}else{
-				echo "Email non trovata";
+				setcookie("error","Email non trovata",time()+300,"/");
+				header("Location: ../../login.html");
 			}
 		}
 	}

@@ -86,7 +86,7 @@ http://www.tooplate.com/view/2085-neuron
                     <h2>Cambia la password!</h2>
                     <span>Inserisci la nuova password per cambiarla</span>
                     <?php
-                         require "../../php/loader.php";
+                         require "php/loader.php";
                          if (isset($_GET['id'])) {
                              $id = $_GET['id'];
                              $email = urldecode($id);

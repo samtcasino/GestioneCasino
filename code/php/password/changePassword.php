@@ -9,6 +9,7 @@
  	 		if($_SERVER['REQUEST_METHOD'] == "POST"){
  	 			if(isset($_POST["password"]) && isset($_POST["repassword"])){
  	 				$db->executeQuery('update user set password = "'.$_POST["password"].'" where email = "'.$email.'"');
+ 	 				header("Location: ../../login.html");
  	 			}
  	 		}else{
 		    	echo"
