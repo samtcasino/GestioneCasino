@@ -26,10 +26,6 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 0.5px;
 }
 
-#errorMessage{
-	color:red;
-	font-size: 20px;
-}
 h1 {
     font-size: 62px;
     padding-bottom: 14px;

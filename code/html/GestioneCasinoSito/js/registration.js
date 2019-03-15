@@ -50,7 +50,7 @@ function checkCivicNumber(val){
 
 //Controllo se le password sono uguali
 function checkPassword(pas1, pas2){
-    return (pas1 == pas2) && pas2.toLowerCase() == pas1 && /\d/.test(pas1) && pas1.length > 7;
+    return (pas1 == pas2) && pas2.toLowerCase() != pas1 && /\d/.test(pas1) && pas1.length > 7;
 }
 
 //Controllo lato client dei campi con evenutali notifiche in caso di errore.
@@ -63,78 +63,74 @@ function checkAll(){
     }else{
         if(!checkName(inputs[0].value)){
             inputs[0].style.backgroundColor = "#ffcccc";
-            $.notify("Nome non valido!", "error");
+            $.notify("Nome non valido!", { position:"bottom left" });
         }else{
-            inputs[0].style.backgroundColor = none;
+            inputs[0].style.backgroundColor = "white";
         }
         if(!checkName(inputs[1].value)){
             inputs[1].style.backgroundColor = "#ffcccc";
-            $.notify("Cognome non valido!", "error");
+            $.notify("Cognome non valido!", { position:"bottom left" });
         }else{
-            inputs[1].style.backgroundColor = none;
+            inputs[1].style.backgroundColor = "white";
         }
         if(!checkDate(inputs[2].value)){
             inputs[2].style.backgroundColor = "#ffcccc";
-            $.notify("Data non valida!", "error");
+            $.notify("Data non valida!", { position:"bottom left" });
         }else{
-            inputs[2].style.backgroundColor = none;
+            inputs[2].style.backgroundColor = "white";
         }
         if(!checkName(inputs[3].value)){
             inputs[3].style.backgroundColor = "#ffcccc";
-            $.notify("Via non valida!", "error");
+            $.notify("Via non valida!", { position:"bottom left" });
         }else{
-            inputs[3].style.backgroundColor = none;
+            inputs[3].style.backgroundColor = "white";
         }
         if(!checkCivicNumber(inputs[4].value)){
             inputs[4].style.backgroundColor = "#ffcccc";
-            $.notify("Numero Civico non valido!", "error");
+            $.notify("Numero Civico non valido!", { position:"bottom left" });
         }else{
-            inputs[4].style.backgroundColor = none;
+            inputs[4].style.backgroundColor = "white";
         }
         if(!checkNap(inputs[5].value)){
             inputs[5].style.backgroundColor = "#ffcccc";
-            $.notify("CAP non valido!", "error");
+            $.notify("CAP non valido!", { position:"bottom left" });
         }else{
-            inputs[5].style.backgroundColor = none;
+            inputs[5].style.backgroundColor = "white";
         }
         if(!checkName(inputs[6].value)){
             inputs[6].style.backgroundColor = "#ffcccc";
-            $.notify("Citta non valida!", "error");
+            $.notify("Citta non valida!", { position:"bottom left" });
         }else{
-            inputs[6].style.backgroundColor = none;
+            inputs[6].style.backgroundColor = "white";
         }
         if(!checkNumber(inputs[7].value)){
             inputs[7].style.backgroundColor = "#ffcccc";
-            $.notify("Numero di telefono non valido!", "error");
+            $.notify("Numero di telefono non valido!", { position:"bottom left" });
         }else{
-            inputs[7].style.backgroundColor = none;
+            inputs[7].style.backgroundColor = "white";
         }
         if(!checkEmail(inputs[8].value)){
             inputs[8].style.backgroundColor = "#ffcccc";
-            $.notify("Email non valida!", "error");
+            $.notify("Email non valida!", { position:"bottom left" });
         }else{
-            inputs[8].style.backgroundColor = none;
+            inputs[8].style.backgroundColor = "white";
         }
         if(!checkPassword(inputs[9].value, inputs[10].value)){
             inputs[9].style.backgroundColor = "#ffcccc";
             inputs[10].style.backgroundColor = "#ffcccc";
-            $.notify("Password non corrispondenti!", "error");
+            $.notify("Password non corrispondenti!", { position:"bottom left" });
         }else{
-            inputs[9].style.backgroundColor = none;
-            inputs[10].style.backgroundColor = none;
+            inputs[9].style.backgroundColor = "white";
+            inputs[10].style.backgroundColor = "white";
         }
-    }
-}
-
-//Richiesta di cancellamento di tutti i campi.
-function deleteAll(){
-    if(confirm("Sei sicuro di voler cancellare i dati?")){
-        clearAll();
-        $.notify("La cencellazione è avvenuta con successo", "success");
     }
 }
 
 //rimuove il colore rosso dagli input errati
 function normal(input){
-    input.style.backgroundColor = none; 
+    input.style.backgroundColor = "white"; 
+}
+
+function register(){
+
 }
