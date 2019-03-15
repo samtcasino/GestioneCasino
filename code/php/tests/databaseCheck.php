@@ -31,14 +31,32 @@ final class DatabaseTestCase extends TestCase
             "male",
             "Password&1"
         ));
-	$result = $db->executeQuery("select email from user where email = 'a@a.ch'")["email"];
+	    $result = $db->executeQuery("select email from user where email = 'a@a.ch'")["email"];
         $this->assertTrue($result == "a@a.ch");
-	$db->executeQuery("delete from user where email = 'a@a.ch'");
+	    $db->executeQuery("delete from user where email = 'a@a.ch'");
     }
 
     public function testCannotInsertUser():void{
         $this->expectException(InvalidArgumentException::class);
         $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018");
         $db->insertUser("prova");
+    }
+
+    public function testCorrectReturn():void{
+        $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018"); 
+        $result = $db->executeQuery("select email,name from user where email = 'admin@admin.ch'");
+        $this->assertTrue(($result["email"] == "admin@admin.ch" && $result["name"] == "admin"));
+    }
+
+    public function testNotCorrectReturn():void{
+        $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018"); 
+        $result = $db->executeQuery("select email,name from user where email = 'admin@admin.ch'");
+        $this->assertTrue(!($result["email"] == "adm@admin.ch" && $result["name"] == "ain"));
+    }
+
+    public function testExecuteNotCorrectQuery(){
+        $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018"); 
+        $this->expectException(InvalidArgumentException::class);
+        $db->executeQuery("select * from users");
     }
 }
