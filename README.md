@@ -13,3 +13,4 @@ Casino management software
 
 [Work diaries](work%20diaries): the path that contains the work diaries for each work day.
 
+.
