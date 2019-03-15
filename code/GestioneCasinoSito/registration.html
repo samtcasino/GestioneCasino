@@ -85,61 +85,61 @@ http://www.tooplate.com/view/2085-neuron
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <h2>Accedi</h2>
 
-                    <form action="#" method="post">
+                    <form method="post" id="registration_form">
                          <div class="col-md-6 col-sm-6">
                               <span>Nome:</span>
-                              <input name="name" type="text" class="form-control" id="name" placeholder="Nome" required>
+                              <input name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)">
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <span>Cognome:</span>
-                              <input name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" required>
+                              <input name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Data Nascita:</span>
-                              <input name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" required>
+                              <input name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)">
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <span>Via:</span>
-                              <input name="street" type="text" class="form-control" id="address" placeholder="Via" required>
+                              <input name="address" type="text" class="form-control" id="address" placeholder="Via" onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>No. Civico:</span>
-                              <input name="house-number" type="number" class="form-control" id="house-number" placeholder="Numero Civico" required>
-                         </div> 
-                         <div class="col-md-6 col-sm-6">
-                              <span>No. Telefono:</span>
-                              <input name="phone-number" type="text" class="form-control" id="phone-number" placeholder="Numero di Telefono" required>
+                              <input name="houseNumber" type="text" class="form-control" id="houseNumber" placeholder="Numero Civico" onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>CAP:</span>
-                              <input name="zip" type="text" class="form-control" id="zip" placeholder="CAP" required>
+                              <input name="zipCode" type="text" class="form-control" id="zipCode" placeholder="CAP" onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
+                              <span>Città:</span>
+                              <input name="city" type="city" class="form-control" id="city" placeholder="Città" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>No. Telefono:</span>
+                              <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)">
+                         </div>
+                         <div class="col-md-6 col-sm-6">
                               <span>Sesso:</span>
-                              <select class="form-control" id="select-gender" required>
-                                   <option value="man">Maschio</option>
-                                   <option value="woman">Femmina</option>
+                              <select class="form-control" id="select-gender" name="gender">
+                                   <option value="male">Maschio</option>
+                                   <option value="female">Femmina</option>
                               </select>
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Email:</span>
-                              <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
-                         </div> 
-                         <div class="col-md-6 col-sm-12">
-                              <span>Ripeti Email:</span>
-                              <input name="repeat-email" type="email" class="form-control" id="repeat-email" placeholder="Ripeti Email" required>
+                              <input name="email" type="email" class="form-control" id="email" placeholder="Email"  onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Password:</span>
-                              <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
+                              <input name="password" type="password" class="form-control" id="password" placeholder="Password"  onkeydown="normal(this)">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Ripeti Password:</span>
-                              <input name="repeat-password" type="password" class="form-control" id="repeat-password" placeholder="Ripeti Password" required>
+                              <input name="repassword" type="password" class="form-control" id="repassword" placeholder="Ripeti Password"  onkeydown="normal(this)">
                          </div> 
                          <br>
                          <div class="col-md-4 col-sm-6" id="button-login">
-                              <input name="register" type="submit" class="form-control" id="submit" value="REGISTRATI">
+                              <input name="register" type="button" class="form-control" id="submit" value="REGISTRATI" onclick="checkAll()">
                          </div>
                     </form>
                </div>
@@ -182,10 +182,13 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- SCRIPTS -->
 
+
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.parallax.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/notify.js"></script>
+<script src="js/registration.js"></script>
 
 </body>
 </html>
