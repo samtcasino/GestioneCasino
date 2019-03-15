@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use phpunit\Framework\TestCase;
-include 'user.php';
+require "../loader.php";
 
 final class UserTestCase extends TestCase
 {
@@ -20,7 +20,6 @@ final class UserTestCase extends TestCase
 			"0788159957",
 			"carlo.pezzotti@samtrevano.ch",
 			"male",
-			"Password&1",
 			"Password&1"
 		));
     }
@@ -38,7 +37,6 @@ final class UserTestCase extends TestCase
 			"0788159957",
 			"carlo.pezzotti@samtrevano.ch",
 			"male",
-			"Password&1",
 			"Password&1"
 		);
     }

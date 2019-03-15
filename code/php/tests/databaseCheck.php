@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use phpunit\Framework\TestCase;
-include 'database.php';
+require "../loader.php";
 
 final class DatabaseTestCase extends TestCase
 {
@@ -14,11 +14,10 @@ final class DatabaseTestCase extends TestCase
     public function testCannotConnect(): void
     {
         $this->expectException(PDOException::class);
-        $this->assertInstanceOf(Database::class,new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018"));
+        $this->assertInstanceOf(Database::class,new Database("127.0.0.1",3306,"cashyland","root","Casin02018"));
     }
-    public function testInserUser() : void{
+    public function testInsertUser() : void{
         $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018");
-        $lastId = $db->executeQuery("select max(id) from users")[0];
         $db->insertUser(new User(
             "Carlo",
             "Pezzotti",
@@ -28,13 +27,13 @@ final class DatabaseTestCase extends TestCase
             "Via laveggio",
             9,
             "0788159957",
-            "carlo.pezzotti@samtrevano.ch",
+            "a@a.ch",
             "male",
-            "Password&1",
             "Password&1"
         ));
-        $nowId = $db->executeQuery("select max(id) from users")[0];
-        $this->assertTrue(($lastId+1 == $nowId));
+	$result = $db->executeQuery("select email from user where email = 'a@a.ch'")["email"];
+        $this->assertTrue($result == "a@a.ch");
+	$db->executeQuery("delete from user where email = 'a@a.ch'");
     }
 
     public function testCannotInsertUser():void{
