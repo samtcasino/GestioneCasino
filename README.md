@@ -11,4 +11,4 @@ Casino management software
 
 [Presentation](presentation): the directory with the files relative to the project's presentation to the client.
 
-[Work diaries](work%20diaries): the path that contains the work diaries for each work day.
+[Work diaries](work%20diaries): the path that contains the work diaries for each work day
