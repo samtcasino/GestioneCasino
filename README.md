@@ -1,4 +1,4 @@
-# GestioneCasinoDevelopment
+## GestioneCasinoDevelopment
 Casino management software
 
 [Analysis](analysis): the directory that contains the initial analysis of the customer's requirements, that leads to the project's requirements chapter of the documentation (see chapter 1.5 of documentation, "Analisi e specifica dei requisiti").
