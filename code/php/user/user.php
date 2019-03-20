@@ -17,29 +17,19 @@
 		private $zipCode;
 
 
-		public function __construct($name,$surname,$birthday,$city,$zipCode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password,$repassword)
+		public function __construct($name,$surname,$birthday,$city,$zipCode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password)
 		{
-			$this->name = $name;
-			$this->surname = $surname;
-			$this->birthday = $birthday;
-			$this->city = $city;
-			$this->address = $address;
-			$this->houseNumber = $houseNumber;
-			$this->telephoneNumber = $telephoneNumber;
-			$this->email = $email;
-			$this->gender = $gender;
-			$this->zipCode = $zipCode;
-			$this->password = $password;
-
-			User::tryName($name);
-			User::tryName($surname);
-			User::tryDate($birthday);
-			User::tryName($city);
-			User::tryName($address);
-			User::tryHouseNumber($houseNumber);
-			User::tryNumber($telephoneNumber);
-			User::tryEmail($email);
-			User::tryGender($gender);
+			$this->name = User::tryName($name);
+			$this->surname = User::tryName($surname);
+			$this->birthday = User::tryDate($birthday);
+			$this->city = User::tryName($city);
+			$this->address = User::tryName($address);
+			$this->houseNumber = User::tryHouseNumber($houseNumber);
+			$this->telephoneNumber = User::tryNumber($telephoneNumber);
+			$this->email = User::tryEmail($email);
+			$this->gender = User::tryGender($gender);
+			$this->zipCode = User::tryZipCode($zipCode);
+			$this->password = User::tryPassword($password);
 		}
 
 		public static function tryEmail($email)
@@ -95,7 +85,26 @@
 	            throw new InvalidArgumentException( sprintf( '"%s" is not a valid gender',$object));
 	        }
 	        return $object;
-	    }
+		}
+		
+		public static function tryPassword($object){
+			if(strlen($object)>=8){
+				if(strtolower($object) != $object){
+					return $object;
+				}else{
+					throw new InvalidArgumentException(sprintf( '"%s" have all lower character',$object));
+				}
+			}else{
+				throw new InvalidArgumentException(sprintf( '"%s" is too short',$object));
+			}
+		}
+
+		public static function tryZipCode($object){
+			if(!(strlen($object)>= 4 && strlen($object) <= 5)){
+				throw new InvalidArgumentException(sprintf( '"%s" is not a valid zip code',$object));	
+			}
+			return $object;
+		}
 
 	    public function getName(){
 	    	return $this->name;
