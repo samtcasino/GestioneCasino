@@ -151,7 +151,7 @@ a:hover, a:active, a:focus {
 }
 
 .sk-spinner-wordpress.sk-spinner {
-  background-color: #bfba55;
+  background-color: #99a0ff;
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -221,24 +221,24 @@ a:hover, a:active, a:focus {
 }
 
 .navbar-default .navbar-nav > li a:hover {
-    color: #bfba55 !important;
+    color: #99a0ff !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #606066;
+    color: #2f3066;
     background-color: transparent;
 }
 
 .navbar-default .navbar-nav li a:hover,
  .navbar-default .navbar-nav .active > a {
-    color: #bfba55;
+    color: #99a0ff;
   }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #bfba55;
+    color: #99a0ff;
     background-color: transparent;
 }
 
@@ -248,7 +248,7 @@ a:hover, a:active, a:focus {
   }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background: #bfba55;
+    background: #99a0ff;
     border-color: transparent;
   }
 
@@ -309,7 +309,7 @@ a:hover, a:active, a:focus {
 }
 
 #home h4 {
-  color: #bfba55;
+  color: #99a0ff;
 }
 
 #home .btn {
@@ -431,29 +431,31 @@ a:hover, a:active, a:focus {
 }
 
 #login input[type="submit"] {
-  background: #bfba55;
+  background: #99a0ff;
   border-radius: 100px;
   border: none;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
 }
 
 #login input[type="submit"]:hover {
-  background: #333;
+  color: #ffffff;
+  background: #2f3066;
 }
 
 #login input[type="button"] {
-  background: #bfba55;
+  background: #99a0ff;
   border-radius: 100px;
   border: none;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
 }
 
 #login input[type="button"]:hover {
-  background: #333;
+  color: #ffffff;
+  background: #2f3066;
 }
 
 #select-gender  {
@@ -495,7 +497,7 @@ a:hover, a:active, a:focus {
 }
 
 .blog-post-title a:hover {
-  color: #bfba55;
+  color: #99a0ff;
 }
 
 .blog-post-format {
@@ -532,7 +534,7 @@ a:hover, a:active, a:focus {
 }
 
 .blog-post-des .btn:hover {
-  background: #bfba55;
+  background: #99a0ff;
   border-color: transparent;
   color: #ffffff;
 }
@@ -606,7 +608,7 @@ a:hover, a:active, a:focus {
 }
 
 .blog-comment-form input[type="submit"] {
-  background: #bfba55;
+  background: #99a0ff;
   border-radius: 100px;
   border: none;
   color: #ffffff;
@@ -695,7 +697,7 @@ footer .footer-copyright {
 }
 
 .go-top:hover {
-    background: #bfba55;
+    background: #99a0ff;
     color: #ffffff;
 }
 
@@ -735,8 +737,8 @@ footer .footer-copyright {
 }
 
 .social-icon li a:hover {
-    border-color: #bfba55;
-    color: #bfba55;
+    border-color: #99a0ff;
+    color: #99a0ff;
     transform: scale(1.1);
 }
 
