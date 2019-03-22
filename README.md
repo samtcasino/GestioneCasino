@@ -5,6 +5,8 @@ Casino management software
 
 [Code](code): the folder containing the source code of the project's implementation (see chapter 3 of documentation, "Implementazione").
 
+[Design](design): the path where the project's design phase is found. Contains the database's design.
+
 [Documentation](documentation): the path in which the project's documentation is stored.
 
 [Gantt diagrams](gantt%20diagrams): the folder where the gantt diagrams used for planning are found (see chapter 1.6 of documentation, "Pianificazione").
