@@ -14,7 +14,7 @@
 				$dbVerified = $queryRepose["verified"];
 				if($password == $dbPassword){
 					if($dbVerified == 1){
-						echo "Loggato stracazzo con successo";
+						echo "Loggato con successo";
 					}else{
 						setcookie("error","Non è verificato",time()+300,"/");
 						header("Location: ../../login.html");

@@ -8,9 +8,9 @@
 			//$mailSender->mailSend($_POST["email"],"Reset password!",$message);
 			header("Location: ../../verifyMail.html");
 		}else{
-			echo "Ops";
+			header("Location: ../../index.html");
 		}
 	}else{
-		echo "Ops";
+		header("Location: ../../index.html");
 	}
 ?>

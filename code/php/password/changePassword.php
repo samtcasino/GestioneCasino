@@ -23,7 +23,7 @@
 		    	";
 		    }
 	    }else{
-	    	echo "Qualcosa è andato storto :(";
+	    	header("Location: ../../index.html");
 	    }
 	}
 ?>

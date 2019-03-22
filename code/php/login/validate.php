@@ -9,7 +9,7 @@
 	    	$db->executeQuery("update user SET verified = 1 where email = '". $email."'");
 	    	echo $email . " ti sei registrato con successo";
 	    }else{
-	    	echo "Qualcosa è andato storto :(";
+			header("Location: ../../index.html");
 	    }
 	}
 ?>
