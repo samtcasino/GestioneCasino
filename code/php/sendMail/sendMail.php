@@ -28,7 +28,7 @@
 			$this->mail->isHTML(true);                                  // Set email format to HTML
 			$this->mail->Subject = $subject;
 			$this->mail->Body = $message;
-			$this->mail->send();
+			return $this->mail->send();
 		}
 	}
 ?>

@@ -38,9 +38,8 @@
 				$mailSender->mailSend($_POST["email"],$subjet,$message);
 				header("Location: ../../../verifyMail.html");	
 			}catch(Exception $e){
-//				echo "<script>alert($e->getMessage())</script>";
-				echo $e;
-				//echo "<script>window.location.replace('../../registration.html')</script>";
+				setcookie("error","C'è stato un errore :(",time()+300,"/");
+				header("Location: ../../register.html");
 			}
 		}
 	}
