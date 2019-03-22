@@ -9,6 +9,8 @@ Casino management software
 
 [Gantt diagrams](gantt%20diagrams): the folder where the gantt diagrams used for planning are found (see chapter 1.6 of documentation, "Pianificazione").
 
+[Media](media): the folder containing all media files used inside of the documentation and work diaries.
+
 [Presentation](presentation): the directory with the files relative to the project's presentation to the client.
 
 [Work diaries](work%20diaries): the path that contains the work diaries for each work day.
