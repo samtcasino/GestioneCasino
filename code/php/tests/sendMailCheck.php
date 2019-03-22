@@ -16,5 +16,4 @@ final class SendMailTest extends TestCase
         $this->assertTrue($e->mailSend("gruppoCasin0@hotmail.com","test","test"));
     }
 }
-
 ?>
