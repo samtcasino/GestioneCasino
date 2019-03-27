@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-02-07" view-index="0" gantt-divider-location="903" resource-divider-location="300" version="2.8.9" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-02-22" view-index="0" gantt-divider-location="903" resource-divider-location="300" version="2.8.9" locale="it">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
         <field id="tpd3" name="Nome" width="355" order="0"/>
@@ -36,7 +36,8 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Gestione Casinò" color="#000000" meeting="false" start="2019-02-15" duration="17" complete="0" thirdDate="2019-02-13" thirdDate-constraint="1" expand="true">
+        <task id="0" name="Gestione Casinò" color="#000000" meeting="false" start="2019-02-13" duration="28" complete="0" thirdDate="2019-02-13" thirdDate-constraint="1" expand="true">
+            <task id="76" name="Documentazione di progetto" color="#8cb6ce" meeting="false" start="2019-02-13" duration="28" complete="0" thirdDate="2019-02-22" thirdDate-constraint="0" expand="true"/>
             <task id="5" name="Stesura del Gantt" meeting="false" start="2019-02-15" duration="2" complete="0" expand="true">
                 <depend id="10" type="2" difference="0" hardness="Strong"/>
                 <task id="6" name="Discutere su eventuali attività" meeting="false" start="2019-02-15" duration="1" complete="0" expand="true"/>
