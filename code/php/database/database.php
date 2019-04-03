@@ -20,7 +20,7 @@
 			if ($result === FALSE) {
 				throw new InvalidArgumentException("Failed to load schema is not exists or you are not permission");
 			}
-			return $result->fetch();
+			return $result->fetchAll();
 		} 
 
 		public function printTableQuery($selectQuery){

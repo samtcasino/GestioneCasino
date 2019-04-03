@@ -115,6 +115,7 @@ a:focus {
 .main-about,
 .main-single-post,
 .main-gallery,
+.main-profile,
 .main-login {
     height: 65vh;
 }
@@ -296,7 +297,11 @@ a:focus {
 }
 
 .main-gallery {
-    background: url('../images/gallery-bg.jpg') no-repeat;
+   background: url('../images/gallery-bg.jpg') no-repeat;
+}
+
+.main-profile{
+    background: url('../images/Profile.jpg') no-repeat;
 }
 
 .main-login {
@@ -440,7 +445,21 @@ a:focus {
     transition: all 0.4s ease-in-out;
 }
 
+#profile input[type="submit"] {
+    background: #99a0ff;
+    border-radius: 100px;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+
 #login input[type="submit"]:hover {
+    color: #ffffff;
+    background: #2f3066;
+}
+
+#profile input[type="submit"]:hover {
     color: #ffffff;
     background: #2f3066;
 }
@@ -454,13 +473,32 @@ a:focus {
     transition: all 0.4s ease-in-out;
 }
 
+#profile input[type="button"] {
+    background: #99a0ff;
+    border-radius: 100px;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+
 #login input[type="button"]:hover {
+    color: #ffffff;
+    background: #2f3066;
+}
+
+#profile input[type="button"]:hover {
     color: #ffffff;
     background: #2f3066;
 }
 
 #select-gender {
     height: 50px;
+}
+
+#description{
+    height: 150px;
+    resize: none;
 }
 
 /*---------------------------------------
@@ -692,6 +730,15 @@ footer .footer-copyright {
     color: #ffffff;
 }
 
+.modify{
+    height: 250px;
+}
+
+.header-modify{
+    font-weight: bold;
+    font-size: 16px;
+}
+
 /*---------------------------------------
    Social icon             
 -----------------------------------------*/
@@ -734,15 +781,33 @@ footer .footer-copyright {
     float: right;
 }
 
+#modify-password {
+    margin-top: 82px;
+}
+
+#admin{
+    margin-top: 50px;
+}
+
+#utente{
+    margin-top: 50px;
+}
+
 /*---------------------------------------
    Mobile Responsive         
 -----------------------------------------*/
+
 @media (max-width: 980px) {
     .main-about,
     .main-single-post,
     .main-gallery,
+    .main-profile,
     .main-login {
         height: 35vh;
+    }
+
+    #modify-password {
+        margin-top: 0px;
     }
 }
 
@@ -785,4 +850,51 @@ footer .footer-copyright {
         padding-top: 60px;
         padding-bottom: 60px;
     }
+}
+
+.files input {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+}
+.files input:focus{
+    outline: 2px dashed #92b0b3;  
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.color input{ background-color:#f1f1f1;}
+.files:before {
+    position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    display: block;
+    margin: 0 auto;
+    color: #2ea591;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
 }
