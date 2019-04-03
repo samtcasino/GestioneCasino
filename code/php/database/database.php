@@ -28,17 +28,25 @@
 			if ($result === FALSE) {
 				throw new InvalidArgumentException("Failed to load schema is not exists or you are not permission");
 			}
-			echo "<table id='tbl'><tr>";
-			while($row = $result->fetch()) 
-	     	{
-	    	    echo "<tr>";
-	    	    for ($i=0;$i<(sizeof($row)-1);$i++)
-	    	    {
-		           echo "<td>".$row[$i]."</td>";
-		        }
-		        echo "</tr>";
-		      }
-			echo "</table>";
+			$result = $result->fetchAll();
+
+			echo "<table class='table'><thead><tr>";
+				$n = 0;
+				foreach ($result[0] as $key => $value) {
+					if($n%2==0){
+						echo "<th><b>".strtoupper($key{0}).substr($key,1,strlen($key))."</b></th>";
+					}
+					$n++;
+				}
+			echo "</tr></thead><tbody>";
+			for ($i=0; $i < sizeof($result); $i++) { 
+				echo "<tr>";
+				for ($j=0; $j < sizeof($result[$i])/2; $j++) { 
+					echo "<th>".$result[$i][$j]."</th>";
+				}
+				echo "</tr>";
+			}
+			echo "</tbody></table>";
 		}
 
 		public function existsUserByEmail($email){
