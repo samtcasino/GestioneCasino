@@ -16,15 +16,14 @@
 					if($dbVerified == 1){
 						echo "Loggato con successo";
 					}else{
-						setcookie("error","Non è verificato",time()+300,"/");
-						header("Location: ../../login.html");
+						header("Location: ../../verifyMail.html");
 					}
 				}else{
-					setcookie("error","Password sbagliata",time()+300,"/");
+					setcookie("error","Password sbagliata",time()+1,"/");
 					header("Location: ../../login.html");
 				}
 			}else{
-				setcookie("error","Email non trovata",time()+300,"/");
+				setcookie("error","Email non trovata",time()+1,"/");
 				header("Location: ../../login.html");
 			}
 		}
