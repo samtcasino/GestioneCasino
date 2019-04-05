@@ -1,3 +1,14 @@
+<?php
+     require_once "php/loader.php";
+     session_start();
+     if(empty($_SESSION["username"])){
+          setcookie("error","Pagina non trovata :(", time() + 1000,"/");
+          header("Location: error.html");
+          exit();
+     }
+     
+     $queryRepose = $db->executeQueryWithoutFetch("select * from user where email = '".$_SESSION['username']."'")->fetch();
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +20,7 @@
 <meta name="author" content="gruppocasin02018">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>CashyLand - Aggiungi</title>
+<title>CashyLand - ModificaDati</title>
 <!--
 
 Template 2085 Neuron
@@ -39,13 +50,14 @@ http://www.tooplate.com/view/2085-neuron
 
 <div class="navbar navbar-default navbar-static-top" role="navigation">
      <div class="container">
+
           <div class="navbar-header">
                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand">Cashy Land</a>
+               <a href="index.html" class="navbar-brand">Ca$hy Land</a>
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
@@ -56,18 +68,19 @@ http://www.tooplate.com/view/2085-neuron
                     <li class="active"><a href="login.html">Accedi</a></li>
                </ul>
           </div>
-     </div>
+
+  </div>
 </div>
 
 <!-- Home Section -->
 
-<section id="home" class="main-profile parallax-section">
+<section id="home" class="main-login parallax-section">
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
 
                <div class="col-md-12 col-sm-12">
-                    <h1>Aggiungi [TIPO]</h1>
+                    <h1>Modifica i tuoi dati</h1>
                </div>
 
           </div>
@@ -81,45 +94,45 @@ http://www.tooplate.com/view/2085-neuron
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h2>Inserire dati</h2>
+                    <h2>Aggiugiungi Promozione</h2>
 
-                    <form method="post" id="registration_form">
-                         <div class="col-md-12 col-sm-12">
-                              <span>Titolo:</span>
-                              <input name="title" type="text" class="form-control" id="title" placeholder="Titolo">
+                    <form method="post" action="post/login/update.php" id="update_form">
+                         <div class="col-md-6 col-sm-6">
+                              <span>Nome:</span>
+                              <input value="<?php echo $queryRepose['name']?>" name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)">
                          </div>
-                         <div class="col-md-12 col-sm-12">
-                              <span>Immagine:</span>
-                              <div class="row">
-                                   <div class="col-md-6">
-                                        <div class="form-group files color">
-                                             <input type="file" class="form-control" accept="image/*">
-                                        </div>
-                                   </div>
-                              </div>
+                         <div class="col-md-6 col-sm-6">
+                              <span>Cognome:</span>
+                              <input value="<?php echo $queryRepose['surname']?>" name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>Via:</span>
+                              <input value="<?php echo $queryRepose['street']?>" name="address" type="text" class="form-control" id="address" placeholder="Via" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>No. Civico:</span>
+                              <input value="<?php echo $queryRepose['house_number']?>" name="houseNumber" type="text" class="form-control" id="houseNumber" placeholder="Numero Civico" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>CAP:</span>
+                              <input value="<?php echo $queryRepose['zip_code']?>" name="zipCode" type="text" class="form-control" id="zipCode" placeholder="CAP" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>Città:</span>
+                              <input value="<?php echo $queryRepose['city']?>" name="city" type="city" class="form-control" id="city" placeholder="Città" onkeydown="normal(this)">
+                         </div> 
+                         <div class="col-md-6 col-sm-6">
+                              <span>No. Telefono:</span>
+                              <input value="<?php echo $queryRepose['phone_number']?>" name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)">
                          </div>
-                         <div class="col-md-12 col-sm-12">
-                              <span>Descrizione:</span>
-                              <textarea name="description" type="text" class="form-control" id="description" placeholder="Inserisci una descrizione..."></textarea>
-                         </div>
+                         <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
-                              <input name="modify" type="button" class="form-control" id="modify" value="AGGIUNGI" onclick="checkAll()">
+                              <input name="modify" type="button" class="form-control" id="modify" value="MODIFICA" onclick="document.getElementById('update_form').submit()">
                          </div>
-                         
                     </form>
                </div>
 
           </div>
-          <br><br><br><br><br><br>
-          <div class="row">
-
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <h2>Vedi già le cose presenti:</h2>
-     
-                         
-                    </div>
-     
-               </div>
      </div>
 </section>
 
@@ -153,7 +166,7 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- SCRIPTS -->
 
-<script src="js/index.js"></script>
+
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.parallax.js"></script>

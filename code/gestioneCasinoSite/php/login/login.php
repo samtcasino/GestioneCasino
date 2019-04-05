@@ -8,13 +8,18 @@
 			$email = $_POST["email"];
 			$password = $_POST["password"];
 
-			$queryRepose = $db->executeQuery("select password,verified from user where email = '$email'");
+			$queryRepose = $db->executeQueryWithoutFetch("select password,verified,email from user where email = '$email'")->fetch();
+			var_dump($queryRepose);
 			if(!(gettype($queryRepose)=="boolean")){
+				
 				$dbPassword = $queryRepose["password"];
 				$dbVerified = $queryRepose["verified"];
 				if($password == $dbPassword){
 					if($dbVerified == 1){
-						echo "Loggato con successo";
+						session_start();
+						setcookie("email",$queryRepose["email"]^$privateKey, time() + (2592000*20), "../../");
+						$_SESSION["username"] = $email;
+						header("Location: ../../profile.php");
 					}else{
 						header("Location: ../../verifyMail.html");
 					}

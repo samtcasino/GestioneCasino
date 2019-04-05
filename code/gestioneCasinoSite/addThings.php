@@ -2,29 +2,31 @@
     require_once "php/loader.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $get = $_GET["type"];
-        $query = "Insert into $get(";
-        $n = 0;
-        foreach ($_POST as $key => $value) {
-            if($n+1 == sizeof($_POST))
-                $query .= $key;
-            else
-                $query .= $key . ",";
-            $n++;
-        }
-        $query .= ") values(";
-        $n = 0;
-        foreach ($_POST as $key => $value) {
-            if($n+1 == sizeof($_POST))
-                $query .= "'$value'";
-            else
-                $query .= "'$value'" . ",";
-            $n++;
-        }
-        $query .= ")";
-        //echo $query;
-        $db->executeQuery($query);
-        header("Refresh:0");
+          if(isset($_GET["type"])){
+          $get = $_GET["type"];
+          $query = "Insert into $get(";
+          $n = 0;
+          foreach ($_POST as $key => $value) {
+               if($n+1 == sizeof($_POST))
+                    $query .= $key;
+               else
+                    $query .= $key . ",";
+               $n++;
+          }
+          $query .= ") values(";
+          $n = 0;
+          foreach ($_POST as $key => $value) {
+               if($n+1 == sizeof($_POST))
+                    $query .= "'$value'";
+               else
+                    $query .= "'$value'" . ",";
+               $n++;
+          }
+          $query .= ")";
+          //echo $query;
+          $db->executeQuery($query);
+          header("Refresh:0");
+          }
     }
 ?>
 <!DOCTYPE html>
@@ -116,18 +118,35 @@ http://www.tooplate.com/view/2085-neuron
                         <?php
                             $get = $_GET['type'];
                             try{
-                                $result = $db->executeQuery("select * from $get");
-                                $n = 0;
-                                foreach ($result[0] as $key => $value) {
-                                    if($n%2==0){
-                                        echo "<div class='col-md-12 col-sm-12'>
-                                            <span>".strtoupper($key{0}).substr($key,1,strlen($key)).":</span>
-                                            <input name='$key' type='text' class='form-control' id='title' placeholder='".strtoupper($key{0}).substr($key,1,strlen($key))."'>
-                                        </div>";  
-                                    }
-                                    $n++;
-                                }
-                            }catch(InvalidArgumentException $iae){}
+                                   $result = $db->executeQuery("desc $get");
+                                   foreach ($result as $key => $value) {
+                                        for ($i=0; $i < 1; $i++) { 
+                                             if($i == 0){
+                                                  $type = "number";
+                                                  if (strpos($value[1], 'varchar') !== false) {
+                                                       $type = "text";
+                                                  }else if(strpos($value[1], 'datetime') !== false){
+                                                       $type = "date";
+                                                  }
+                                                  echo "<div class='col-md-12 col-sm-12'>
+                                                  <span>".$value[0].":</span>
+                                                  <input name='".$value[0]."' type='$type' class='form-control' id='".$value[0]."' placeholder='".$value[0]."'>
+                                                  </div>"; 
+                                             }
+                                        }
+                                        echo "<br>";
+                                   }
+                                   $n = 0;
+                                   /*foreach ($result[0] as $key => $value) {
+                                        if($n%2==0){
+                                             echo "<div class='col-md-12 col-sm-12'>
+                                             <span>".strtoupper($key{0}).substr($key,1,strlen($key)).":</span>
+                                             <input name='$key' type='text' class='form-control' id='title' placeholder='".strtoupper($key{0}).substr($key,1,strlen($key))."'>
+                                             </div>";  
+                                        }
+                                        $n++;
+                                   }*/
+                              }catch(InvalidArgumentException $iae){}
                         ?>
                          <!--
                          <div class="col-md-12 col-sm-12">
@@ -155,7 +174,8 @@ http://www.tooplate.com/view/2085-neuron
                         <h2>Vedi già le cose presenti:</h2>
                         <?php
                             $get = $_GET["type"];
-                            $db->printTableQuery("select * from $get");
+                            if(isset($_GET["type"]))
+                              $db->printTableQuery("select * from $get");
                         ?>
                 </div>
             </div>

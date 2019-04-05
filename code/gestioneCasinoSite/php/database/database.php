@@ -22,6 +22,13 @@
 			}
 			return $result->fetchAll();
 		} 
+		public function executeQueryWithoutFetch($query){
+			$result = $this->db->query($query);
+			if ($result === FALSE) {
+				throw new InvalidArgumentException("Failed to load schema is not exists or you are not permission");
+			}
+			return $result;
+		} 
 
 		public function printTableQuery($selectQuery){
 			$result = $this->db->query($selectQuery);
