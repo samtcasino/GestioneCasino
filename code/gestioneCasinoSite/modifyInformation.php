@@ -125,6 +125,10 @@ http://www.tooplate.com/view/2085-neuron
                               <span>No. Telefono:</span>
                               <input value="<?php echo $queryRepose['phone_number']?>" name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)">
                          </div>
+                         <div class="col-md-6 col-sm-6">
+                              <span>Data Nascita:</span>
+                              <input value="<?php echo $queryRepose['birthday']?>" name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)">
+                         </div>
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
                               <input name="modify" type="button" class="form-control" id="modify" value="MODIFICA" onclick="document.getElementById('update_form').submit()">
