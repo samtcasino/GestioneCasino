@@ -42,11 +42,20 @@ class SeleniumTestTest {
 
     void forgot(){
         WebElement forgot = null;
-        forget = driver.findElement(By.linkText("Hai dimenticato la password?"));
-        forget.click();
+        forgot = driver.findElement(By.linkText("Hai dimenticato la password?"));
+        forgot.click();
         wai();
         System.out.println(driver.getTitle());
         assertEquals("GestioneCasino - Password Smarrita?",driver.getTitle());
+    }
+
+    void giochi(){
+        WebElement giochi = null;
+        giochi = driver.findElement(By.linkText("Giochi"));
+        giochi.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("Neuron Template - About",driver.getTitle());
     }
 
     @Test
@@ -60,7 +69,7 @@ class SeleniumTestTest {
 
 
 
-        WebElement giochi = null;
+
         WebElement foto = null;
         WebElement map = null;
 
@@ -80,12 +89,8 @@ class SeleniumTestTest {
         accedi();
 
         home();
+        giochi();
 
-        giochi = driver.findElement(By.linkText("Giochi"));
-        giochi.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - About",driver.getTitle());
 
         foto = driver.findElement(By.linkText("Foto"));
         foto.click();
