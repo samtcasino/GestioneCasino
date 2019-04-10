@@ -23,6 +23,14 @@
 			return $result->fetchAll();
 		} 
 
+		public function executeQueryWithoutFetch($query){
+			$result = $this->db->query($query);
+			if ($result === FALSE) {
+				throw new InvalidArgumentException("Failed to load schema is not exists or you are not permission");
+			}
+			return $result;
+		} 
+
 		public function printTableQuery($selectQuery){
 			$result = $this->db->query($selectQuery);
 			if ($result === FALSE) {
@@ -69,8 +77,8 @@
 
 
 					$query = "Insert into user
-					(name,surname,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
-					values('$name','$surname','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
+					(name,surname,street,house_number,zip_code,city,email,phone_number,gender,password,verified,registration_date,admin) 
+					values('$name','$surname','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0,'2019-03-27',0)";
 					$this->executeQuery($query);
 				}else{
 					throw new InvalidArgumentException(get_class($user)." is not a User class");
