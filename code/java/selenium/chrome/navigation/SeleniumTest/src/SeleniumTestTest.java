@@ -58,13 +58,13 @@ class SeleniumTestTest {
         assertEquals("CashyLand - Giochi",driver.getTitle());
     }
 
-    void foto(){
-        WebElement foto = null;
-        foto = driver.findElement(By.linkText("Foto"));
-        foto.click();
+    void sale(){
+        WebElement sale = null;
+        sale = driver.findElement(By.linkText("Sale"));
+        sale.click();
         wai();
         System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - Gallery",driver.getTitle());
+        assertEquals("CashyLand - Sale",driver.getTitle());
     }
 
     void map(){
@@ -95,7 +95,8 @@ class SeleniumTestTest {
         accedi();
         home();
         giochi();
-        foto();
+        home();
+        sale();
         home();
         map();
 
