@@ -11,7 +11,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver = null;
 
     void home(){
         WebElement home = null;
@@ -55,7 +55,7 @@ class SeleniumTestTest {
         giochi.click();
         wai();
         System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - About",driver.getTitle());
+        assertEquals("CashyLand - Giochi",driver.getTitle());
     }
 
     void foto(){
@@ -69,7 +69,11 @@ class SeleniumTestTest {
 
     void map(){
         WebElement map = null;
-        
+        map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
+        map.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
     }
 
     @Test
@@ -77,16 +81,8 @@ class SeleniumTestTest {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
         //System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
         System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-
-
         //WebDriver driver = new ChromeDriver();
-
-
-
-
-
-
-
+        driver = new ChromeDriver();
         driver.get(URL);
         wai();
         System.out.println(driver.getTitle());
@@ -94,31 +90,14 @@ class SeleniumTestTest {
 
         accedi();
         registrati();
-
-
         accedi();
         forgot();
-
-
         accedi();
-
         home();
         giochi();
-
         foto();
-
-
         home();
-
-        map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
-        map.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
-
-        home();
-
-
+        map();
 
         System.out.println("OK");
 

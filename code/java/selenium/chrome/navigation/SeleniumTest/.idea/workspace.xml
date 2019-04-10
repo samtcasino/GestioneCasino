@@ -29,12 +29,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+            <state relative-caret-position="148">
+              <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2155#2156#0" expanded="true" />
-                <element signature="e#2192#2193#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,6 +186,15 @@
     <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 42m 37s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 53m 29s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 54m 58s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 56m 18s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3215000" />
@@ -205,7 +212,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -248,12 +255,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+        <state relative-caret-position="148">
+          <caret line="57" column="40" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="e#2192#2193#0" expanded="true" />
           </folding>
         </state>
       </provider>
