@@ -115,6 +115,9 @@ a:focus {
 .main-about,
 .main-single-post,
 .main-gallery,
+.main-game,
+.main-sale,
+.main-promozioni,
 .main-profile,
 .main-login {
     height: 65vh;
@@ -298,6 +301,18 @@ a:focus {
 
 .main-gallery {
    background: url('../images/gallery-bg.jpg') no-repeat;
+}
+
+.main-game {
+    background: url('../images/game.jpg') no-repeat;
+}
+
+.main-sale {
+    background: url('../images/sale.jpg') no-repeat;
+}
+
+.main-promozioni {
+    background: url('../images/promozioni.jpg') no-repeat;
 }
 
 .main-profile{
@@ -802,6 +817,9 @@ footer .footer-copyright {
     .main-single-post,
     .main-gallery,
     .main-profile,
+    .main-game,
+    .main-sale,
+    .main-promozioni,
     .main-login {
         height: 35vh;
     }
