@@ -72,11 +72,7 @@ class SeleniumTestTest {
         System.out.println(driver.getTitle());
         assertEquals("GestioneCasino - Login",driver.getTitle());
 
-        casa = driver.findElement(By.linkText("Home"));
-        casa.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Home",driver.getTitle());
+        home();
 
         giochi = driver.findElement(By.linkText("Giochi"));
         giochi.click();
@@ -90,17 +86,17 @@ class SeleniumTestTest {
         System.out.println(driver.getTitle());
         assertEquals("Neuron Template - Gallery",driver.getTitle());
 
-        casa = driver.findElement(By.linkText("Home"));
-        casa.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Home",driver.getTitle());
+        home();
 
         map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
         map.click();
         wai();
         System.out.println(driver.getTitle());
         assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
+
+        home();
+
+        
 
         System.out.println("OK");
 
