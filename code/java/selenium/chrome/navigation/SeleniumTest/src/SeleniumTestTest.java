@@ -58,6 +58,20 @@ class SeleniumTestTest {
         assertEquals("Neuron Template - About",driver.getTitle());
     }
 
+    void foto(){
+        WebElement foto = null;
+        foto = driver.findElement(By.linkText("Foto"));
+        foto.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("Neuron Template - Gallery",driver.getTitle());
+    }
+
+    void map(){
+        WebElement map = null;
+        
+    }
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -70,8 +84,8 @@ class SeleniumTestTest {
 
 
 
-        WebElement foto = null;
-        WebElement map = null;
+
+
 
         driver.get(URL);
         wai();
@@ -91,12 +105,8 @@ class SeleniumTestTest {
         home();
         giochi();
 
+        foto();
 
-        foto = driver.findElement(By.linkText("Foto"));
-        foto.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - Gallery",driver.getTitle());
 
         home();
 
