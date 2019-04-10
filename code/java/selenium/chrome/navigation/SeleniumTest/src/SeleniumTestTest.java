@@ -22,6 +22,33 @@ class SeleniumTestTest {
         assertEquals("CashyLand - Home",driver.getTitle());
     }
 
+    void accedi(){
+        WebElement accedi = null;
+        accedi = driver.findElement(By.linkText("Accedi"));
+        accedi.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("GestioneCasino - Login",driver.getTitle());
+    }
+
+    void registrati(){
+        WebElement registrati = null;
+        registrati = driver.findElement(By.name("register"));
+        registrati.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+    }
+
+    void forgot(){
+        WebElement forgot = null;
+        forget = driver.findElement(By.linkText("Hai dimenticato la password?"));
+        forget.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("GestioneCasino - Password Smarrita?",driver.getTitle());
+    }
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -30,9 +57,9 @@ class SeleniumTestTest {
 
 
         //WebDriver driver = new ChromeDriver();
-        WebElement accedi = null;
-        WebElement registrati = null;
-        WebElement forget = null;
+
+
+
         WebElement giochi = null;
         WebElement foto = null;
         WebElement map = null;
@@ -42,35 +69,15 @@ class SeleniumTestTest {
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Home",driver.getTitle());
 
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Login",driver.getTitle());
+        accedi();
+        registrati();
 
-        registrati = driver.findElement(By.name("register"));
-        registrati.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
 
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Login",driver.getTitle());
+        accedi();
+        forgot();
 
-        forget = driver.findElement(By.linkText("Hai dimenticato la password?"));
-        forget.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Password Smarrita?",driver.getTitle());
 
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Login",driver.getTitle());
+        accedi();
 
         home();
 
@@ -96,7 +103,7 @@ class SeleniumTestTest {
 
         home();
 
-        
+
 
         System.out.println("OK");
 
