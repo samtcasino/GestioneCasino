@@ -37,7 +37,7 @@
 			}
 			$result = $result->fetchAll();
 
-			echo "<table class='table'><thead><tr>";
+			echo "<table class='table' style='overflow-x:auto;'><thead><tr>";
 			echo "<th></th>";
 			echo "<th></th>";
 				$n = 0;
