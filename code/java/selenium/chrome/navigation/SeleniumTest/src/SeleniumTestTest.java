@@ -98,6 +98,15 @@ class SeleniumTestTest {
         home();
         sale();
         home();
+
+        WebElement giochi = null;
+        giochi = driver.findElement(By.linkText("Clicca qui per scoprirne di pìù"));
+        giochi.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("CashyLand - Giochi",driver.getTitle());
+
+        home();
         map();
 
         System.out.println("OK");
