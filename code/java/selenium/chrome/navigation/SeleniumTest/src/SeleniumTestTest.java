@@ -11,7 +11,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver = null;
 
     void home(){
         WebElement home = null;
@@ -42,11 +42,38 @@ class SeleniumTestTest {
 
     void forgot(){
         WebElement forgot = null;
-        forget = driver.findElement(By.linkText("Hai dimenticato la password?"));
-        forget.click();
+        forgot = driver.findElement(By.linkText("Hai dimenticato la password?"));
+        forgot.click();
         wai();
         System.out.println(driver.getTitle());
         assertEquals("GestioneCasino - Password Smarrita?",driver.getTitle());
+    }
+
+    void giochi(){
+        WebElement giochi = null;
+        giochi = driver.findElement(By.linkText("Giochi"));
+        giochi.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("CashyLand - Giochi",driver.getTitle());
+    }
+
+    void sale(){
+        WebElement sale = null;
+        sale = driver.findElement(By.linkText("Sale"));
+        sale.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("CashyLand - Sale",driver.getTitle());
+    }
+
+    void map(){
+        WebElement map = null;
+        map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
+        map.click();
+        wai();
+        System.out.println(driver.getTitle());
+        assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
     }
 
     @Test
@@ -54,16 +81,8 @@ class SeleniumTestTest {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
         //System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
         System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
-
-
         //WebDriver driver = new ChromeDriver();
-
-
-
-        WebElement giochi = null;
-        WebElement foto = null;
-        WebElement map = null;
-
+        driver = new ChromeDriver();
         driver.get(URL);
         wai();
         System.out.println(driver.getTitle());
@@ -71,39 +90,24 @@ class SeleniumTestTest {
 
         accedi();
         registrati();
-
-
         accedi();
         forgot();
-
-
         accedi();
-
+        home();
+        giochi();
+        home();
+        sale();
         home();
 
-        giochi = driver.findElement(By.linkText("Giochi"));
+        WebElement giochi = null;
+        giochi = driver.findElement(By.linkText("Clicca qui per scoprirne di pìù"));
         giochi.click();
         wai();
         System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - About",driver.getTitle());
-
-        foto = driver.findElement(By.linkText("Foto"));
-        foto.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("Neuron Template - Gallery",driver.getTitle());
+        assertEquals("CashyLand - Giochi",driver.getTitle());
 
         home();
-
-        map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
-        map.click();
-        wai();
-        System.out.println(driver.getTitle());
-        assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
-
-        home();
-
-
+        map();
 
         System.out.println("OK");
 

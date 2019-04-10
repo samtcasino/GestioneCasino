@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+            <state relative-caret-position="300">
+              <caret line="102" column="79" selection-start-line="102" selection-start-column="79" selection-end-line="102" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,18 +165,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 25m 17s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 26m 18s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 30m 04s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 33m 28s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 35m 39s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
@@ -184,6 +172,27 @@
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 42m 37s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 53m 29s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 54m 58s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 56m 18s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 57m 59s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 59m 28s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 03m 03s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 04m 31s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -203,7 +212,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24220963" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -246,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+        <state relative-caret-position="300">
+          <caret line="102" column="79" selection-start-line="102" selection-start-column="79" selection-end-line="102" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
