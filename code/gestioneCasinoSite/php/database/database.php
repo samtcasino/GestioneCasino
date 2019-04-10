@@ -38,6 +38,8 @@
 			$result = $result->fetchAll();
 
 			echo "<table class='table'><thead><tr>";
+			echo "<th></th>";
+			echo "<th></th>";
 				$n = 0;
 				foreach ($result[0] as $key => $value) {
 					if($n%2==0){
@@ -45,10 +47,18 @@
 					}
 					$n++;
 				}
+			
 			echo "</tr></thead><tbody>";
+			
+			
 			for ($i=0; $i < sizeof($result); $i++) { 
+				
 				echo "<tr>";
+				echo "<th><a href='php/database/modify.php?value=modify_$i'><i class='fa fa-pencil' id='modify_$i'></a></th>";
+				echo "<th><a href='php/database/modify.php?value=delete_$i><i class='fa fa-trash' id='delete_$i'></a></th>";
 				for ($j=0; $j < sizeof($result[$i])/2; $j++) { 
+					
+					//echo "<tr><i class='far fa-trash-alt' id='$i'></tr>";
 					echo "<th>".$result[$i][$j]."</th>";
 				}
 				echo "</tr>";
