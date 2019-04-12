@@ -22,7 +22,6 @@
 			}
 			return $result->fetchAll();
 		} 
-
 		public function executeQueryWithoutFetch($query){
 			$result = $this->db->query($query);
 			if ($result === FALSE) {
@@ -38,7 +37,9 @@
 			}
 			$result = $result->fetchAll();
 
-			echo "<table class='table'><thead><tr>";
+			echo "<table class='table' style='overflow-x:auto;'><thead><tr>";
+			echo "<th></th>";
+			echo "<th></th>";
 				$n = 0;
 				foreach ($result[0] as $key => $value) {
 					if($n%2==0){
@@ -46,10 +47,18 @@
 					}
 					$n++;
 				}
+			
 			echo "</tr></thead><tbody>";
+			
+			
 			for ($i=0; $i < sizeof($result); $i++) { 
+				
 				echo "<tr>";
+				echo "<th><a href='php/database/modify.php?value=modify_$i'><i class='fa fa-pencil' id='modify_$i'></a></th>";
+				echo "<th><a href='php/database/modify.php?value=delete_$i><i class='fa fa-trash' id='delete_$i'></a></th>";
 				for ($j=0; $j < sizeof($result[$i])/2; $j++) { 
+					
+					//echo "<tr><i class='far fa-trash-alt' id='$i'></tr>";
 					echo "<th>".$result[$i][$j]."</th>";
 				}
 				echo "</tr>";
@@ -65,6 +74,7 @@
 			if(gettype($user) == "object"){
 				if(get_class($user) == "User"){
 					$name =$user->getName();
+					$birthday = $user->getBirthday();
 					$surname=$user->getSurname();
 					$street=$user->getAddress();
 					$house_number=$user->getHouseNumber();
@@ -77,8 +87,8 @@
 
 
 					$query = "Insert into user
-					(name,surname,street,house_number,zip_code,city,email,phone_number,gender,password,verified,registration_date,admin) 
-					values('$name','$surname','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0,'2019-03-27',0)";
+					(name,surname,birthday,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
+					values('$name','$surname','$birthday','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
 					$this->executeQuery($query);
 				}else{
 					throw new InvalidArgumentException(get_class($user)." is not a User class");
