@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../../work diaries/2019.04.10_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../work diaries/2019.04.10_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SeleniumRegistrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeleniumTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumTestTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,19 +21,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SeleniumTest.java">
+        <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="36" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
+        <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1643">
-              <caret line="103" column="23" lean-forward="true" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+            <state relative-caret-position="442">
+              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -56,6 +63,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/SeleniumTest.java" />
         <option value="$PROJECT_DIR$/src/SeleniumTestTest.java" />
+        <option value="$PROJECT_DIR$/src/SeleniumRegistrationTest.java" />
+        <option value="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" />
       </list>
     </option>
   </component>
@@ -127,10 +136,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SeleniumTestTest">
+  <component name="RunManager" selected="JUnit.SeleniumRegistrationTestTest.test">
     <configuration name="SeleniumTest" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
       <module name="SeleniumTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumRegistrationTestTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SeleniumRegistrationTestTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,6 +165,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeleniumRegistrationTestTest.test" />
         <item itemvalue="JUnit.SeleniumTestTest" />
       </list>
     </recent_temporary>
@@ -165,18 +185,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 37m 38s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 42m 37s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 53m 29s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 54m 58s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumTestTest - 2019.04.10 at 15h 56m 18s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
@@ -195,14 +203,27 @@
     <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 07m 49s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.04.12 at 13h 55m 07s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 13h 55m 37s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 04m 09s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 07m 12s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.110738255" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11208054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -248,14 +269,31 @@
     <entry file="file://$PROJECT_DIR$/src/SeleniumTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <caret line="8" column="18" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="74" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1643">
-          <caret line="103" column="23" lean-forward="true" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
+        <state relative-caret-position="165">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
