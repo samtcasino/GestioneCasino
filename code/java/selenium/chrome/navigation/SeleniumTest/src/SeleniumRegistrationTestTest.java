@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Date;
 import java.text.*;
 import java.io.File;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class SeleniumRegistrationTestTest {
