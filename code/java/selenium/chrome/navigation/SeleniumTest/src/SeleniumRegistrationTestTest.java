@@ -110,7 +110,7 @@ class SeleniumRegistrationTestTest {
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
 
-        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
         Date date = new Date();
         insertEmail(email + dateFormat.format(date) + endEmail);
 

@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+            <state relative-caret-position="130">
+              <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,12 +182,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 03m 03s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 04m 31s.xml">
-      <configuration name="SeleniumTestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumTestTest - 2019.04.10 at 16h 07m 49s.xml">
       <configuration name="SeleniumTestTest" configurationId="JUnit" />
     </history-entry>
@@ -210,6 +204,12 @@
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 34m 36s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 41m 59s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 43m 34s.xml">
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -289,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+        <state relative-caret-position="130">
+          <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
