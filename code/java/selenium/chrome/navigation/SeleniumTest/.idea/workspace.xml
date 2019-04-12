@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="123" column="33" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="123" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+            <state relative-caret-position="323">
+              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,8 +298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="123" column="33" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="123" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -309,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

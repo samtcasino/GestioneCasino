@@ -43,6 +43,10 @@ class SeleniumLoginTestTest {
         accedi();
         insertEmail("selenium@selenium.com");
         insertPassword("Selenium&1");
+
+        assertEquals("GestioneCasino - Dopo login",driver.getTitle());
+
+        System.out.println("OK");
     }
 
     public void waitMillis(int millis) {
