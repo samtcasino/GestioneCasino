@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../work diaries/2019.04.12_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../work diaries/2019.04.12_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="123" column="33" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="436">
+              <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -296,20 +297,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
+    <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="123" column="33" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="123" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
+    <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+        <state relative-caret-position="436">
+          <caret line="89" column="9" lean-forward="true" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
