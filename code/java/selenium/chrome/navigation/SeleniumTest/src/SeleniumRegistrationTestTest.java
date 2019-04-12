@@ -94,7 +94,6 @@ class SeleniumRegistrationTestTest {
         driver = new ChromeDriver();
         driver.get(URL);
         waitMillis(1000);
-        System.out.println(driver.getTitle());
 
         assertEquals("CashyLand - Home",driver.getTitle());
         accedi();
