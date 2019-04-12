@@ -3,7 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import java.util.Date;
+import java.text.*;
 import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SeleniumRegistrationTestTest {
     private String URL = "http://cashyland.tk/";
     private WebDriver driver = null;
+    private String email = "seleniumtest";
+    private String endEmail = "@gmail.com";
 
     void accedi(){
         WebElement accedi = null;
@@ -100,14 +103,16 @@ class SeleniumRegistrationTestTest {
 
         insertName("Matteo");
         insertSurname("Forni");
-        insertBirthday("12.12.2012");
+        insertBirthday("12.12.2000");
         insertAddress("via test di selenium");
         insertHouseNumber("982");
-        insertZipCode("89");
+        insertZipCode("8999");
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
 
-        insertEmail("p");
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date date = new Date();
+        insertEmail(email + dateFormat.format(date) + endEmail);
 
         insertPassword("iuciuvhsd98ds98HBHB989");
         insertRePassword("iuciuvhsd98ds98HBHB989");
