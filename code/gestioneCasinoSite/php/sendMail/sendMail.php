@@ -13,13 +13,13 @@
 		{		
 			$this->mail = new PHPMailer(true);
 			$this->mail->isSMTP();                                      // Set mailer to use SMTP
-			$this->mail->Host = 'smtp.live.com';              // Specify main and backup SMTP servers
+			$this->mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
 			$this->mail->SMTPAuth = true;                               // Enable SMTP authentication
-			$this->mail->Username = 'gruppoCasin02018@hotmail.com';                 // SMTP username
-			$this->mail->Password = 'Gruppo2018';                           // SMTP password
+			$this->mail->Username = 'gruppocasino2018@gmail.com';                 // SMTP username
+			$this->mail->Password = 'Casin02018';                           // SMTP password
 			$this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			$this->mail->Port = 25;  
-			$this->mail->From = 'gruppoCasin02018@hotmail.com';
+			$this->mail->From = 'gruppocasino2018@gmail.com';
 			$this->mail->FromName = 'Verify Password';
 		}
 
