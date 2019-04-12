@@ -74,6 +74,7 @@
 			if(gettype($user) == "object"){
 				if(get_class($user) == "User"){
 					$name =$user->getName();
+					$birthday = $user->getBirthday();
 					$surname=$user->getSurname();
 					$street=$user->getAddress();
 					$house_number=$user->getHouseNumber();
@@ -86,8 +87,8 @@
 
 
 					$query = "Insert into user
-					(name,surname,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
-					values('$name','$surname','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
+					(name,surname,birthday,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
+					values('$name','$surname','$birthday','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
 					$this->executeQuery($query);
 				}else{
 					throw new InvalidArgumentException(get_class($user)." is not a User class");

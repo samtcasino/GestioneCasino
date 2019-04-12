@@ -26,11 +26,5 @@ function getCookie(cname) {
 }
 
 if(getCookie("error") != ""){
-     var inputs = document.getElementsByTagName("input");
-     inputs[0].style.backgroundColor = "#ffcccc";
-     inputs[1].style.backgroundColor = "#ffcccc";
      $.notify(getCookie("error"), { position:"bottom left" });          
-}else{
-     inputs[0].style.backgroundColor = "white";
-     inputs[1].style.backgroundColor = "white";
 }

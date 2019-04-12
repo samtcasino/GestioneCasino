@@ -13,7 +13,7 @@ final class SendMailTest extends TestCase
 
     public function testCanSendMail():void{
         $e = new SendMail();
-        $this->assertTrue($e->mailSend("gruppoCasin0@hotmail.com","test","test"));
+        $this->assertTrue($e->mailSend("gruppocasino@gmail.com","test","test"));
     }
 }
 ?>
