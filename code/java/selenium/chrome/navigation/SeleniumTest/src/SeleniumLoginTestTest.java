@@ -18,7 +18,7 @@ class SeleniumLoginTestTest {
         accedi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Login",driver.getTitle());
+        assertEquals("CashyLand - Login",driver.getTitle());
     }
 
     void insertEmail(String email){
@@ -31,6 +31,13 @@ class SeleniumLoginTestTest {
         pass.sendKeys(password);
     }
 
+    void pressButton(){
+        WebElement registrati = null;
+        registrati = driver.findElement(By.id("submit"));
+        registrati.click();
+        waitMillis(1000);
+    }
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -41,10 +48,10 @@ class SeleniumLoginTestTest {
 
         assertEquals("CashyLand - Home",driver.getTitle());
         accedi();
-        insertEmail("selenium@selenium.com");
-        insertPassword("Selenium&1");
-
-        assertEquals("GestioneCasino - Dopo login",driver.getTitle());
+        insertEmail("admin");
+        insertPassword("Password&1");
+        pressButton();
+        assertEquals("CashyLand - MyAccount",driver.getTitle());
 
         System.out.println("OK");
     }
