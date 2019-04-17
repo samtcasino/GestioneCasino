@@ -94,6 +94,134 @@ class SeleniumRegistrationTestTest {
         waitMillis(1000);
     }
 
+    String getEmail(){
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
+        Date date = new Date();
+        return email + dateFormat.format(date) + endEmail;
+    }
+
+    void testTextInputs(String text, String input){
+        insertBirthday("12.12.2000");
+        insertHouseNumber("982");
+        insertZipCode("8999");
+        insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        if(input.equalsIgnoreCase("name")){
+            insertSurname("Test");
+            insertCity("Lugano");
+            insertAddress("via test di selenium");
+            insertName(text);
+        }else if(input.equalsIgnoreCase("surname")){
+            insertName("Selenium");
+            insertCity("Lugano");
+            insertAddress("via test di selenium");
+            insertSurname(text);
+        }else if(input.equalsIgnoreCase("city")){
+            insertSurname("Test");
+            insertName("Selenium");
+            insertAddress("via test di selenium");
+            insertCity(text);
+        }else if(input.equalsIgnoreCase("address")){
+            insertSurname("Test");
+            insertCity("Lugano");
+            insertName("Selenium");
+            insertAddress(text);
+        }
+        pressButton();
+    }
+
+    void testBirthday(String birthday){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday(birthday);
+        insertAddress("via test di selenium");
+        insertHouseNumber("982");
+        insertZipCode("8999");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+    }
+
+    void testHouseNumber(String houseNumber){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber(houseNumber);
+        insertZipCode("8999");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+    }
+
+    void testZipCode(String zipCode){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("10");
+        insertZipCode(zipCode);
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+    }
+
+    void testEmail(String email){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("10");
+        insertZipCode("9876");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+        insertEmail(email);
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+    }
+
+    void testPhoneNumber(String phoneNumber){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("10");
+        insertZipCode("9876");
+        insertCity("Lugano");
+        insertPhoneNumber(phoneNumber);
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+    }
+
+    void testPassword(String password){
+        insertName("Selenium");
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("10");
+        insertZipCode("9876");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword(password);
+        insertRePassword(password);
+        pressButton();
+    }
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -111,15 +239,80 @@ class SeleniumRegistrationTestTest {
         pressButton();
         assertEquals("GestioneCasino - Registrazione",driver.getTitle());
 
-        /*Inputs with too long values*/
-        insertName("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertSurname("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertBirthday("12.12.3000");
-        insertAddress("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertHouseNumber("999999999");
-        insertZipCode("8999999");
-        insertCity("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertPhoneNumber("0798887766");
+        /*Test name*/
+        testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "name");
+        testTextInputs("21","name");
+        testTextInputs("S£l£nium~","name");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("NAME OK");
+
+        /*Test surname*/
+        testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "surname");
+        testTextInputs("21","surname");
+        testTextInputs("S£l£nium~","surname");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("SURNAME OK");
+
+        /*Test birthday*/
+        testBirthday("31.02.2010");
+        testBirthday("12.12.5000");
+        testBirthday("12.31.2000");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("BIRTHDAY OK");
+
+        /*Test address*/
+        testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "address");
+        testTextInputs("21","address");
+        testTextInputs("S£l£nium~","address");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("ADDRESS OK");
+
+        /*Test HouseNumber*/
+        testHouseNumber("jasnd");
+        testHouseNumber("7834548547583475419753947147171717147247");
+        testHouseNumber("8!$");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("HOUSENUMBER OK");
+
+        /*Test ZipCode*/
+        testZipCode("jasnd");
+        testZipCode("7834548547583475419753947147171717147247");
+        testZipCode("8!$");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("ZIPCODE OK");
+
+        /*Test city*/
+        testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "city");
+        testTextInputs("21","city");
+        testTextInputs("S£l£nium~","city");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("CITY OK");
+
+        /*Test PhoneNumber*/
+        testPhoneNumber("9238-12+12");
+        testPhoneNumber("7834548547583475419753947147171717147247");
+        testPhoneNumber("qwdxsas");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("PHONENUMBER OK");
+
+        /*Test Email*/
+        testEmail("email.com");
+        testEmail("email@");
+        testEmail("email@email");
+        testEmail("9283§912");
+        testEmail("ema$¨à¨!!il@email.09");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("EMAIL OK");
+
+        /*Test Password*/
+        testPhoneNumber("aaaaaaaa");
+        testPhoneNumber("AAaaaaaa");
+        testPhoneNumber("aaaaaaa12");
+        testPhoneNumber("1938u21");
+        testPhoneNumber("aaa!!~aaaa12");
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        System.out.println("PASSWORD OK");
+
 
         /*These test should work*/
         insertName("Matteo");
@@ -130,17 +323,7 @@ class SeleniumRegistrationTestTest {
         insertZipCode("8999");
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
-
-        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
-        Date date = new Date();
-        insertEmail(email + dateFormat.format(date) + endEmail);
-
-        insertPassword("iuciuvhsd98ds98HBHB989");
-        insertRePassword("iuciuvhsd98ds98HBHB989");
-
-
         assertEquals("GestioneCasino - Verifica Mail",driver.getTitle());
-
         System.out.println("OK");
     }
 
