@@ -87,6 +87,13 @@ class SeleniumRegistrationTestTest {
         repass.sendKeys(repassword);
     }
 
+    void pressButton(){
+        WebElement registrati = null;
+        registrati = driver.findElement(By.name("register"));
+        registrati.click();
+        waitMillis(1000);
+    }
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -99,6 +106,22 @@ class SeleniumRegistrationTestTest {
         accedi();
         registrati();
 
+        /*These tests should fail*/
+        /*Test with empty inputs*/
+        pressButton();
+        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+
+        /*Inputs with too long values*/
+        insertName("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        insertSurname("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        insertBirthday("12.12.3000");
+        insertAddress("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        insertHouseNumber("999999999");
+        insertZipCode("8999999");
+        insertCity("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        insertPhoneNumber("0798887766");
+
+        /*These test should work*/
         insertName("Matteo");
         insertSurname("Forni");
         insertBirthday("12.12.2000");
@@ -115,10 +138,7 @@ class SeleniumRegistrationTestTest {
         insertPassword("iuciuvhsd98ds98HBHB989");
         insertRePassword("iuciuvhsd98ds98HBHB989");
 
-        WebElement registrati = null;
-        registrati = driver.findElement(By.name("register"));
-        registrati.click();
-        waitMillis(1000);
+
         assertEquals("GestioneCasino - Verifica Mail",driver.getTitle());
 
         System.out.println("OK");
