@@ -44,8 +44,8 @@ final class DatabaseTestCase extends TestCase
 
     public function testCorrectReturn():void{
         $db = new Database("127.0.0.1",3306,"cashyland","casinoAdmin","Casin02018"); 
-        $result = $db->executeQueryWithoutFetch("select email,name from user where email = 'admin@admin.ch'")->fetch();
-        $this->assertTrue(($result["email"] == "admin@admin.ch" && $result["name"] == "admin"));
+        $result = $db->executeQueryWithoutFetch("select email,name from user where email = 'admin'")->fetch();
+        $this->assertTrue(($result["email"] == "admin" && $result["name"] == "admin"));
     }
 
     public function testNotCorrectReturn():void{

@@ -1,4 +1,4 @@
-co/*
+/*
 
 Template 2085 Neuron
 
@@ -514,6 +514,10 @@ a:focus {
 #description{
     height: 150px;
     resize: none;
+}
+
+.field{
+    margin-bottom: 20px;
 }
 
 /*---------------------------------------
