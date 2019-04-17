@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="" />
+    <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1916">
-              <caret line="308" column="36" lean-forward="true" selection-start-line="308" selection-start-column="36" selection-end-line="308" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="358" column="31" selection-start-line="358" selection-start-column="31" selection-end-line="358" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,7 +74,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-25" />
     <option name="y" value="30" />
     <option name="width" value="1750" />
@@ -182,9 +184,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 13h 55m 37s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 04m 09s.xml">
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
@@ -212,6 +211,9 @@
     <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 14h 44m 00s.xml">
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 08m 44s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3215000" />
@@ -229,7 +231,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24220963" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24220963" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -306,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1916">
-          <caret line="308" column="36" lean-forward="true" selection-start-line="308" selection-start-column="36" selection-end-line="308" selection-end-column="36" />
+        <state relative-caret-position="323">
+          <caret line="358" column="31" selection-start-line="358" selection-start-column="31" selection-end-line="358" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
