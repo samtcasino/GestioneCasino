@@ -118,7 +118,7 @@ function checkAll(){
         if(!checkPassword(inputs[9].value, inputs[10].value)){
             inputs[9].style.backgroundColor = "#ffcccc";
             inputs[10].style.backgroundColor = "#ffcccc";
-            $.notify("Password non corrispondenti!", { position:"bottom left" });
+            $.notify("Password non valide o corrispondenti!", { position:"bottom left" });
         }else{
             inputs[9].style.backgroundColor = "white";
             inputs[10].style.backgroundColor = "white";
@@ -129,6 +129,16 @@ function checkAll(){
 //rimuove il colore rosso dagli input errati
 function normal(input){
     input.style.backgroundColor = "white"; 
+}
+
+function tooltip(input, testo){
+    $(input).notify(
+        testo, 
+        { 
+            elementPosition:"bottom right",
+            className: 'info'
+        }
+      );
 }
 
 function register(){
