@@ -94,6 +94,36 @@ class SeleniumRegistrationTestTest {
         waitMillis(1000);
     }
 
+    String getEmail(){
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
+        Date date = new Date();
+        return email + dateFormat.format(date) + endEmail;
+    }
+
+    void testName(String name){
+        insertName(name);
+        insertSurname("Test");
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("982");
+        insertZipCode("8999");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+    }
+
+    void testSurname(String surname){
+        insertName("Selenium");
+        insertSurname(surname);
+        insertBirthday("12.12.2000");
+        insertAddress("via test di selenium");
+        insertHouseNumber("982");
+        insertZipCode("8999");
+        insertCity("Lugano");
+        insertPhoneNumber("0798887766");
+    }
+
+    void testBirthday("String birthday")
+
     @Test
     void test() {
         File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
@@ -111,15 +141,20 @@ class SeleniumRegistrationTestTest {
         pressButton();
         assertEquals("GestioneCasino - Registrazione",driver.getTitle());
 
-        /*Inputs with too long values*/
-        insertName("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertSurname("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertBirthday("12.12.3000");
-        insertAddress("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertHouseNumber("999999999");
-        insertZipCode("8999999");
-        insertCity("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        insertPhoneNumber("0798887766");
+        /*Test name*/
+        testName("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        pressButton();
+        testName("21");
+        pressButton();
+        testName("S£l£nium~");
+
+        /*Test surname*/
+        testSurname("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        pressButton();
+        testSurname("21");
+        pressButton();
+        testSurname("T£$t~");
+
 
         /*These test should work*/
         insertName("Matteo");
@@ -131,9 +166,7 @@ class SeleniumRegistrationTestTest {
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
 
-        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss");
-        Date date = new Date();
-        insertEmail(email + dateFormat.format(date) + endEmail);
+
 
         insertPassword("iuciuvhsd98ds98HBHB989");
         insertRePassword("iuciuvhsd98ds98HBHB989");
