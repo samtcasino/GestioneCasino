@@ -87,8 +87,38 @@
 
 
 					$query = "Insert into user
-					(name,surname,birthday,street,house_number,zip_code,city,email,phone_number,gender,password,verified) 
-					values('$name','$surname','$birthday','$street',$house_number,$zip_code,'$city','$email',$phone_number,'$gender','$password',0)";
+					(
+						name,
+						surname,
+						street,
+						house_number,
+						zip_code,
+						city,
+						email,
+						phone_number,
+						gender,
+						password,
+						verified,
+						birthday,
+						type,
+						admin
+					) 
+					values(
+						'$name',
+						'$surname',
+						'$street',
+						$house_number,
+						$zip_code,
+						'$city',
+						'$email',
+						$phone_number,
+						'$gender',
+						'$password',
+						0,
+						$birthday,
+						'occasionale',
+						0
+					)";
 					$this->executeQuery($query);
 				}else{
 					throw new InvalidArgumentException(get_class($user)." is not a User class");
