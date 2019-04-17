@@ -106,7 +106,10 @@ http://www.tooplate.com/view/2085-neuron
                     <div class="col-md-6 col-sm-6">
                         <h2>Modifica Password:</h2><br>
                         <p><span class="header-modify">Email: </span><span><?php echo $_SESSION["username"]?></span></p>
-                        <a href="resetPassword.html"><input type="button" class="form-control" value="Modifica Password" id="modify-password"></a>
+                        <form action="php/password/sendLostPassword.php" method="post">
+                              <input type="submit" class="form-control" value="Modifica password">
+                              <input type="hidden" <?php echo "value=".urlencode($queryRepose["email"]^$privateKey)?>>
+                         </form>
                     </div>
                     <div class="col-md-12 col-sm-12" id="utente">
                          <h2>Visualizza Promozioni:</h2>

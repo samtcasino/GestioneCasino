@@ -38,10 +38,8 @@
 				$mailSender->mailSend($_POST["email"],$subjet,$message);
 				header("Location: ../../../verifyMail.html");	
 			}catch(Exception $e){
-				echo $e;
-				/*
 				setcookie("error","Mail già in uso",time()+1,"/");
-				header("Location: ../../../registration.html");*/
+				header("Location: ../../../registration.html");
 			}
 		}
 	}
