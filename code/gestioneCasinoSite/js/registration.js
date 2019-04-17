@@ -135,7 +135,7 @@ function tooltip(input, testo){
     $(input).notify(
         testo, 
         { 
-            elementPosition:"bottom right",
+            elementPosition:"bottom left",
             className: 'info'
         }
       );
