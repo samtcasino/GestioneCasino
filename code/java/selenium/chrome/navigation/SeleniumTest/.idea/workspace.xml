@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="358" column="31" selection-start-line="358" selection-start-column="31" selection-end-line="358" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="363" selection-start-line="363" selection-end-line="363" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state relative-caret-position="-175">
               <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -184,21 +184,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 04m 09s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 07m 12s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 29m 55s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 33m 19s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 34m 36s.xml">
-      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.12 at 14h 41m 59s.xml">
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
@@ -212,6 +197,21 @@
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 08m 44s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 10m 14s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 12m 48s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 17m 20s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 20m 15s.xml">
+      <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeleniumRegistrationTestTest_test - 2019.04.17 at 15h 22m 17s.xml">
       <configuration name="SeleniumRegistrationTestTest.test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -231,7 +231,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24220963" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3796034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -298,7 +298,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="-175">
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -308,8 +308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="358" column="31" selection-start-line="358" selection-start-column="31" selection-end-line="358" selection-end-column="31" />
+        <state relative-caret-position="288">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
