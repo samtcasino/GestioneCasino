@@ -32,7 +32,7 @@ class SeleniumRegistrationTestTest {
         accedi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Login",driver.getTitle());
+        assertEquals("CashyLand - Login",driver.getTitle());
     }
 
     void registrati(){
@@ -41,7 +41,7 @@ class SeleniumRegistrationTestTest {
         registrati.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("GestioneCasino - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - Registrazione",driver.getTitle());
     }
 
     void insertName(String name){
@@ -338,11 +338,11 @@ class SeleniumRegistrationTestTest {
         System.out.println("EMAIL OK");
 
         /*Test Password*/
-        testPhoneNumber("aaaaaaaa");
-        testPhoneNumber("AAaaaaaa");
-        testPhoneNumber("aaaaaaa12");
-        testPhoneNumber("1938u21");
-        testPhoneNumber("aaa!!~aaaa12");
+        testPassword("aaaaaaaa");
+        testPassword("AAaaaaaa");
+        testPassword("aaaaaaa12");
+        testPassword("1938u21");
+        testPassword("aaa!!~aaaa12");
         assertEquals("CashyLand - Registrazione",driver.getTitle());
         System.out.println("PASSWORD OK");
 
@@ -356,6 +356,11 @@ class SeleniumRegistrationTestTest {
         insertZipCode("8999");
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
+        insertEmail(getEmail());
+        insertPassword("iuciuvhsd98ds98HBHB989");
+        insertRePassword("iuciuvhsd98ds98HBHB989");
+        pressButton();
+        waitMillis(1000);
         assertEquals("CashyLand - Verifica Mail",driver.getTitle());
         System.out.println("OK");
     }
