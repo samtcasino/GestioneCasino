@@ -76,14 +76,13 @@ http://www.tooplate.com/view/2085-neuron
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand">Cashy Land</a>
+               <a href="index.html" class="navbar-brand">Ca$hy Land</a>
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Giochi</a></li>
+                    <li><a href="game.html">Giochi</a></li>
                     <li><a href="sale.html">Sale</a></li>
-                    <li><a href="gallery.html">Foto</a></li>
                     <li class="active"><a href="login.html">Accedi</a></li>
                </ul>
           </div>
