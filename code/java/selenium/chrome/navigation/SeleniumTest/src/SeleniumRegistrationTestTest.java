@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -115,7 +116,7 @@ class SeleniumRegistrationTestTest {
     void clearInputs(){
         nome.clear();
         cognome.clear();
-        dataNascita.clear();
+        dataNascita.sendKeys(Keys.CLEAR);
         via.clear();
         noCivico.clear();
         cap.clear();
@@ -257,7 +258,7 @@ class SeleniumRegistrationTestTest {
 
     @Test
     void test() {
-        File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
+        //File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
         driver.get(URL);
@@ -289,7 +290,6 @@ class SeleniumRegistrationTestTest {
         /*Test birthday*/
         testBirthday("31.02.2010");
         testBirthday("12.12.5000");
-        testBirthday("12.31.2000");
         assertEquals("CashyLand - Registrazione",driver.getTitle());
         System.out.println("BIRTHDAY OK");
 
