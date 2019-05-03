@@ -53,7 +53,9 @@ class SeleniumLoginTestTest {
         pressButton();
         assertEquals("CashyLand - MyAccount",driver.getTitle());
 
+        assertNotEquals(driver.findElement(By.id("admin")), null);
         System.out.println("OK");
+
     }
 
     public void waitMillis(int millis) {
