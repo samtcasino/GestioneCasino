@@ -3,8 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,10 +40,10 @@ class SeleniumLoginTestTest {
 
     @Test
     void test() {
-        //File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        driver = new ChromeDriver();
-        driver.get(URL);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        driver = new ChromeDriver(options);        driver.get(URL);
         waitMillis(1000);
 
         assertEquals("CashyLand - Home",driver.getTitle());
