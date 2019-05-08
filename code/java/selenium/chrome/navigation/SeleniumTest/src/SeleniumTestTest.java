@@ -79,7 +79,6 @@ class SeleniumTestTest {
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
-        //WebDriver driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--ignore-certificate-errors"); 
