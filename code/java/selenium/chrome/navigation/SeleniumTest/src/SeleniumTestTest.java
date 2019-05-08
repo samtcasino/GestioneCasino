@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
@@ -15,7 +16,7 @@ class SeleniumTestTest {
         WebElement home = null;
         home = driver.findElement(By.linkText("Home"));
         home.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Home",driver.getTitle());
     }
@@ -24,7 +25,7 @@ class SeleniumTestTest {
         WebElement accedi = null;
         accedi = driver.findElement(By.linkText("Accedi"));
         accedi.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Login",driver.getTitle());
     }
@@ -33,7 +34,7 @@ class SeleniumTestTest {
         WebElement registrati = null;
         registrati = driver.findElement(By.name("register"));
         registrati.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Registrazione",driver.getTitle());
     }
@@ -42,7 +43,7 @@ class SeleniumTestTest {
         WebElement forgot = null;
         forgot = driver.findElement(By.linkText("Hai dimenticato la password?"));
         forgot.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Password Smarrita?",driver.getTitle());
     }
@@ -51,7 +52,7 @@ class SeleniumTestTest {
         WebElement giochi = null;
         giochi = driver.findElement(By.linkText("Giochi"));
         giochi.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Giochi",driver.getTitle());
     }
@@ -60,7 +61,7 @@ class SeleniumTestTest {
         WebElement sale = null;
         sale = driver.findElement(By.linkText("Sale"));
         sale.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Sale",driver.getTitle());
     }
@@ -69,20 +70,20 @@ class SeleniumTestTest {
         WebElement map = null;
         map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
         map.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
     }
 
     @Test
     void test() {
-        File file = new File("C:\\Users\\Utente\\Desktop\\Tutto\\2018-19\\modulo 306\\Utility\\Progetto 3\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe");
-        //System.setProperty("phantomjs.binary.path", file.getAbsolutePath());
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        //WebDriver driver = new ChromeDriver();
         driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--ignore-certificate-errors");
+        driver = new ChromeDriver(options);
         driver.get(URL);
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Home",driver.getTitle());
 
@@ -100,7 +101,7 @@ class SeleniumTestTest {
         WebElement giochi = null;
         giochi = driver.findElement(By.linkText("Clicca qui per scoprirne di pìù"));
         giochi.click();
-        wai();
+        waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Giochi",driver.getTitle());
 
@@ -111,9 +112,9 @@ class SeleniumTestTest {
         driver.quit();
     }
 
-    public void wai() {
+    public void waitMillis(int millis) {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
