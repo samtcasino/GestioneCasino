@@ -80,12 +80,9 @@ class SeleniumTestTest {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--ignore-certificate-errors"); 
-        options.addArguments("disable-infobars"); 
-        options.addArguments("--disable-extensions"); 
-        options.addArguments("--disable-dev-shm-usage"); 
         options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage"); 
+        
         driver = new ChromeDriver(options);
         driver.get(URL);
         waitMillis(1000);
