@@ -16,7 +16,10 @@
 		private $password;
 		private $zipCode;
 
-
+		/**
+		* Costruttore personalizzato che si occupa di inizializzare gli attributi di un utente.
+		* Prima di inizializzare controlla che l'informazione sia corretta.
+		*/
 		public function __construct($name,$surname,$birthday,$city,$zipCode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password)
 		{
 			$this->name = User::tryName($name);
