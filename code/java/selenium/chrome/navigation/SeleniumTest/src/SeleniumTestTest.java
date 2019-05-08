@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
@@ -78,6 +79,10 @@ class SeleniumTestTest {
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
+        //WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        driver = new ChromeDriver(options);
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
