@@ -81,7 +81,12 @@ class SeleniumTestTest {
         driver = new ChromeDriver();
         //WebDriver driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--ignore-certificate-errors");
+        options.addArguments("--headless");
+        options.addArguments("--ignore-certificate-errors"); 
+        options.addArguments("disable-infobars"); 
+        options.addArguments("--disable-extensions"); 
+        options.addArguments("--disable-dev-shm-usage"); 
+        options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
         driver.get(URL);
         waitMillis(1000);
