@@ -54,8 +54,7 @@ class SeleniumLoginTestTest {
         assertEquals("CashyLand - MyAccount",driver.getTitle());
 
         assertNotEquals(driver.findElement(By.id("admin")), null);
-        System.out.println(driver.findElement(By.id("admin")).getAttribute("class"));
-        assertEquals("col-md-12 col-sm-12",driver.findElement(By.id("admin")).getAttribute("class"));
+        assertEquals("admin section",driver.findElement(By.id("admin")).getAttribute("title"));
         System.out.println("OK");
 
     }
