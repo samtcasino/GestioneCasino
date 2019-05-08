@@ -115,7 +115,7 @@ http://www.tooplate.com/view/2085-neuron
                          <p>Cliccando il bottone qui sotto puoi visualizzare tutte le promozioni da utilizzare all\'interno del nostro casinò:</p>
                          <a href="resetPassword.html"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
                          <br>
-                    </div>';
+                    </div>
 
 
 
@@ -123,7 +123,7 @@ http://www.tooplate.com/view/2085-neuron
                     <?php 
                          if($queryRepose["admin"]==1){
                               echo'
-                              <div class="col-md-12 col-sm-12" id="admin">
+                              <div class="col-md-12 col-sm-12" id="admin" title="admin section">
                                    <h2>Gestione Utenti:</h2>
                                    <br>
                                    <p>Puoi gestire tutti gli utenti del sito, aggiungere o togliere qualsiasi utente: </p>

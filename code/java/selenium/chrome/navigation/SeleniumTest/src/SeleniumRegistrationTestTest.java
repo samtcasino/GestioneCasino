@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Date;
 import java.text.*;
-import java.io.File;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SeleniumRegistrationTestTest {
@@ -104,7 +103,7 @@ class SeleniumRegistrationTestTest {
         WebElement registrati = null;
         registrati = driver.findElement(By.name("register"));
         registrati.click();
-        waitMillis(1000);
+        waitMillis(1);
     }
 
     String getEmail(){
