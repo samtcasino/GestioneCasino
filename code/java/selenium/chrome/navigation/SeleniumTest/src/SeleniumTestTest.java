@@ -79,7 +79,10 @@ class SeleniumTestTest {
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--ignore-certificate-errors");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage"); 
+        
         driver = new ChromeDriver(options);
         driver.get(URL);
         waitMillis(1000);
