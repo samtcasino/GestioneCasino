@@ -123,7 +123,7 @@ http://www.tooplate.com/view/2085-neuron
                     <?php 
                          if($queryRepose["admin"]==1){
                               echo'
-                              <div class="col-md-12 col-sm-12" id="admin">
+                              <div class="col-md-12 col-sm-12" id="admin" title="admin section">
                                    <h2>Gestione Utenti:</h2>
                                    <br>
                                    <p>Puoi gestire tutti gli utenti del sito, aggiungere o togliere qualsiasi utente: </p>

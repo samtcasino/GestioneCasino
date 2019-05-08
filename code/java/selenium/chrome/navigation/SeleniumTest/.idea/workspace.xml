@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
