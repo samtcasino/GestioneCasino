@@ -115,7 +115,7 @@ http://www.tooplate.com/view/2085-neuron
                          <p>Cliccando il bottone qui sotto puoi visualizzare tutte le promozioni da utilizzare all\'interno del nostro casinò:</p>
                          <a href="resetPassword.html"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
                          <br>
-                    </div>';
+                    </div>
 
 
 
