@@ -110,12 +110,18 @@ http://www.tooplate.com/view/2085-neuron
                               <input type="hidden" <?php echo "value=".urlencode($queryRepose["email"]^$privateKey)?>>
                          </form>
                     </div>
-                    <div class="col-md-12 col-sm-12" id="utente">
-                         <h2>Visualizza Promozioni:</h2>
-                         <p>Cliccando il bottone qui sotto puoi visualizzare tutte le promozioni da utilizzare all\'interno del nostro casinò:</p>
-                         <a href="resetPassword.html"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
-                         <br>
-                    </div>
+                    <?php 
+                         if($queryRepose["admin"]==0){
+                              echo'
+                                   <div class="col-md-12 col-sm-12" id="utente">
+                                        <h2>Visualizza Promozioni:</h2>
+                                        <p>Cliccando il bottone qui sotto puoi visualizzare tutte le promozioni da utilizzare all\'interno del nostro casinò:</p>
+                                        <a href="resetPassword.html"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
+                                        <br>
+                                   </div>
+                              ';
+                         }
+                    ?>
 
 
 
@@ -145,6 +151,10 @@ http://www.tooplate.com/view/2085-neuron
                                    <h2>Gestione Promozioni:</h2>
                                    <p>Puoi gestire tutte le promozioni del sito, aggiungere o togliere qualsiasi promozioni:</p>
                                    <a href="addThings.php?type=user_promotion"><input type="button" class="form-control" value="Modifica Promozioni"></a>
+                                   <br>
+                                   <h2>Aggiungi immagine:</h2>
+                                   <p>Puoi caricare un immagine qualsiasi sul server. Dopodichè basterà solo selezionarla nelle gestioni.:</p>
+                                   <a href="uploadImage.php"><input type="button" class="form-control" value="Aggiungi file"></a>
                                    <br>
                               </div>
                               ';
