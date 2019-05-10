@@ -81,15 +81,18 @@ class SeleniumTestTest {
 
     @Test
     void test() throws IOException {
-        //System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        ChromeDriverService options = new ChromeDriverService.Builder()
-        .usingDriverExecutable(new File("/usr/bin/chromedriver"))
-        .usingAnyFreePort().withEnvironment(ImmutableMap.of("DISPLAY", ":1")).build();
+
+        String Xport = System.getProperty(
+                "lmportal.xvfb.id", ":1");
+        final File firefoxPath = new File(System.getProperty(
+                "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+        FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+        firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
         
-        options.start();
-        
-        driver = new ChromeDriver(options);
+        driver = new FirefoxDriver(firefoxBinary, null);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(URL);
+        
         waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Home",driver.getTitle());
