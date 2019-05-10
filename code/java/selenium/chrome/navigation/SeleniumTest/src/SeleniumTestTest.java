@@ -11,6 +11,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverService;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
@@ -93,10 +96,7 @@ class SeleniumTestTest {
         FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
         String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
-        driver = new FirefoxDriver( new GeckoDriverService.Builder()
-            .usingDriverExecutable(new File("/usr/bin/geckodriver"))
-            .usingFirefoxBinary(new FirefoxBinary(firefoxPath)))
-            .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
+        driver = new FirefoxDriver( new GeckoDriverService.Builder().usingDriverExecutable(new File("/usr/bin/geckodriver")).usingFirefoxBinary(new FirefoxBinary(firefoxPath))).withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
 
         driver.get(URL);
         waitMillis(1000);
