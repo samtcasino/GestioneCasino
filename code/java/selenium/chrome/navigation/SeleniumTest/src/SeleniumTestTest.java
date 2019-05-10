@@ -85,11 +85,13 @@ class SeleniumTestTest {
     @Test
     void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+       
+        String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
         driver = new FirefoxDriver( new GeckoDriverService.Builder()
             .usingDriverExecutable(new File("/usr/bin/geckodriver"))
             .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
-            .withEnvironment(ImmutableMap.of("DISPLAY", ":0")).build());
+            .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
 
         driver.get(URL);
         waitMillis(1000);
