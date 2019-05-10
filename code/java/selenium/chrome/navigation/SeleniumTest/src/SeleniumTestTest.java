@@ -83,17 +83,9 @@ class SeleniumTestTest {
     }
 
     @Test
-    void test() throws IOException {
-        /**
-        ChromeDriverService options = new ChromeDriverService.Builder()
-        .usingDriverExecutable(new File("/usr/bin/chromedriver"))
-        .usingAnyFreePort().withEnvironment(ImmutableMap.of("DISPLAY", ":1")).build();
-        options.start();
-        driver = new ChromeDriver(options);
-        */
-
+    void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-        FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+       
         String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
         driver = new FirefoxDriver( new GeckoDriverService.Builder()
