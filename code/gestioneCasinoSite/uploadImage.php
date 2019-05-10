@@ -150,27 +150,25 @@ http://www.tooplate.com/view/2085-neuron
 
 <?php
     require_once "php/loader.php";
-    $target_dir = "images/";
+    $target_dir = "mediaFiles/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    $message = "";
     if(isset($_POST["ok"])) {    
         if (file_exists($target_file)) {
-            echo "<script>alert('Sorry, file already exists.')</script>";
-            $uploadOk = 0;
-        }
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
-            echo "<script>alert('Sorry, your file is too large.')</script>";
+            $message .= "Sorry, file already exists. ";
             $uploadOk = 0;
         }
         if ($uploadOk == 0) {
-            echo "<script>alert('Sorry, your file was not uploaded.')</script>";
+            $message .= "Sorry, your file was not uploaded. "; 
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                echo "<script>alert('The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.')</script>";
+                $message.= "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. ";
             } else {
-                echo "<script>alert('Sorry, there was an error uploading your file.')</script>";
+                $message.="Sorry, there was an error uploading your file. ";
             }
         }
+        echo "<script>alert('$message');</script>";
     }
 ?>
