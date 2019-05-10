@@ -78,10 +78,10 @@ class SeleniumTestTest {
     @Test
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage"); 
+        ChromeDriverService options = new ChromeDriverService().Builder()
+        .usingAnyFreePort().withEnvironment(ImmutableMap.of("DISPLAY", ":1")).build();
+        
+        options.start();
         
         driver = new ChromeDriver(options);
         driver.get(URL);
