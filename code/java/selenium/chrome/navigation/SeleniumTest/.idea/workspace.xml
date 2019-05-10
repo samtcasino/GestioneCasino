@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e25267cc-0bfe-4da4-bc56-10536bf1ca4b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../../work diaries/2019.05.08_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../work diaries/2019.05.08_i3_davidi_dueblin_forni_pezzotti_toscanelli_diario_prog3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SeleniumTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SeleniumTestTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,11 +42,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="241">
+              <caret line="83" column="75" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SeleniumTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -81,10 +91,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/SeleniumRegistrationTest.java" />
         <option value="$PROJECT_DIR$/src/SeleniumLoginTest.java" />
-        <option value="$PROJECT_DIR$/src/SeleniumTest.java" />
-        <option value="$PROJECT_DIR$/src/SeleniumTestTest.java" />
         <option value="$PROJECT_DIR$/src/SeleniumLoginTestTest.java" />
         <option value="$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java" />
+        <option value="$PROJECT_DIR$/src/SeleniumTest.java" />
+        <option value="$PROJECT_DIR$/src/SeleniumTestTest.java" />
       </list>
     </option>
   </component>
@@ -107,7 +117,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,6 +133,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SeleniumRegistrationTestTest">
+  <component name="RunManager" selected="JUnit.SeleniumTestTest">
     <configuration name="SeleniumTest" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="SeleniumTest" />
       <module name="SeleniumTest" />
@@ -214,9 +224,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeleniumTestTest" />
         <item itemvalue="JUnit.SeleniumRegistrationTestTest" />
         <item itemvalue="JUnit.SeleniumLoginTestTest" />
-        <item itemvalue="JUnit.SeleniumTestTest" />
         <item itemvalue="JUnit.SeleniumRegistrationTestTest.test" />
         <item itemvalue="JUnit.SeleniumLoginTestTest.test" />
       </list>
@@ -237,9 +247,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SeleniumRegistrationTestTest - 2019.05.08 at 14h 14m 36s.xml">
-      <configuration name="SeleniumRegistrationTestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SeleniumRegistrationTestTest - 2019.05.08 at 14h 15m 29s.xml">
       <configuration name="SeleniumRegistrationTestTest" configurationId="JUnit" />
     </history-entry>
@@ -267,6 +274,9 @@
     <history-entry file="SeleniumRegistrationTestTest - 2019.05.08 at 14h 33m 36s.xml">
       <configuration name="SeleniumRegistrationTestTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SeleniumTestTest - 2019.05.10 at 14h 11m 19s.xml">
+      <configuration name="SeleniumTestTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="3215000" />
@@ -274,7 +284,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15598291" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15758547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -324,27 +334,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeleniumTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumRegistrationTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5576">
           <caret line="338" column="39" selection-start-line="338" selection-start-column="39" selection-end-line="338" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -358,10 +351,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeleniumLoginTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeleniumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SeleniumTestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="241">
+          <caret line="83" column="75" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
