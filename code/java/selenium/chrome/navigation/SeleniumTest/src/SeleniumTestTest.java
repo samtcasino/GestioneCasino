@@ -81,8 +81,9 @@ class SeleniumTestTest {
 
     @Test
     void test() throws IOException {
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        //System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         ChromeDriverService options = new ChromeDriverService.Builder()
+        .usingDriverExecutable(new File("/usr/bin/chromedriver"))
         .usingAnyFreePort().withEnvironment(ImmutableMap.of("DISPLAY", ":1")).build();
         
         options.start();
