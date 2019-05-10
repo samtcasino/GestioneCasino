@@ -83,7 +83,7 @@ class SeleniumTestTest {
     }
 
     @Test
-    void test() throws IOException {
+    void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
 
         driver = new FirefoxDriver( new GeckoDriverService.Builder()
