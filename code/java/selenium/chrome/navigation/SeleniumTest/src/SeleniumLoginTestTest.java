@@ -42,7 +42,9 @@ class SeleniumLoginTestTest {
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        options.addArguments("--headless"/*, "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"*/);
+        options.addArguments("--no-sandbox");
+        options.addArguments("--remote-debugging-port=9222");
         driver = new ChromeDriver(options);        driver.get(URL);
         waitMillis(1000);
 
