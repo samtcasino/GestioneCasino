@@ -1,12 +1,19 @@
+import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverService;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
@@ -77,6 +84,7 @@ class SeleniumTestTest {
 
     @Test
     void test() {
+<<<<<<< HEAD
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
@@ -85,6 +93,17 @@ class SeleniumTestTest {
         options.addArguments("--disable-dev-shm-usage"); 
         
         driver = new ChromeDriver(options);
+=======
+        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+       
+        String Xport = System.getProperty("lmportal.xvfb.id", ":1");
+
+        driver = new FirefoxDriver( new GeckoDriverService.Builder()
+            .usingDriverExecutable(new File("/usr/bin/geckodriver"))
+            .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
+            .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
+
+>>>>>>> 8fb1b5dd66f87ef6bc037da97181e3438508f44f
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
