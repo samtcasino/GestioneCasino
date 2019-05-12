@@ -78,6 +78,7 @@ class SeleniumTestTest {
     @Test
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
