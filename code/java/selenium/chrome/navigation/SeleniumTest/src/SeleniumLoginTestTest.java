@@ -47,28 +47,28 @@ class SeleniumLoginTestTest {
 
     void pressRoomsManagement(){
         WebElement button = null;
-        button = driver.findElement(By.id("modifyUser"));
+        button = driver.findElement(By.id("modifyRoom"));
         button.click();
         waitMillis(1000);
     }
 
     void pressGamesManagement(){
         WebElement button = null;
-        button = driver.findElement(By.id("modifyUser"));
+        button = driver.findElement(By.id("modifyGame"));
         button.click();
         waitMillis(1000);
     }
 
     void pressPromotionsManagement(){
         WebElement button = null;
-        button = driver.findElement(By.id("modifyUser"));
+        button = driver.findElement(By.id("modifyPromotion"));
         button.click();
         waitMillis(1000);
     }
 
-    void pressImmagessManagement(){
+    void pressImmagesManagement(){
         WebElement button = null;
-        button = driver.findElement(By.id("modifyUser"));
+        button = driver.findElement(By.id("modifyMedia"));
         button.click();
         waitMillis(1000);
     }
@@ -76,11 +76,12 @@ class SeleniumLoginTestTest {
     @Test
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"/*, "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"*/);
+        /*ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--remote-debugging-port=9222");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
+        driver = new ChromeDriver();
         driver.get(URL);
         waitMillis(1000);
 
@@ -97,12 +98,26 @@ class SeleniumLoginTestTest {
 
         pressUsersManagement();
         assertEquals("http://cashyland.tk/addThings.php?type=user",driver.getCurrentUrl());
+        driver.navigate().back();
+        waitMillis(1000);
 
         pressRoomsManagement();
         assertEquals("http://cashyland.tk/addThings.php?type=room",driver.getCurrentUrl());
+        driver.navigate().back();
+        waitMillis(1000);
 
         pressGamesManagement();
         assertEquals("http://cashyland.tk/addThings.php?type=game", driver.getCurrentUrl());
+        driver.navigate().back();
+        waitMillis(1000);
+
+        pressPromotionsManagement();
+        assertEquals("http://cashyland.tk/addThings.php?type=promotion", driver.getCurrentUrl());
+        driver.navigate().back();
+        waitMillis(1000);
+
+        pressImmagesManagement();
+        assertEquals("http://cashyland.tk/uploadImage.php", driver.getCurrentUrl());
     }
 
     public void waitMillis(int millis) {
