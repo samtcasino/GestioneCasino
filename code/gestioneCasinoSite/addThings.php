@@ -207,7 +207,6 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- SCRIPTS -->
 
-<script src="js/index.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.parallax.js"></script>
