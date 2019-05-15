@@ -47,7 +47,7 @@
 
 			$primaryKey = $this->db->query("SHOW KEYS FROM ".$tableName." WHERE Key_name = 'PRIMARY'")->fetchAll()[0]["Column_name"];
 			$primaryIndex = 0;
-			echo "<table class='table' style='overflow-x:auto;'><thead><tr>";
+			echo "<table class='table' style='table table-striped'><thead><tr>";
 			echo "<th></th>";
 			echo "<th></th>";
 				$n = 0;

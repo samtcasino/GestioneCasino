@@ -165,7 +165,7 @@ http://www.tooplate.com/view/2085-neuron
           </div>
           <br><br><br><br><br><br>
           <div class="row">
-                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="col-md-offset-1 col-md-10 col-sm-12 table-responsive text-nowrap">
                         <h2>Vedi già le cose presenti:</h2>
                         <?php
                             $get = $_GET["type"];
