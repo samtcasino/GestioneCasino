@@ -38,6 +38,41 @@ class SeleniumLoginTestTest {
         waitMillis(1000);
     }
 
+    void pressUsersManagement(){
+        WebElement button = null;
+        button = driver.findElement(By.id("modifyUser"));
+        button.click();
+        waitMillis(1000);
+    }
+
+    void pressRoomsManagement(){
+        WebElement button = null;
+        button = driver.findElement(By.id("modifyUser"));
+        button.click();
+        waitMillis(1000);
+    }
+
+    void pressGamesManagement(){
+        WebElement button = null;
+        button = driver.findElement(By.id("modifyUser"));
+        button.click();
+        waitMillis(1000);
+    }
+
+    void pressPromotionsManagement(){
+        WebElement button = null;
+        button = driver.findElement(By.id("modifyUser"));
+        button.click();
+        waitMillis(1000);
+    }
+
+    void pressImmagessManagement(){
+        WebElement button = null;
+        button = driver.findElement(By.id("modifyUser"));
+        button.click();
+        waitMillis(1000);
+    }
+
     @Test
     void test() {
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
@@ -45,7 +80,8 @@ class SeleniumLoginTestTest {
         options.addArguments("--headless"/*, "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors"*/);
         options.addArguments("--no-sandbox");
         options.addArguments("--remote-debugging-port=9222");
-        driver = new ChromeDriver(options);        driver.get(URL);
+        driver = new ChromeDriver(options);
+        driver.get(URL);
         waitMillis(1000);
 
         assertEquals("CashyLand - Home",driver.getTitle());
@@ -59,6 +95,14 @@ class SeleniumLoginTestTest {
         assertEquals("admin section",driver.findElement(By.id("admin")).getAttribute("title"));
         System.out.println("OK");
 
+        pressUsersManagement();
+        assertEquals("http://cashyland.tk/addThings.php?type=user",driver.getCurrentUrl());
+
+        pressRoomsManagement();
+        assertEquals("http://cashyland.tk/addThings.php?type=room",driver.getCurrentUrl());
+
+        pressGamesManagement();
+        assertEquals("http://cashyland.tk/addThings.php?type=game", driver.getCurrentUrl());
     }
 
     public void waitMillis(int millis) {

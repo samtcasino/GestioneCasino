@@ -133,33 +133,34 @@ http://www.tooplate.com/view/2085-neuron
                                    <h2>Gestione Utenti:</h2>
                                    <br>
                                    <p>Puoi gestire tutti gli utenti del sito, aggiungere o togliere qualsiasi utente: </p>
-                                   <a href="addThings.php?type=user"><input type="button" class="form-control" value="Modifica Utenti"></a>
+                                   <a href="addThings.php?type=user"><input id="modifyUser" type="button" class="form-control" value="Modifica Utenti"></a>
                                    <br>
                                    <br>
                                    <h2>Gestione Sale:</h2>
                                    <br>
                                    <p>Puoi gestire tutte le sale del sito, aggiungere o togliere qualsiasi sala: </p>
-                                   <a href="addThings.php?type=room"><input type="button" class="form-control" value="Modifica Sale"></a>
+                                   <a href="addThings.php?type=room"><input id="modifyRoom" type="button" class="form-control" value="Modifica Sale"></a>
                                    <br>
                                    <br>
                                    <h2>Gestione Giochi:</h2>
                                    <br>
                                    <p>Puoi gestire tutti i giochi del sito, aggiungere o togliere qualsiasi gioco:</p>
-                                   <a href="addThings.php?type=game"><input type="button" class="form-control" value="Modifica Giochi"></a>
+                                   <a href="addThings.php?type=game"><input id="modifyGame" type="button" class="form-control" value="Modifica Giochi"></a>
                                    <br>
                                    <br>
                                    <h2>Gestione Promozioni:</h2>
                                    <p>Puoi gestire tutte le promozioni del sito, aggiungere o togliere qualsiasi promozioni:</p>
-                                   <a href="addThings.php?type=promotion"><input type="button" class="form-control" value="Modifica Promozioni"></a>
+                                   <a href="addThings.php?type=promotion"><input id="modifyPromotion" type="button" class="form-control" value="Modifica Promozioni"></a>
                                    <br>
                                    <br>
                                    <h2>Aggiungi immagine:</h2>
                                    <p>Puoi caricare un immagine qualsiasi sul server. Dopodichè basterà solo selezionarla nelle gestioni.:</p>
-                                   <a href="uploadImage.php"><input type="button" class="form-control" value="Aggiungi file"></a>
+                                   <a href="uploadImage.php"><input id="modifyMedia" type="button" class="form-control" value="Aggiungi file"></a>
                                    <br>
                               </div>
                               ';
                          }
+                         
                     ?>
 
                </div>
