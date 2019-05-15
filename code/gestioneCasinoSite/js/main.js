@@ -4,7 +4,6 @@ function clickRegister(){
 
 //Metodo che ritorna un valore in base al cookie.
 function getCookie(cname) {
-     console.log("Loo");
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
