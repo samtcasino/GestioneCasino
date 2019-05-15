@@ -827,10 +827,6 @@ footer .footer-copyright {
     .main-login {
         height: 35vh;
     }
-
-    #modify-password {
-        margin-top: 0px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -856,6 +852,10 @@ footer .footer-copyright {
 
     #button-login {
         float: none;
+    }
+
+    #modify-password {
+        margin-top: 0px;
     }
 }
 
