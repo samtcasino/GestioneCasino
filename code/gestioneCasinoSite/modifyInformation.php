@@ -130,7 +130,7 @@ http://www.tooplate.com/view/2085-neuron
                          </div>
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
-                              <input name="modify" type="button" class="form-control" id="modify" value="MODIFICA" onclick="document.getElementById('update_form').submit()">
+                              <input name="modify" type="button" class="form-control" id="modify" value="MODIFICA" onclick="checkAll()">
                          </div>
                     </form>
                </div>
