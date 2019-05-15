@@ -59,7 +59,7 @@ function checkAll(){
     var inputs = document.getElementsByTagName("input");
     if(checkName(inputs[0].value) && checkName(inputs[1].value) && checkDate(inputs[2].value) && checkName(inputs[3].value) && 
     checkCivicNumber(inputs[4].value) && checkNap(inputs[5].value) && checkName(inputs[6].value)  && checkNumber(inputs[7].value)){
-        document.getElementById("registration_form").submit();
+        document.getElementById('update_form').submit();
     }else{
         if(!checkName(inputs[0].value)){
             inputs[0].style.backgroundColor = "#ffcccc";
@@ -115,4 +115,15 @@ function checkAll(){
 //rimuove il colore rosso dagli input errati
 function normal(input){
     input.style.backgroundColor = "white"; 
+}
+
+//metodo che aggiunge una notifica al campo
+function tooltip(input, testo){
+    $(input).notify(
+        testo, 
+        { 
+            elementPosition:"bottom right",
+            className: 'info'
+        }
+      );
 }

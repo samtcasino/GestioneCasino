@@ -87,7 +87,7 @@ class SeleniumTestTest {
     @Test
     void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-        String Xport = System.getProperty("lmportal.xvfb.id", ":1");
+        String Xport = System.getProperty("lmportal.xvfb.id", ":0");
 
         driver = new FirefoxDriver(new GeckoDriverService.Builder()
                 .usingDriverExecutable(new File("/usr/bin/geckodriver"))
