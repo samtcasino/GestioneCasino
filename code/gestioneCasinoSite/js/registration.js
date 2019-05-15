@@ -140,7 +140,3 @@ function tooltip(input, testo){
         }
       );
 }
-
-function register(){
-
-}
