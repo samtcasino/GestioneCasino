@@ -1,109 +1,103 @@
 import com.google.common.collect.ImmutableMap;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import java.io.File;
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
+
+import java.io.File;
 
 class SeleniumTestTest {
     String URL = "http://cashyland.tk/";
     WebDriver driver = null;
 
-    void home(){
+    @Test
+    void home() {
         WebElement home = null;
         home = driver.findElement(By.linkText("Home"));
         home.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Home",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Home", driver.getTitle());
     }
 
-    void accedi(){
+    @Test
+    void accedi() {
         WebElement accedi = null;
         accedi = driver.findElement(By.linkText("Accedi"));
         accedi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Login",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Login", driver.getTitle());
     }
 
-    void registrati(){
+    @Test
+    void registrati() {
         WebElement registrati = null;
         registrati = driver.findElement(By.name("register"));
         registrati.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Registrazione", driver.getTitle());
     }
 
-    void forgot(){
+    @Test
+    void forgot() {
         WebElement forgot = null;
         forgot = driver.findElement(By.linkText("Hai dimenticato la password?"));
         forgot.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Password Smarrita?",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Password Smarrita?", driver.getTitle());
     }
 
-    void giochi(){
+    @Test
+    void giochi() {
         WebElement giochi = null;
         giochi = driver.findElement(By.linkText("Giochi"));
         giochi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Giochi",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Giochi", driver.getTitle());
     }
 
-    void sale(){
+    @Test
+    void sale() {
         WebElement sale = null;
         sale = driver.findElement(By.linkText("Sale"));
         sale.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Sale",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Sale", driver.getTitle());
     }
 
-    void map(){
+    @Test
+    void map() {
         WebElement map = null;
         map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
         map.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("Mandalay Bay Resort and Casino - Google Maps",driver.getTitle());
+        Assertions.assertEquals("Mandalay Bay Resort and Casino - Google Maps", driver.getTitle());
     }
 
     @Test
     void test() {
-        /*System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        driver = new ChromeDriver(options);*/
-		
-        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));    
+        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
         String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
-        driver = new FirefoxDriver( new GeckoDriverService.Builder()
-            .usingDriverExecutable(new File("/usr/bin/geckodriver"))
-            .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
-            .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
+        driver = new FirefoxDriver(new GeckoDriverService.Builder()
+                .usingDriverExecutable(new File("/usr/bin/geckodriver"))
+                .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
+                .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
 
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Home",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Home", driver.getTitle());
 
         accedi();
         registrati();
@@ -121,7 +115,7 @@ class SeleniumTestTest {
         giochi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        assertEquals("CashyLand - Giochi",driver.getTitle());
+        Assertions.assertEquals("CashyLand - Giochi", driver.getTitle());
 
         home();
         map();
