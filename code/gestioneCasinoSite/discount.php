@@ -55,9 +55,9 @@ http://www.tooplate.com/view/2085-neuron
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="game.html">Giochi</a></li>
-                    <li><a href="sale.html">Sale</a></li>
-                    <li class="active"><a href="discount.html">Promozioni</a></li>
+                    <li><a href="game.php">Giochi</a></li>
+                    <li><a href="sale.php">Sale</a></li>
+                    <li class="active"><a href="discount.php">Promozioni</a></li>
                     <li><a href="login.html">Accedi</a></li>
                </ul>
           </div>
