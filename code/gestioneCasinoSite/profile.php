@@ -139,7 +139,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <h2>Gestione Sale:</h2>
                                    <br>
                                    <p>Puoi gestire tutte le sale del sito, aggiungere o togliere qualsiasi sala: </p>
-                                   <a href="addThings.php?type=user_promotion"><input type="button" class="form-control" value="Modifica Sale"></a>
+                                   <a href="addThings.php?type=room"><input type="button" class="form-control" value="Modifica Sale"></a>
                                    <br>
                                    <br>
                                    <h2>Gestione Giochi:</h2>
@@ -150,7 +150,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <br>
                                    <h2>Gestione Promozioni:</h2>
                                    <p>Puoi gestire tutte le promozioni del sito, aggiungere o togliere qualsiasi promozioni:</p>
-                                   <a href="addThings.php?type=user_promotion"><input type="button" class="form-control" value="Modifica Promozioni"></a>
+                                   <a href="addThings.php?type=promotion"><input type="button" class="form-control" value="Modifica Promozioni"></a>
                                    <br>
                                    <br>
                                    <h2>Aggiungi immagine:</h2>
