@@ -93,7 +93,7 @@ http://www.tooplate.com/view/2085-neuron
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h2>Aggiugiungi Promozione</h2>
+                    <h2>Aggiungi Promozione</h2>
 
                     <form method="post" action="post/login/update.php" id="update_form">
                          <div class="col-md-6 col-sm-6">
