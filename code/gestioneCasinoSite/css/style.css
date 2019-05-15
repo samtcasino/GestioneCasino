@@ -854,9 +854,6 @@ footer .footer-copyright {
         float: none;
     }
 
-    #modify-password {
-        margin-top: 0px;
-    }
 }
 
 @media (max-width: 650px) {
@@ -871,6 +868,10 @@ footer .footer-copyright {
     #blog-single-post {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+
+    #modify-password {
+        margin-top: 0px;
     }
 }
 
