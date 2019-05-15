@@ -37,13 +37,28 @@
 			}
 			$result = $result->fetchAll();
 
+			$tableName = explode(" ",$selectQuery);
+			for($i = 1; $i <sizeof($tableName);$i++){
+				if($tableName[$i-1] == "from"){
+					$tableName = $tableName[$i];
+					break;
+				}
+			}
+
+			$primaryKey = $this->db->query("SHOW KEYS FROM ".$tableName." WHERE Key_name = 'PRIMARY'")->fetchAll()[0]["Column_name"];
+			$primaryIndex = 0;
 			echo "<table class='table' style='overflow-x:auto;'><thead><tr>";
 			echo "<th></th>";
 			echo "<th></th>";
 				$n = 0;
 				foreach ($result[0] as $key => $value) {
 					if($n%2==0){
-						echo "<th><b>".strtoupper($key{0}).substr($key,1,strlen($key))."</b></th>";
+						if($key != $primaryKey){
+							echo "<th><b>".strtoupper($key{0}).substr($key,1,strlen($key))."</b></th>";
+						}else{
+							echo "<th><u><b>".strtoupper($key{0}).substr($key,1,strlen($key))."</u> <i class='fas fa-key'></i></b></th>";	
+							$primaryIndex = $n;
+						}
 					}
 					$n++;
 				}
@@ -54,12 +69,16 @@
 			for ($i=0; $i < sizeof($result); $i++) { 
 				
 				echo "<tr>";
-				echo "<th><a href='php/database/modify.php?value=modify_$i'><i class='fa fa-pencil' id='modify_$i'></a></th>";
-				echo "<th><a href='php/database/modify.php?value=delete_$i><i class='fa fa-trash' id='delete_$i'></a></th>";
+				echo "<th><a href='php/database/remove.php?table=$tableName&key="."$primaryKey"."&value=".$result[$i][$primaryIndex/2]."'><i class='fas fa-trash-alt'></i></a></th>";
+				echo "<th><a href='php/database/modify.php?table=$tableName&key="."$primaryKey"."&value=".$result[$i][$primaryIndex/2]."'><i class='fas fa-pencil-alt'></i></a></th>";
 				for ($j=0; $j < sizeof($result[$i])/2; $j++) { 
 					
 					//echo "<tr><i class='far fa-trash-alt' id='$i'></tr>";
-					echo "<th>".$result[$i][$j]."</th>";
+					if($j != $primaryIndex/2){
+						echo "<th>".$result[$i][$j]."</th>";
+					}else{
+						echo "<th><u>".$result[$i][$j]."</u></th>";
+					}
 				}
 				echo "</tr>";
 			}
