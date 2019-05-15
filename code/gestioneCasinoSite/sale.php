@@ -1,3 +1,6 @@
+<?php
+     require_once "php/loader.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>CashyLand - Promozioni</title>
+<title>CashyLand - Sale</title>
 <!--
 
 Template 2085 Neuron
@@ -53,8 +56,7 @@ http://www.tooplate.com/view/2085-neuron
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="game.html">Giochi</a></li>
-                    <li><a href="sale.html">Sale</a></li>
-                    <li class="active"><a href="discount.html">Promozioni</a></li>
+                    <li class="active"><a href="sale.html">Sale</a></li>
                     <li><a href="login.html">Accedi</a></li>
                </ul>
           </div>
@@ -64,13 +66,13 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- Home Section -->
 
-<section id="home" class="main-promozioni parallax-section">
+<section id="home" class="main-sale parallax-section">
      <div class="overlay"></div>
      <div class="container">
           <div class="row">
 
                <div class="col-md-12 col-sm-12">
-                    <h1>Le Vostre Promozioni</h1>
+                    <h1>Le Nostre Sale</h1>
                </div>
 
           </div>
@@ -83,19 +85,30 @@ http://www.tooplate.com/view/2085-neuron
      <div class="container"> 
          <div class="row">
              <div class="col-md-offset-1 col-md-10 col-sm-12"> 
-                 <div class="blog-post-thumb">
-                     <div class="blog-post-image" id="[num]"> 
-                         <img src="images/edificio.jpg" class="img-responsive" alt="Blog Image"> 
-                     </div>                             
-                     <div class="blog-post-title"> 
-                         <h3>[Titolo]</h3> 
-                     </div>                             
-                     <div class="blog-post-des">
-                         <p>[Descizione}</p>
-                     </div>
-                 </div>                                                
-             </div>
-         </div>                 
+                 <div class="blog-post-thumb"
+
+                    <?php                    
+                         $files = $db->executeQuery("select media_url,room_location from room_media");               
+                         $n = 0;
+                         foreach ($files as $key => $value) {
+                              $roomDescription = $db->executeQuery("select description from room where location = '".$value["room_location"]."'");
+                              echo"
+                                   <div class='blog-post-image' id='$n'> 
+                                        <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'> 
+                                   </div>                             
+                                   <div class='blog-post-title'> 
+                                        <h3>".$value["room_location"]."</h3> 
+                                   </div>                             
+                                   <div class='blog-post-des'>
+                                        <p>".$roomDescription[0]["description"]."</p>
+                                   </div>
+                              ";
+                              $n++;
+                         }
+                    ?>
+                    </div>                                                
+               </div>
+          </div>                 
      </div>             
  </section> 
 

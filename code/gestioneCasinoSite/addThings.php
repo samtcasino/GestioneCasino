@@ -54,6 +54,7 @@ http://www.tooplate.com/view/2085-neuron
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 </head>
 <body>
@@ -124,7 +125,7 @@ http://www.tooplate.com/view/2085-neuron
                                                   $type = "number";
                                                   if (strpos($value[1], 'varchar') !== false) {
                                                        $type = "text";
-                                                  }else if(strpos($value[1], 'datetime') !== false){
+                                                  }else if(strpos($value[1], 'date') !== false){
                                                        $type = "date";
                                                   }
                                                   echo "<div class='col-md-12 col-sm-12'>
@@ -135,35 +136,30 @@ http://www.tooplate.com/view/2085-neuron
                                         }
                                         echo "<br>";
                                    }
-                                   $n = 0;
-                                   /*foreach ($result[0] as $key => $value) {
-                                        if($n%2==0){
-                                             echo "<div class='col-md-12 col-sm-12'>
-                                             <span>".strtoupper($key{0}).substr($key,1,strlen($key)).":</span>
-                                             <input name='$key' type='text' class='form-control' id='title' placeholder='".strtoupper($key{0}).substr($key,1,strlen($key))."'>
-                                             </div>";  
-                                        }
-                                        $n++;
-                                   }*/
+                                   
                               }catch(InvalidArgumentException $iae){}
                         ?>
-                         <!--
-                         <div class="col-md-12 col-sm-12">
-                              <span>Immagine:</span>
-                              <div class="row">
-                                   <div class="col-md-6">
-                                        <div class="form-group files color">
-                                             <input type="file" class="form-control" accept="image/*">
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>-->
 
                          <div class="col-md-12 col-sm-12" id="button-login">
                               <input name="modify" type="button" class="form-control" id="modify" value="AGGIUNGI" onclick="document.getElementById('registration_form').submit()">
                          </div>
                          
                     </form>
+                    <?php
+                         if($_GET["type"] == "room"){
+                              echo'
+                                   <a href="addThings.php?type=room_media"><input type="button" class="form-control" value="Aggiungi un immagine alla sala!"></a>
+                              ';
+                         }else if($_GET["type"] == "game"){
+                              echo'
+                                   <a href="addThings.php?type=game_media"><input type="button" class="form-control" value="Aggiungi un immagine al gioco!"></a>
+                              ';
+                         }else if($_GET["type"] == "promotion"){
+                              echo'
+                                   <a href="addThings.php?type=promotion_media"><input type="button" class="form-control" value="Aggiungi un immagine alla promozione!"></a>
+                              ';
+                         }
+                    ?>
                </div>
 
           </div>
