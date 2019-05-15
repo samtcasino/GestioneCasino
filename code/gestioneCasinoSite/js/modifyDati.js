@@ -125,5 +125,6 @@ function tooltip(input, testo){
             elementPosition:"bottom right",
             className: 'info'
         }
+        
       );
 }
