@@ -1,6 +1,6 @@
 public class SeleniumUpdateUserTest {
     public static void main(String[] args) {
-        SeleniumUpdateUserTestTest sut = SeleniumUpdateUserTestTest();
+        SeleniumUpdateUserTestTest sut = new SeleniumUpdateUserTestTest();
         sut.test();
     }
 }
