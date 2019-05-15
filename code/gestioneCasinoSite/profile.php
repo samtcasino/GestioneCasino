@@ -100,7 +100,7 @@ http://www.tooplate.com/view/2085-neuron
                         <p><span class="header-modify">Nome: </span><span><?php echo $queryRepose["name"]?></span></p>
                         <p><span class="header-modify">Cognome: </span><span><?php echo $queryRepose["surname"]?></span></p>
                         <p><span class="header-modify">Nascita: </span><span><?php echo $queryRepose["birthday"]?></span></p>
-                        <a href="modifyInformation.php"><input type="button" class="form-control" value="Modifica Dati"></a>
+                        <a href="modifyInformation.php"><input id="modifyInformation" type="button" class="form-control" value="Modifica Dati"></a>
                     </div>
                     <div class="col-md-6 col-sm-6">
                         <h2>Modifica Password:</h2><br>
