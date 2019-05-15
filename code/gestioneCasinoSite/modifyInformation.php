@@ -98,35 +98,35 @@ http://www.tooplate.com/view/2085-neuron
                     <form method="post" action="post/login/update.php" id="update_form">
                          <div class="col-md-6 col-sm-6">
                               <span>Nome:</span>
-                              <input value="<?php echo $queryRepose['name']?>" name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['name']?>" name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <span>Cognome:</span>
-                              <input value="<?php echo $queryRepose['surname']?>" name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['surname']?>" name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Via:</span>
-                              <input value="<?php echo $queryRepose['street']?>" name="address" type="text" class="form-control" id="address" placeholder="Via" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['street']?>" name="address" type="text" class="form-control" id="address" placeholder="Via" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>No. Civico:</span>
-                              <input value="<?php echo $queryRepose['house_number']?>" name="houseNumber" type="text" class="form-control" id="houseNumber" placeholder="Numero Civico" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['house_number']?>" name="houseNumber" type="text" class="form-control" id="houseNumber" placeholder="Numero Civico" onkeydown="normal(this)" onfocus="tooltip(this, ' Max 4 caratteri, numero ed eventualmente lettera')">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>CAP:</span>
-                              <input value="<?php echo $queryRepose['zip_code']?>" name="zipCode" type="text" class="form-control" id="zipCode" placeholder="CAP" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['zip_code']?>" name="zipCode" type="text" class="form-control" id="zipCode" placeholder="CAP" onkeydown="normal(this)" onfocus="tooltip(this, '4-5 Numeri')">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>Città:</span>
-                              <input value="<?php echo $queryRepose['city']?>" name="city" type="city" class="form-control" id="city" placeholder="Città" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['city']?>" name="city" type="city" class="form-control" id="city" placeholder="Città" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
                          </div> 
                          <div class="col-md-6 col-sm-6">
                               <span>No. Telefono:</span>
-                              <input value="<?php echo $queryRepose['phone_number']?>" name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['phone_number']?>" name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)" onfocus="tooltip(this, 'Solo numeri, spazi, più e cancelleto')">
                          </div>
                          <div class="col-md-6 col-sm-6">
                               <span>Data Nascita:</span>
-                              <input value="<?php echo $queryRepose['birthday']?>" name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)">
+                              <input value="<?php echo $queryRepose['birthday']?>" name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)" onkeydown="normal(this)" onfocus="tooltip(this, 'Maggiorenne e età massima 100')">
                          </div>
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
