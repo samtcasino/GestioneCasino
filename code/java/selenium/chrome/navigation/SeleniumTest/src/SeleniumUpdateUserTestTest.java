@@ -222,55 +222,55 @@ class SeleniumUpdateUserTestTest {
         testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "name");
         testTextInputs("21","name");
         testTextInputs("S£l£nium~","name");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("NAME OK");
 
         /*Test surname*/
         testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "surname");
         testTextInputs("21","surname");
         testTextInputs("S£l£nium~","surname");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("SURNAME OK");
 
         /*Test birthday*/
         testBirthday("31.02.2010");
         testBirthday("12.12.5000");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("BIRTHDAY OK");
 
         /*Test address*/
         testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "address");
         testTextInputs("21","address");
         testTextInputs("S£l£nium~","address");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("ADDRESS OK");
 
         /*Test HouseNumber*/
         testHouseNumber("jasnd");
         testHouseNumber("7834548547583475419753947147171717147247");
         testHouseNumber("8!$");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("HOUSENUMBER OK");
 
         /*Test ZipCode*/
         testZipCode("jasnd");
         testZipCode("7834548547583475419753947147171717147247");
         testZipCode("8!$");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("ZIPCODE OK");
 
         /*Test city*/
         testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "city");
         testTextInputs("21","city");
         testTextInputs("S£l£nium~","city");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("CITY OK");
 
         /*Test PhoneNumber*/
         testPhoneNumber("9238-12+12");
         testPhoneNumber("7834548547583475419753947147171717147247");
         testPhoneNumber("qwdxsas");
-        assertEquals("CashyLand - Registrazione",driver.getTitle());
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
         System.out.println("PHONENUMBER OK");
     }
 
