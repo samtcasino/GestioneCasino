@@ -116,3 +116,14 @@ function checkAll(){
 function normal(input){
     input.style.backgroundColor = "white"; 
 }
+
+//metodo che aggiunge una notifica al campo
+function tooltip(input, testo){
+    $(input).notify(
+        testo, 
+        { 
+            elementPosition:"bottom right",
+            className: 'info'
+        }
+      );
+}
