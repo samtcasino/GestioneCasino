@@ -116,7 +116,6 @@ class SeleniumUpdateUserTestTest {
         insertHouseNumber("982");
         insertZipCode("8999");
         insertPhoneNumber("0798887766");
-        insertPassword("iuciuvhsd98ds98HBHB989");
         if(input.equalsIgnoreCase("name")){
             insertSurname("Test");
             insertCity("Lugano");
@@ -138,7 +137,7 @@ class SeleniumUpdateUserTestTest {
             insertName("Selenium");
             insertAddress(text);
         }
-        pressUpdateButton();
+        pressUpdateUserButton();
         clearInputs();
     }
 
@@ -151,7 +150,7 @@ class SeleniumUpdateUserTestTest {
         insertZipCode("8999");
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
-        pressUpdateButton();
+        pressUpdateUserButton();
         clearInputs();
     }
 
@@ -164,7 +163,7 @@ class SeleniumUpdateUserTestTest {
         insertZipCode("8999");
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
-        pressUpdateButton();
+        pressUpdateUserButton();
         clearInputs();
     }
 
@@ -177,7 +176,7 @@ class SeleniumUpdateUserTestTest {
         insertZipCode(zipCode);
         insertCity("Lugano");
         insertPhoneNumber("0798887766");
-        pressUpdateButton();
+        pressUpdateUserButton();
         clearInputs();
     }
 
@@ -197,11 +196,12 @@ class SeleniumUpdateUserTestTest {
     @Test
     void test(){
         System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--remote-debugging-port=9222");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
+        driver = new ChromeDriver();
         driver.get(URL);
 
         waitMillis(1000);
@@ -215,7 +215,8 @@ class SeleniumUpdateUserTestTest {
         waitMillis(1000);
 
         pressUpdateButton();
-        assertEquals("CashyLand - MyAccount",driver.getTitle());
+        waitMillis(1000);
+        assertEquals("CashyLand - ModificaDati",driver.getTitle());
 
         /*Test name*/
         testTextInputs("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "name");
