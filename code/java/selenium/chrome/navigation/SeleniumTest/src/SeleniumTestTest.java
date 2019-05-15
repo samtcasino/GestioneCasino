@@ -84,18 +84,15 @@ class SeleniumTestTest {
 
     @Test
     void test() {
-<<<<<<< HEAD
-        System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+        /*System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
         driver = new ChromeDriver();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage"); 
-        
-        driver = new ChromeDriver(options);
-=======
-        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-       
+        options.addArguments("--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);*/
+		
+        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));    
         String Xport = System.getProperty("lmportal.xvfb.id", ":1");
 
         driver = new FirefoxDriver( new GeckoDriverService.Builder()
@@ -103,7 +100,6 @@ class SeleniumTestTest {
             .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
             .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
 
->>>>>>> 8fb1b5dd66f87ef6bc037da97181e3438508f44f
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
