@@ -29,7 +29,7 @@ class RegistrationTest {
     private WebElement pass;
     private WebElement repass;
 
-
+    @Test
     void accedi() {
         WebElement accedi = null;
         accedi = driver.findElement(By.linkText("Accedi"));
@@ -39,6 +39,7 @@ class RegistrationTest {
         assertEquals("CashyLand - Login", driver.getTitle());
     }
 
+    @Test
     void registrati() {
         WebElement registrati = null;
         registrati = driver.findElement(By.name("register"));

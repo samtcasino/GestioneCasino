@@ -11,6 +11,7 @@ class LoginTest {
     private String URL = "http://cashyland.tk/";
     private WebDriver driver = null;
 
+    @Test
     void accedi() {
         WebElement accedi = null;
         accedi = driver.findElement(By.linkText("Accedi"));
