@@ -94,7 +94,7 @@ http://www.tooplate.com/view/2085-neuron
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <h2>Cambia la tua password!</h2>
-                    <span>Appena cliccerai INVIA controlla la tua email e clicca il link di modifica.</span>
+                    <span>Appena cliccherai INVIA controlla la tua email e clicca il link di modifica.</span>
                     <form action="php/password/sendLostPassword.php" method="post">
                          <div class="col-md-12 col-sm-12">
                               <span>Email:</span>
