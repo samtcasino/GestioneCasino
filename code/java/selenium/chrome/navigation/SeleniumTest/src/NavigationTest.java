@@ -1,9 +1,4 @@
-<<<<<<< HEAD:code/java/selenium/chrome/navigation/SeleniumTest/src/SeleniumTestTest.java
 
-import org.junit.jupiter.api.Assertions;
-=======
-import com.google.common.collect.ImmutableMap;
->>>>>>> 13105cd9d9323542d872e498e5cb8535dc24b4ed:code/java/selenium/chrome/navigation/SeleniumTest/src/NavigationTest.java
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
