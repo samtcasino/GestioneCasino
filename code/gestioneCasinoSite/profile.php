@@ -105,9 +105,9 @@ http://www.tooplate.com/view/2085-neuron
                     <div class="col-md-6 col-sm-6">
                         <h2>Modifica Password:</h2><br>
                         <p><span class="header-modify">Email: </span><span><?php echo $_SESSION["username"]?></span></p>
-                        <form action="php/password/sendLostPassword.php" method="post">
+                        <form action="modifyPassword.php" method="post">
                               <input type="submit" id="modify-password" class="form-control" value="Modifica password">
-                              <input type="hidden" <?php echo "value=".urlencode($queryRepose["email"]^$privateKey)?>>
+                              <input type="hidden" name="username" value="$_SESSION['username']" ?>
                          </form>
                     </div>
                     <?php 
