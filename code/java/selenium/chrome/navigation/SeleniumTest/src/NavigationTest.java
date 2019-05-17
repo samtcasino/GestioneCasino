@@ -1,5 +1,4 @@
 import com.google.common.collect.ImmutableMap;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
 
 import java.io.File;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class NavigationTest {
     String URL = "http://cashyland.tk/";
@@ -21,7 +22,7 @@ class NavigationTest {
         home.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Home", driver.getTitle());
+        assertEquals("CashyLand - Home", driver.getTitle());
     }
 
     @Test
@@ -31,7 +32,7 @@ class NavigationTest {
         accedi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Login", driver.getTitle());
+        assertEquals("CashyLand - Login", driver.getTitle());
     }
 
     @Test
@@ -41,7 +42,7 @@ class NavigationTest {
         registrati.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Registrazione", driver.getTitle());
+        assertEquals("CashyLand - Registrazione", driver.getTitle());
     }
 
     @Test
@@ -51,7 +52,7 @@ class NavigationTest {
         forgot.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Password Smarrita?", driver.getTitle());
+        assertEquals("CashyLand - Password Smarrita?", driver.getTitle());
     }
 
     @Test
@@ -61,7 +62,7 @@ class NavigationTest {
         giochi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Giochi", driver.getTitle());
+        assertEquals("CashyLand - Giochi", driver.getTitle());
     }
 
     @Test
@@ -71,7 +72,7 @@ class NavigationTest {
         sale.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Sale", driver.getTitle());
+        assertEquals("CashyLand - Sale", driver.getTitle());
     }
 
     @Test
@@ -81,7 +82,7 @@ class NavigationTest {
         map.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("Mandalay Bay Resort and Casino - Google Maps", driver.getTitle());
+        assertEquals("Mandalay Bay Resort and Casino - Google Maps", driver.getTitle());
     }
 
     @Test
@@ -97,7 +98,7 @@ class NavigationTest {
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Home", driver.getTitle());
+        assertEquals("CashyLand - Home", driver.getTitle());
 
         accedi();
         registrati();
@@ -115,7 +116,7 @@ class NavigationTest {
         giochi.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
-        Assertions.assertEquals("CashyLand - Giochi", driver.getTitle());
+        assertEquals("CashyLand - Giochi", driver.getTitle());
 
         home();
         map();
