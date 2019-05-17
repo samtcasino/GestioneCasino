@@ -107,7 +107,6 @@ http://www.tooplate.com/view/2085-neuron
                         <p><span class="header-modify">Email: </span><span><?php echo $_SESSION["username"]?></span></p>
                         <form action="modifyPassword.php" method="post">
                               <input type="submit" id="modify-password" class="form-control" value="Modifica password">
-                              <input type="hidden" name="username" value="$_SESSION['username']" ?>
                          </form>
                     </div>
                     <?php  

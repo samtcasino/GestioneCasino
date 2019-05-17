@@ -1,4 +1,4 @@
-import com.google.common.collect.ImmutableMap;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 
@@ -18,7 +21,8 @@ class NavigationTest {
     @Test
     void home() {
         WebElement home = null;
-        home = driver.findElement(By.linkText("Home"));
+        home = driver.findElement(By.id("homeLi"));
+        WebElement homeLink = home.findElement(By.id("homeBtn"));
         home.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
@@ -28,8 +32,9 @@ class NavigationTest {
     @Test
     void accedi() {
         WebElement accedi = null;
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
+        accedi = driver.findElement(By.id("loginLi"));
+        WebElement loginLink = accedi.findElement(By.id("loginBtn"));
+        loginLink.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Login", driver.getTitle());
@@ -88,13 +93,16 @@ class NavigationTest {
     @Test
     void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-        String Xport = System.getProperty("lmportal.xvfb.id", ":0");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+        /*String Xport = System.getProperty("lmportal.xvfb.id", ":0");
 
         driver = new FirefoxDriver(new GeckoDriverService.Builder()
                 .usingDriverExecutable(new File("/usr/bin/geckodriver"))
                 .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
-                .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());
-
+                .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());*/
+        driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("container")));
         driver.get(URL);
         waitMillis(1000);
         System.out.println(driver.getTitle());
