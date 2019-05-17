@@ -98,7 +98,7 @@ http://www.tooplate.com/view/2085-neuron
                     <form action="php/password/sendLostPassword.php" method="post">
                          <div class="col-md-12 col-sm-12">
                               <span>Email:</span>
-                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" value="<?php echo $queryRepose["email"] ?>">
+                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" value="<?php echo $queryRepose["email"] ?>" readonly>
                          </div>
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
