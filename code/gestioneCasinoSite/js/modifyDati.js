@@ -128,7 +128,3 @@ function tooltip(input, testo){
         
       );
 }
-
-function backProfile(){
-    window.location = "profile.php";
-}
