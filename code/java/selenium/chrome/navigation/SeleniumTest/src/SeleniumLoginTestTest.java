@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -83,6 +86,9 @@ class SeleniumLoginTestTest {
         driver = new ChromeDriver(options);*/
         driver = new ChromeDriver();
         driver.get(URL);
+
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Accedi")));
         waitMillis(1000);
 
         assertEquals("CashyLand - Home",driver.getTitle());
