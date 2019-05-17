@@ -21,7 +21,7 @@ class NavigationTest {
     @Test
     void home() {
         WebElement home = null;
-        home = driver.findElement(By.linkText("Home"));
+        home = driver.findElement(By.id("homeBtn"));
         home.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
