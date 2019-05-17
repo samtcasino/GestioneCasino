@@ -112,12 +112,12 @@ http://www.tooplate.com/view/2085-neuron
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-               		<div class="col-md-4 col-sm-4" id="button-profile" style="margin-bottom: 30px; display: block;">
+               		<div class="col-md-4 col-sm-4" id="button-profile">
                			<a href="profile.php">
                         	<input name="backProfile" type="button" class="form-control" id="backProfile" value="Torna al profilo">
                         </a>
                     </div>
-                    <h2>Inserire dati</h2>
+                    <h2 style="margin-top: 40px;">Inserire dati</h2>
 
                     <form method="post" action="" id="registration_form">
                         <?php
