@@ -6,7 +6,7 @@
           header("Location: error.html");
           exit();
      }
-     
+
      $queryRepose = $db->executeQueryWithoutFetch("select * from user where email = '".$_SESSION['username']."'")->fetch();
 ?>
 <!DOCTYPE html>
@@ -94,11 +94,11 @@ http://www.tooplate.com/view/2085-neuron
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <h2>Cambia la tua password!</h2>
-                    <span>Appena cliccerai INVIA controlla la tua email e clicca il link di modifica.</span>
+                    <span>Appena cliccherai INVIA controlla la tua email e clicca il link di modifica.</span>
                     <form action="php/password/sendLostPassword.php" method="post">
                          <div class="col-md-12 col-sm-12">
                               <span>Email:</span>
-                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" value="<?php echo $_POST["username"];?>">
+                              <input name="email" type="text" class="form-control" id="email" placeholder="Email Address" value="<?php echo $queryRepose["email"] ?>" readonly>
                          </div>
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
@@ -131,7 +131,7 @@ http://www.tooplate.com/view/2085-neuron
                     <p><i class="fa fa-envelope-o"></i> gruppocasin02018@hotmail.com</p>
                     <p><i class="fa fa-github"></i> https://github.com/samtcasino/GestioneCasino</p>
                </div>
-               
+
           </div>
      </div>
 </footer>
@@ -146,5 +146,5 @@ http://www.tooplate.com/view/2085-neuron
 <script src="js/jquery.parallax.js"></script>
 <script src="js/custom.js"></script>
 
-</body>
+</body> 
 </html>

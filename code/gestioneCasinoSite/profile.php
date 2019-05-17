@@ -10,7 +10,7 @@
      $queryRepose = $db->executeQueryWithoutFetch("select * from user where email = '".$_SESSION['username']."'")->fetch();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
 
 <meta charset="UTF-8">
@@ -110,7 +110,7 @@ http://www.tooplate.com/view/2085-neuron
                               <input type="hidden" name="username" value="$_SESSION['username']" ?>
                          </form>
                     </div>
-                    <?php 
+                    <?php  
                          if($queryRepose["admin"]==0){
                               echo'
                                    <div class="col-md-12 col-sm-12" id="utente">
