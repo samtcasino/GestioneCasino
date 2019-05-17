@@ -57,7 +57,7 @@ http://www.tooplate.com/view/2085-neuron
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                </button>
-               <a href="index.html" class="navbar-brand">Cashy Land</a>
+               <a href="index.html" class="navbar-brand">Ca$hy Land</a>
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
