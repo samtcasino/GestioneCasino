@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.GeckoDriverService;
 
 import java.io.File;
 
-class SeleniumTestTest {
+class NavigationTest {
     String URL = "http://cashyland.tk/";
     WebDriver driver = null;
 
