@@ -21,7 +21,8 @@ class NavigationTest {
     @Test
     void home() {
         WebElement home = null;
-        home = driver.findElement(By.id("homeBtn"));
+        home = driver.findElement(By.id("homeLi"));
+        WebElement homeLink = home.findElement(By.id("homeBtn"));
         home.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
@@ -31,8 +32,9 @@ class NavigationTest {
     @Test
     void accedi() {
         WebElement accedi = null;
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
+        accedi = driver.findElement(By.id("loginLi"));
+        WebElement loginLink = accedi.findElement(By.id("loginBtn"));
+        loginLink.click();
         waitMillis(1000);
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Login", driver.getTitle());
