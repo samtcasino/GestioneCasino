@@ -63,8 +63,8 @@ http://www.tooplate.com/view/2085-neuron
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="game.html">Giochi</a></li>
-                    <li><a href="sale.html">Sale</a></li>
+                    <li><a href="game.php">Giochi</a></li>
+                    <li><a href="sale.php">Sale</a></li>
                     <li class="active"><a href="login.html">Accedi</a></li>
                </ul>
           </div>
@@ -116,7 +116,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <div class="col-md-12 col-sm-12" id="utente">
                                         <h2>Visualizza Promozioni:</h2>
                                         <p>Cliccando il bottone qui sotto puoi visualizzare tutte le promozioni da utilizzare all\'interno del nostro casinò:</p>
-                                        <a href="resetPassword.html"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
+                                        <a href="discount.php"><input type="button" class="form-control" value="Visualizza Promozioni"></a>
                                         <br>
                                    </div>
                               ';
