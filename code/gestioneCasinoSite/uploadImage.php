@@ -50,8 +50,8 @@ http://www.tooplate.com/view/2085-neuron
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="game.html">Giochi</a></li>
-                    <li><a href="sale.html">Sale</a></li>
+                    <li><a href="game.php">Giochi</a></li>
+                    <li><a href="sale.php">Sale</a></li>
                     <li class="active"><a href="login.html">Accedi</a></li>
                </ul>
           </div>
@@ -79,7 +79,12 @@ http://www.tooplate.com/view/2085-neuron
      <div class="container">
           <div class="row">
             <div class="col-md-offset-1 col-md-10 col-sm-12">
-                <h2>Inserire immagine</h2>
+                <div class="col-md-4 col-sm-4" id="button-profile">
+                    <a href="profile.php">
+                      <input name="backProfile" type="button" class="form-control" id="backProfile" value="Torna al profilo">
+                    </a>
+                </div>
+                <h2 style="margin-top: 100px;">Inserire immagine</h2>
                 <div class="col-md-12 col-sm-12">
                     <span>Immagine:</span>
                     <div class="row">
