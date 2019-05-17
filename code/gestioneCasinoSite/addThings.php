@@ -142,7 +142,9 @@ http://www.tooplate.com/view/2085-neuron
                                         echo "<br>";
                                    }
                                    
-                              }catch(InvalidArgumentException $iae){}
+                              }catch(InvalidArgumentException $iae){
+                                   setcookie("error","Qualcosa è andato storto",10);
+                              }
                         ?>
 
                          <div class="col-md-12 col-sm-12" id="button-login">
