@@ -119,14 +119,7 @@ http://www.tooplate.com/view/2085-neuron
                                         <br>
                                    </div>
                               ';
-                         }
-                    ?>
-
-
-
-
-                    <?php 
-                         if($queryRepose["admin"]==1){
+                         }else if($queryRepose["admin"]==1){
                               echo'
                               <div class="col-md-12 col-sm-12" id="admin" title="admin section">
                                    <h2>Gestione Utenti:</h2>
