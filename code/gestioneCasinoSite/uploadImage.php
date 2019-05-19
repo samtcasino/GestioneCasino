@@ -91,7 +91,7 @@ http://www.tooplate.com/view/2085-neuron
                         <div class="col-md-6">
                             <div class="form-group files color">
                                 <form action="" method="POST" id="file-form" enctype="multipart/form-data">
-                                    <input id="fileToUpload" name="fileToUpload" type="file" class="form-control" accept="*" onchange="confirmUpload()">
+                                    <input id="fileToUpload" name="fileToUpload" type="file" class="form-control" accept="image/*" onchange="confirmUpload()">
                                     <input type="hidden" name="ok" value="ok">
                                 </form>
                                 <script>
