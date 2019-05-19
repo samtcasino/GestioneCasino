@@ -93,7 +93,12 @@ http://www.tooplate.com/view/2085-neuron
           <div class="row">
 
                <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <h2>Cambia la tua password!</h2>
+                    <div class="col-md-4 col-sm-4" id="button-profile">
+                         <a href="profile.php">
+                              <input name="backProfile" type="button" class="form-control" id="backProfile" value="Torna al profilo">
+                         </a>
+                    </div>
+                    <h2 style="margin-top: 100px;">Cambia la tua password!</h2>
                     <span>Appena cliccherai INVIA controlla la tua email e clicca il link di modifica.</span>
                     <form action="php/password/sendLostPassword.php" method="post">
                          <div class="col-md-12 col-sm-12">

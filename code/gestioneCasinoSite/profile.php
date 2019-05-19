@@ -153,7 +153,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <br>
                                    <br>
                                    <h2>Aggiungi immagine:</h2>
-                                   <p>Puoi caricare un immagine qualsiasi sul server. Dopodichè basterà solo selezionarla nelle gestioni.:</p>
+                                   <p>Puoi caricare un immagine qualsiasi sul server. Dopodichè basterà solo selezionarla nelle gestioni:</p>
                                    <a href="uploadImage.php"><input id="modifyMedia" type="button" class="form-control" value="Aggiungi file"></a>
                                    <br>
                               </div>
