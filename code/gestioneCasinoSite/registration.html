@@ -51,10 +51,18 @@ http://www.tooplate.com/view/2085-neuron
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="game.php">Giochi</a></li>
-                    <li><a href="sale.php">Sale</a></li>
-                    <li class="active"><a href="login.html">Accedi</a></li>
+                 <li id="homeLi">
+                     <a href="index.html" id="homeBtn">Home</a>
+                 </li>
+                 <li id="gameLi">
+                     <a href="game.php" id="gameBtn">Giochi</a>
+                 </li>
+                 <li id="roomLi">
+                     <a href="sale.php" id="roomBtn">Sale</a>
+                 </li>
+                 <li class="active" id="loginLi">
+                     <a href="login.html" id="loginBtn">Accedi</a>
+                 </li>
                </ul>
           </div>
 
@@ -85,7 +93,7 @@ http://www.tooplate.com/view/2085-neuron
                <div class="col-md-offset-1 col-md-10 col-sm-12">
                     <h2>Accedi</h2>
                     <h2 id="errorMessage"></h2>
-                    <form action="php/login/register.php" method="post" id="registration_form">          
+                    <form action="php/login/register.php" method="post" id="registration_form">
                          <div class="col-md-6 col-sm-6 field">
                               <span>Nome:</span>
                               <input name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
@@ -93,7 +101,7 @@ http://www.tooplate.com/view/2085-neuron
                          <div class="col-md-6 col-sm-6 field">
                               <span>Cognome:</span>
                               <input name="surname" type="text" class="form-control" id="surname" placeholder="Cognome" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>Data Nascita:</span>
                               <input name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)" onfocus="tooltip(this, 'Maggiorenne e età massima 100')">
@@ -101,19 +109,19 @@ http://www.tooplate.com/view/2085-neuron
                          <div class="col-md-6 col-sm-6 field">
                               <span>Via:</span>
                               <input name="address" type="text" class="form-control" id="address" placeholder="Via" onkeydown="normal(this)"  onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>No. Civico:</span>
                               <input name="houseNumber" type="text" class="form-control" id="houseNumber" placeholder="Numero Civico" onkeydown="normal(this)" onfocus="tooltip(this, ' Max 4 caratteri, numero ed eventualmente lettera')">
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>CAP:</span>
                               <input name="zipCode" type="text" class="form-control" id="zipCode" placeholder="CAP" onkeydown="normal(this)" onfocus="tooltip(this, '4-5 Numeri')">
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>Città:</span>
                               <input name="city" type="city" class="form-control" id="city" placeholder="Città" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>No. Telefono:</span>
                               <input name="phoneNumber" type="text" class="form-control" id="phoneNumber" placeholder="Numero di Telefono" onkeydown="normal(this)" onfocus="tooltip(this, 'Solo numeri, spazi, più e cancelleto')">
@@ -124,13 +132,13 @@ http://www.tooplate.com/view/2085-neuron
                                    <option value="male">Maschio</option>
                                    <option value="female">Femmina</option>
                               </select>
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>Email:</span>
                               <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email" data-toggle="tooltip" data-placement="left" title="Tooltip on left" onfocus="tooltip(this, 'Esempio mail: testo@testo.testo')">
                               </span>
-                         </div> 
+                         </div>
                          <div class="col-md-6 col-sm-6 field">
                               <span>Password:</span>
                               <input name="password" type="password" class="form-control" id="password" placeholder="Password"  onkeydown="normal(this)" onfocus="tooltip(this, 'Almeno 8 caratteri, una maiuscola e un numero')">
@@ -138,7 +146,7 @@ http://www.tooplate.com/view/2085-neuron
                          <div class="col-md-6 col-sm-6 field">
                               <span>Ripeti Password:</span>
                               <input name="repassword" type="password" class="form-control" id="repassword" placeholder="Ripeti Password"  onkeydown="normal(this)">
-                         </div> 
+                         </div>
                          <br>
                          <div class="col-md-4 col-sm-6" id="button-login">
                               <input name="register" type="button" class="form-control" id="button" value="REGISTRATI" onclick="checkAll()">
@@ -170,7 +178,7 @@ http://www.tooplate.com/view/2085-neuron
                     <p><i class="fa fa-envelope-o"></i> gruppocasin02018@hotmail.com</p>
                     <p><i class="fa fa-github"></i> https://github.com/samtcasino/GestioneCasino</p>
                </div>
-               
+
           </div>
      </div>
 </footer>
