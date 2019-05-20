@@ -81,27 +81,11 @@ class NavigationTest {
     }
 
     @Test
-    void map() {
-        WebElement map = null;
-        map = driver.findElement(By.linkText("Clicca qui per aprire la mappa"));
-        map.click();
-        waitMillis(1000);
-        System.out.println(driver.getTitle());
-        assertEquals("Mandalay Bay Resort and Casino - Google Maps", driver.getTitle());
-    }
-
-    @Test
     void test() {
         final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-        /*String Xport = System.getProperty("lmportal.xvfb.id", ":0");
 
-        driver = new FirefoxDriver(new GeckoDriverService.Builder()
-                .usingDriverExecutable(new File("/usr/bin/geckodriver"))
-                .usingFirefoxBinary(new FirefoxBinary(firefoxPath))
-                .withEnvironment(ImmutableMap.of("DISPLAY", Xport)).build());*/
         driver = new FirefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.elementToBeClickable(By.className("container")));
         driver.get(URL);
         waitMillis(1000);
@@ -127,7 +111,6 @@ class NavigationTest {
         assertEquals("CashyLand - Giochi", driver.getTitle());
 
         home();
-        map();
         System.out.println("OK");
 
         driver.quit();
