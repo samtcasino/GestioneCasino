@@ -57,8 +57,8 @@ function checkCivicNumber(val){
 //Controllo lato client dei campi con evenutali notifiche in caso di errore.
 function checkAll(){
     var inputs = document.getElementsByTagName("input");
-    if(checkName(inputs[1].value) && checkName(inputs[2].value) && checkDate(inputs[3].value) && checkName(inputs[4].value) && 
-    checkCivicNumber(inputs[5].value) && checkNap(inputs[6].value) && checkName(inputs[7].value)  && checkNumber(inputs[8].value)){
+    if(checkName(inputs[1].value) && checkName(inputs[2].value) && checkName(inputs[3].value) && checkCivicNumber(inputs[4].value) && 
+    checkNap(inputs[5].value) && checkName(inputs[6].value) && checkNumber(inputs[7].value)  && checkDate(inputs[8].value)){
         document.getElementById('update_form').submit();
     }else{
         if(!checkName(inputs[1].value)){
