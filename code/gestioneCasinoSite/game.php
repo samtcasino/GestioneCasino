@@ -54,10 +54,18 @@ http://www.tooplate.com/view/2085-neuron
           </div>
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="game.php">Giochi</a></li>
-                    <li><a href="sale.php">Sale</a></li>
-                    <li><a href="login.html">Accedi</a></li>
+                 <li id="homeLi">
+                     <a href="index.html" id="homeBtn">Home</a>
+                 </li>
+                 <li id="gameLi">
+                     <a href="game.php" id="gameBtn">Giochi</a>
+                 </li>
+                 <li id="roomLi">
+                     <a href="sale.php" id="roomBtn">Sale</a>
+                 </li>
+                 <li class="active" id="loginLi">
+                     <a href="login.html" id="loginBtn">Accedi</a>
+                 </li>
                </ul>
           </div>
 
@@ -81,23 +89,23 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- Gallery Section -->
 
-<section id="blog"> 
-     <div class="container"> 
+<section id="blog">
+     <div class="container">
          <div class="row">
-             <div class="col-md-offset-1 col-md-10 col-sm-12"> 
+             <div class="col-md-offset-1 col-md-10 col-sm-12">
                  <div class="blog-post-thumb">
-                    <?php                    
-                         $files = $db->executeQuery("select media_url,game_name from game_media");               
+                    <?php
+                         $files = $db->executeQuery("select media_url,game_name from game_media");
                          $n = 0;
                          foreach ($files as $key => $value) {
                               $gameDescription = $db->executeQuery("select description from game where name = '".$value["game_name"]."'");
                               echo"
-                                   <div class='blog-post-image' id='$n'> 
-                                        <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'> 
-                                   </div>                             
-                                   <div class='blog-post-title'> 
-                                        <h3>".$value["game_name"]."</h3> 
-                                   </div>                             
+                                   <div class='blog-post-image' id='$n'>
+                                        <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'>
+                                   </div>
+                                   <div class='blog-post-title'>
+                                        <h3>".$value["game_name"]."</h3>
+                                   </div>
                                    <div class='blog-post-des'>
                                         <p>".$gameDescription[0]["description"]."</p>
                                    </div>
@@ -105,11 +113,11 @@ http://www.tooplate.com/view/2085-neuron
                               $n++;
                          }
                     ?>
-                 </div>                                                
+                 </div>
              </div>
-         </div>                 
-     </div>             
- </section> 
+         </div>
+     </div>
+ </section>
 
 <!-- Footer Section -->
 
@@ -131,7 +139,7 @@ http://www.tooplate.com/view/2085-neuron
                     <p><i class="fa fa-envelope-o"></i> gruppocasin02018@hotmail.com</p>
                     <p><i class="fa fa-github"></i> https://github.com/samtcasino/GestioneCasino</p>
                </div>
-               
+
           </div>
      </div>
 </footer>
