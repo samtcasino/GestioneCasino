@@ -89,7 +89,6 @@ http://www.tooplate.com/view/2085-neuron
                          $id = $_GET['id'];
                          $email = urldecode($id);
                          $email = $email ^ $privateKey;
-                         echo $email;
 
                          if(!(gettype($db->existsUserByEmail($email)) == "boolean")){
                                    if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -116,8 +115,7 @@ http://www.tooplate.com/view/2085-neuron
                                    
                               }
                          }else{
-                              echo "Pacco";
-                              //header("Location: ../../index.html");
+                              echo "Errore";
                          }
                     }
                     ?>
