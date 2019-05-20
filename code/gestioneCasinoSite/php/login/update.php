@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             Where email = '$email'
         ";
         $db->executeQuery($query);
-        $message = '<h1>Ei bro!, your data was modified</h1>';
+        $message = '<h1>Hey ' .$_POST["firstname"] .'!, your data was modified</h1>';
         $subjet = "Hi there! Cashyland";
         $mailSender->mailSend($_POST["email"],$subjet,$message);
         header("Location: ../../../profile.php");
