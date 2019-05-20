@@ -98,7 +98,7 @@ http://www.tooplate.com/view/2085-neuron
                                              header("Location: login.html");
                                         }
                                    }else{
-                                   echo "<form id='registration_form' action='resetPassword.php?id=".urlencode($email^$privateKey)."' method='post'>";
+                                   echo "<form id='registration_form' action='php/password/resetPassword.php?id=".urlencode($email^$privateKey)."' method='post'>";
                                    echo "    <div class='col-md-6 col-sm-6'>";
                                    echo "          <span>Password:</span>";
                                    echo "         <input name='password' type='password' class='form-control' id='password' placeholder='Password'  onkeydown='normal(this)'>";
