@@ -32,7 +32,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             birthday='$birthday'
             Where email = '$email'
         ";
-        echo $query;
        $db->executeQuery($query);
         $message = '<h1>Hey ' .$_POST["firstname"] .'!, your data was modified</h1>';
         $subjet = "Hi there! Cashyland";
