@@ -201,8 +201,8 @@ http://www.tooplate.com/view/2085-neuron
                <div class="col-md-4 col-md-offset-1 col-sm-6">
                     <h3>Contattaci</h3>
                     <p><i class="fa fa-location-arrow"></i> Via Trevano, 6952 Canobbio</p>
-                    <p><i class="fa fa-envelope-o"></i> gruppocasin02018@hotmail.com</p>
-                    <p><i class="fa fa-github"></i> https://github.com/samtcasino/GestioneCasino</p>
+                    <p><i class="far fa-envelope"></i> gruppocasin02018@hotmail.com</p>
+                    <p><i class="fab fa-github"></i> https://github.com/samtcasino/GestioneCasino</p>
                </div>
                
           </div>
