@@ -9,8 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         isset($_POST["address"]) &&
         isset($_POST["houseNumber"]) &&
         isset($_POST["phoneNumber"]) &&
-        isset($_POST["email"]) &&
-        isset($_POST["birthday"])
+        isset($_POST["email"])
     ){
         $name = $_POST["firstname"];
         $surname = $_POST["surname"];
@@ -31,7 +30,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             city='$city',
             name='$name',
             surname='$surname',
-            birthday='$birthday'
             Where email = '$email'
         ";
         $db->executeQuery($query);
