@@ -100,7 +100,7 @@ http://www.tooplate.com/view/2085-neuron
                     </div>
                     <h2 style="margin-top: 100px;">Modifica Dati</h2>
 
-                    <form method="post" action="post/login/update.php" id="update_form">
+                    <form method="post" action="php/login/update.php" id="update_form">
                          <div class="col-md-6 col-sm-6">
                               <span>Nome:</span>
                               <input value="<?php echo $queryRepose['name']?>" name="firstname" type="text" class="form-control" id="firstname" placeholder="Nome" onkeydown="normal(this)" onfocus="tooltip(this,'  Max 50 caratteri, solo lettere e caratteri da scrittura')">
@@ -133,6 +133,7 @@ http://www.tooplate.com/view/2085-neuron
                               <span>Data Nascita:</span>
                               <input value="<?php echo $queryRepose['birthday']?>" name="birthday" type="date" class="form-control" id="birthday" placeholder="Data di nascita" onkeydown="normal(this)" onkeydown="normal(this)" onfocus="tooltip(this, 'Maggiorenne e età massima 100')">
                          </div>
+                         	<input value="<?php echo $queryRepose['email']?>" name="email" type="hidden">
                          <br>
                          <div class="col-md-12 col-sm-12" id="button-login">
                               <input name="modify" type="button" class="form-control" id="modify" value="MODIFICA" onclick="checkAll()">
