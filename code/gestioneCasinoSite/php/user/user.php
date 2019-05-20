@@ -53,6 +53,7 @@
         }
 
         public static function tryDate($object){
+        	echo "<script type='text/javascript'>alert('$object');</script>";
 	        $age = User::getAge($object);
 	        if($age<18){
 	       		throw new InvalidArgumentException( sprintf( '"%s" is not a valid date or you are under 18',$object));
