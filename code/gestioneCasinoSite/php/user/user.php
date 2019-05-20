@@ -70,7 +70,6 @@
 	        $object = trim($object," ");
 	        $object = trim($object,"-");
 	        $regex = '/^[\+]?[0-9-]{10,14}$/';
-	        $object = "0" .$object;
 	        if(!preg_match($regex,$object)){
 	          throw new InvalidArgumentException( sprintf( '"%s" is not a valid number',$object));
 	        }

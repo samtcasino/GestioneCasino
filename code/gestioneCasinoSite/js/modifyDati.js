@@ -57,57 +57,57 @@ function checkCivicNumber(val){
 //Controllo lato client dei campi con evenutali notifiche in caso di errore.
 function checkAll(){
     var inputs = document.getElementsByTagName("input");
-    if(checkName(inputs[0].value) && checkName(inputs[1].value) && checkDate(inputs[2].value) && checkName(inputs[3].value) && 
-    checkCivicNumber(inputs[4].value) && checkNap(inputs[5].value) && checkName(inputs[6].value)  && checkNumber(inputs[7].value)){
+    if(checkName(inputs[1].value) && checkName(inputs[2].value) && checkDate(inputs[3].value) && checkName(inputs[4].value) && 
+    checkCivicNumber(inputs[5].value) && checkNap(inputs[6].value) && checkName(inputs[7].value)  && checkNumber(inputs[8].value)){
         document.getElementById('update_form').submit();
     }else{
-        if(!checkName(inputs[0].value)){
-            inputs[0].style.backgroundColor = "#ffcccc";
-            $.notify("Nome non valido!", { position:"bottom left" });
-        }else{
-            inputs[0].style.backgroundColor = "white";
-        }
         if(!checkName(inputs[1].value)){
             inputs[1].style.backgroundColor = "#ffcccc";
-            $.notify("Cognome non valido!", { position:"bottom left" });
+            $.notify("Nome non valido!", { position:"bottom left" });
         }else{
             inputs[1].style.backgroundColor = "white";
         }
         if(!checkName(inputs[2].value)){
             inputs[2].style.backgroundColor = "#ffcccc";
-            $.notify("Via non valida!", { position:"bottom left" });
+            $.notify("Cognome non valido!", { position:"bottom left" });
         }else{
             inputs[2].style.backgroundColor = "white";
         }
-        if(!checkCivicNumber(inputs[3].value)){
+        if(!checkName(inputs[3].value)){
             inputs[3].style.backgroundColor = "#ffcccc";
-            $.notify("Numero Civico non valido!", { position:"bottom left" });
+            $.notify("Via non valida!", { position:"bottom left" });
         }else{
             inputs[3].style.backgroundColor = "white";
         }
-        if(!checkNap(inputs[4].value)){
+        if(!checkCivicNumber(inputs[4].value)){
             inputs[4].style.backgroundColor = "#ffcccc";
-            $.notify("CAP non valido!", { position:"bottom left" });
+            $.notify("Numero Civico non valido!", { position:"bottom left" });
         }else{
             inputs[4].style.backgroundColor = "white";
         }
-        if(!checkName(inputs[5].value)){
+        if(!checkNap(inputs[5].value)){
             inputs[5].style.backgroundColor = "#ffcccc";
-            $.notify("Citta non valida!", { position:"bottom left" });
+            $.notify("CAP non valido!", { position:"bottom left" });
         }else{
             inputs[5].style.backgroundColor = "white";
         }
-        if(!checkNumber(inputs[6].value)){
+        if(!checkName(inputs[6].value)){
             inputs[6].style.backgroundColor = "#ffcccc";
-            $.notify("Numero di telefono non valido!", { position:"bottom left" });
+            $.notify("Citta non valida!", { position:"bottom left" });
         }else{
             inputs[6].style.backgroundColor = "white";
         }
-        if(!checkDate(inputs[7].value)){
+        if(!checkNumber(inputs[7].value)){
             inputs[7].style.backgroundColor = "#ffcccc";
-            $.notify("Data di nascita non valida!", { position:"bottom left" });
+            $.notify("Numero di telefono non valido!", { position:"bottom left" });
         }else{
             inputs[7].style.backgroundColor = "white";
+        }
+        if(!checkDate(inputs[8].value)){
+            inputs[8].style.backgroundColor = "#ffcccc";
+            $.notify("Data di nascita non valida!", { position:"bottom left" });
+        }else{
+            inputs[8].style.backgroundColor = "white";
         }
     }
 }
