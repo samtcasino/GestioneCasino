@@ -26,7 +26,7 @@
 					$_POST["address"],
 					$_POST["houseNumber"],
 					$_POST["phoneNumber"],
-					$_POST["email"],
+					$_POST["email"], 
 					$_POST["gender"],
 					$_POST["password"],
 					$_POST["repassword"]

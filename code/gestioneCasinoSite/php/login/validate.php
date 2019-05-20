@@ -11,6 +11,6 @@
 	    	header("Location: ../../login.html");
 	    }else{
 			header("Location: ../../index.html");
-	    }
+	    } 
 	}
 ?>

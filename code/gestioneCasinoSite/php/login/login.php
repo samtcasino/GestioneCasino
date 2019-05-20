@@ -30,7 +30,7 @@
 			}else{
 				setcookie("error","Email non trovata",time()+1,"/");
 				header("Location: ../../login.html");
-			}
+			} 
 		}
 	}
 ?>
