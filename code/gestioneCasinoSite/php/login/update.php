@@ -21,7 +21,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $email = $_POST["email"];
 
         $query = "update user set
-            email='$email',
             phone_number='$phoneNumber',
             house_number='$houseNumber',
             street='$address',
