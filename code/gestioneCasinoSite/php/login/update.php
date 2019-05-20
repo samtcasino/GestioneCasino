@@ -8,8 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         isset($_POST["zipCode"]) &&
         isset($_POST["address"]) &&
         isset($_POST["houseNumber"]) &&
-        isset($_POST["phoneNumber"]) &&
-        isset($_POST["email"]) 
+        isset($_POST["phoneNumber"])
     ){
         $name = $_POST["firstname"];
         $surname = $_POST["surname"];
