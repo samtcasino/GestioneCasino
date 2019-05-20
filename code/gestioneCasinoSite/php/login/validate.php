@@ -7,7 +7,8 @@
 	    $email = $email ^ $privateKey;
  	 if(!(gettype($db->existsUserByEmail($email)) == "boolean")){
 	    	$db->executeQuery("update user SET verified = 1 where email = '". $email."'");
-	    	echo $email . " ti sei registrato con successo";
+	    	echo "<script type='text/javascript'>alert('Ti sei registrato con successo!');</script>";
+	    	header("Location: ../../login.html");
 	    }else{
 			header("Location: ../../index.html");
 	    }
