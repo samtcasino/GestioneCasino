@@ -126,15 +126,15 @@
 						'$name',
 						'$surname',
 						'$street',
-						$house_number,
+						'$house_number',
 						$zip_code,
 						'$city',
 						'$email',
-						$phone_number,
+						'$phone_number',
 						'$gender',
 						'$password',
 						0,
-						$birthday,
+						'$birthday',
 						'occasionale',
 						0
 					)";
