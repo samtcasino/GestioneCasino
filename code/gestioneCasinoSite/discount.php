@@ -1,5 +1,13 @@
 <?php
      require_once "php/loader.php";
+     session_start();
+     if(empty($_SESSION["username"])){
+          setcookie("error","Pagina non trovata :(", time() + 1000,"/");
+          header("Location: error.html");
+          exit();
+     }
+     
+     $queryRepose = $db->executeQueryWithoutFetch("select * from user where email = '".$_SESSION['username']."'")->fetch();
 ?>
 <!DOCTYPE html>
 <html lang="en">

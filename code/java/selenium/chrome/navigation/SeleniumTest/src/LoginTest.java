@@ -2,14 +2,11 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-<<<<<<< HEAD:code/java/selenium/chrome/navigation/SeleniumTest/src/SeleniumLoginTestTest.java
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-=======
->>>>>>> 13105cd9d9323542d872e498e5cb8535dc24b4ed:code/java/selenium/chrome/navigation/SeleniumTest/src/LoginTest.java
+
+import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -21,9 +18,10 @@ class LoginTest {
     @Test
     void accedi() {
         WebElement accedi = null;
-        accedi = driver.findElement(By.linkText("Accedi"));
-        accedi.click();
+        accedi = driver.findElement(By.id("loginLi"));
+        WebElement loginLink = accedi.findElement(By.id("loginBtn"));
         waitMillis(1000);
+        loginLink.click();
         System.out.println(driver.getTitle());
         assertEquals("CashyLand - Login", driver.getTitle());
     }
@@ -82,20 +80,15 @@ class LoginTest {
 
     @Test
     void test() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        /*ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--remote-debugging-port=9222");
-        driver = new ChromeDriver(options);*/
-        driver = new ChromeDriver();
+        final File firefoxPath = new File(System.getProperty("lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+
+        driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver, 60);
+        wait.until(ExpectedConditions.elementToBeClickable(By.className("container")));
         driver.get(URL);
-
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Accedi")));
-        waitMillis(1000);
-
+        System.out.println(driver.getTitle());
         assertEquals("CashyLand - Home", driver.getTitle());
+
         accedi();
         insertEmail("admin");
         insertPassword("Password&1");

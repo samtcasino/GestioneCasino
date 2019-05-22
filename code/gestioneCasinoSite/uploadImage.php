@@ -1,3 +1,14 @@
+<?php
+     require_once "php/loader.php";
+     session_start();
+     if(empty($_SESSION["username"])){
+          setcookie("error","Pagina non trovata :(", time() + 1000,"/");
+          header("Location: error.html");
+          exit();
+     }
+     
+     $queryRepose = $db->executeQueryWithoutFetch("select * from user where email = '".$_SESSION['username']."'")->fetch();
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -169,7 +180,7 @@ http://www.tooplate.com/view/2085-neuron
             $message .= "Sorry, your file was not uploaded. "; 
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-                $db->executeQuery("insert into media values('".$target_file ."','image')");
+                $db->executeQuery("insert into media values('".$target_file ."','immagine')");
                 $message.= "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded. ";
             } else {
                 $message.="Sorry, there was an error uploading your file. ";
