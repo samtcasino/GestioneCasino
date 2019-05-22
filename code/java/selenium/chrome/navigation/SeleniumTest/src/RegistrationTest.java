@@ -263,9 +263,10 @@ class RegistrationTest {
     @Test
     void test() {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--ignore-certificate-errors");
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);*/
+        driver = new ChromeDriver();
         driver.get(URL);
         waitMillis(1000);
 
