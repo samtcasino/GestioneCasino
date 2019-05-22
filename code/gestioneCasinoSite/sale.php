@@ -90,7 +90,7 @@ http://www.tooplate.com/view/2085-neuron
      <div class="container">
          <div class="row">
              <div class="col-md-offset-1 col-md-10 col-sm-12">
-                 <div class="blog-post-thumb"
+                 <div class="blog-post-thumb">
 
                     <?php
                          $files = $db->executeQuery("select media_url,room_location from room_media");
@@ -107,6 +107,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <div class='blog-post-des'>
                                         <p>".$roomDescription[0]["description"]."</p>
                                    </div>
+                                   <hr>
                               ";
                               $n++;
                          }
