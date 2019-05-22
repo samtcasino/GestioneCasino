@@ -141,3 +141,11 @@ function tooltip(input, testo){
         }
       );
 }
+
+$("#registration_form").on("submit", function() { 
+
+    grecaptcha.execute('6LdRvKQUAAAAAIrfynVYzVbvo02Filr9b96NSI2U', {action: 'homepage'}).then(function(token) {
+        return true;
+     });
+
+});
