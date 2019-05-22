@@ -90,35 +90,34 @@ http://www.tooplate.com/view/2085-neuron
 <!-- Gallery Section -->
 
 <section id="blog">
-     <div class="container">
-         <div class="row">
-             <div class="col-md-offset-1 col-md-10 col-sm-12">
-                 <div class="blog-post-thumb"
-
-                    <?php
-                         $files = $db->executeQuery("select media_url,room_location from room_media");
-                         $n = 0;
-                         foreach ($files as $key => $value) {
-                              $roomDescription = $db->executeQuery("select description from room where location = '".$value["room_location"]."'");
-                              echo"
-                                   <div class='blog-post-image' id='$n'>
-                                        <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'>
-                                   </div>
-                                   <div class='blog-post-title'>
-                                        <h3>".$value["room_location"]."</h3>
-                                   </div>
-                                   <div class='blog-post-des'>
-                                        <p>".$roomDescription[0]["description"]."</p>
-                                   </div>
-                              ";
-                              $n++;
-                         }
-                    ?>
-                    </div>
-               </div>
-          </div>
-     </div>
- </section>
+        <?php
+                $files = $db->executeQuery("select media_url,room_location from room_media");
+                $n = 0;
+                foreach ($files as $key => $value) {
+                $roomDescription = $db->executeQuery("select description from room where location = '".$value["room_location"]."'");
+                echo "<div class='container'>
+                                <div class='row'>
+                                        <div class='col-md-offset-1 col-md-10 col-sm-12'>
+                                                <div class='blog-post-thumb'>
+                                                        <div class='blog-post-image' id='$n'>
+                                                                <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'>
+                                                        </div>
+                                                        <div class='blog-post-title'>
+                                                                <h3>".$value["room_location"]."</h3>
+                                                        </div>
+                                                        <div class='blog-post-des'>
+                                                                <p>".$value["description"]."</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>";
+                $n++;
+        ?>
+</section>
 
 <!-- Footer Section -->
 
