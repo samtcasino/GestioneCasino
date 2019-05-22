@@ -14,11 +14,8 @@
 
 <title>CashyLand - Giochi</title>
 <!--
-
 Template 2085 Neuron
-
 http://www.tooplate.com/view/2085-neuron
-
 -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -90,34 +87,34 @@ http://www.tooplate.com/view/2085-neuron
 <!-- Gallery Section -->
 
 <section id="blog">
-     <?php
-          $files = $db->executeQuery("select media_url,game_name from game_media");
-          $n = 0;
-          foreach ($files as $key => $value) {
-               $gameDescription = $db->executeQuery("select description from game where name = '".$value["game_name"]."'");
-               echo "<div class='container'>
-                                <div class='row'>
-                                        <div class='col-md-offset-1 col-md-10 col-sm-12'>
-                                                <div class='blog-post-thumb'>
-                                                        <div class='blog-post-image' id='$n'>
-                                                                <img src='" . $value["media_url"]."' class='img-responsive' alt='Blog Image'>
-                                                        </div>
-                                                        <div class='blog-post-title'>
-                                                                <h3>".$value["game_name"]."</h3>
-                                                        </div>
-                                                        <div class='blog-post-des'>
-                                                                <p>".$gameDescription[0]["description"]."</p>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                        <br>
-                        <br>
-                        <br>";
-               $n++;
-          }
-          ?>
+     <div class="container">
+         <div class="row">
+             <div class="col-md-offset-1 col-md-10 col-sm-12">
+                 <div class="blog-post-thumb">
+                    <?php
+                         $files = $db->executeQuery("select media_url,game_name from game_media");
+                         $n = 0;
+                         foreach ($files as $key => $value) {
+                              $gameDescription = $db->executeQuery("select description from game where name = '".$value["game_name"]."'");
+                              echo"
+                                   <div class='blog-post-image' id='$n'>
+                                        <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'>
+                                   </div>
+                                   <div class='blog-post-title'>
+                                        <h3>".$value["game_name"]."</h3>
+                                   </div>
+                                   <div class='blog-post-des'>
+                                        <p>".$gameDescription[0]["description"]."</p>
+                                   </div>
+                                   <hr>
+                              ";
+                              $n++;
+                         }
+                    ?>
+                 </div>
+             </div>
+         </div>
+     </div>
  </section>
 
 <!-- Footer Section -->

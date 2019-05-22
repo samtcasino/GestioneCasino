@@ -107,6 +107,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <div class='blog-post-des'>
                                         <p>".$roomDescription[0]["description"]."</p>
                                    </div>
+                                   <hr>
                               ";
                               $n++;
                          }
