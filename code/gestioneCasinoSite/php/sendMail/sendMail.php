@@ -20,7 +20,7 @@
 			$this->mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			$this->mail->Port = 25;  
 			$this->mail->From = 'gruppocasino2018@gmail.com';
-			$this->mail->FromName = 'Verify Password';
+			$this->mail->FromName = 'Cashy Land';
 		}
 
 		public function mailSend($email,$subject,$message){
