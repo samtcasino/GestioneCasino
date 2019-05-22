@@ -96,19 +96,19 @@ http://www.tooplate.com/view/2085-neuron
           $files = $db->executeQuery("select media_url,room_location from room_media");
           $n = 0;
           foreach ($files as $key => $value) {
-               $roomDescription = $db->executeQuery("select description from room where location = '" . $value["room_location"] . "'");
+               $roomDescription = $db->executeQuery("select description from room where location = '".$value["room_location"]."'");
                echo "<div class='container'>
                                 <div class='row'>
                                         <div class='col-md-offset-1 col-md-10 col-sm-12'>
                                                 <div class='blog-post-thumb'>
                                                         <div class='blog-post-image' id='$n'>
-                                                                <img src='" . $value["media_url"] . "' class='img-responsive' alt='Blog Image'>
+                                                                <img src='".$value["media_url"]."' class='img-responsive' alt='Blog Image'>
                                                         </div>
                                                         <div class='blog-post-title'>
-                                                                <h3>" . $value["room_location"] . "</h3>
+                                                                <h3>".$value["room_location"]."</h3>
                                                         </div>
                                                         <div class='blog-post-des'>
-                                                                <p>" . $value["description"] . "</p>
+                                                                <p>".$value["description"]."</p>
                                                         </div>
                                                 </div>
                                         </div>
