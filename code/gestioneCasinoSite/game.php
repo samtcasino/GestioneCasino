@@ -103,7 +103,7 @@ http://www.tooplate.com/view/2085-neuron
                                                                 <img src='" . $value["media_url"]."' class='img-responsive' alt='Blog Image'>
                                                         </div>
                                                         <div class='blog-post-title'>
-                                                                <h3>".$value["room_location"]."</h3>
+                                                                <h3>".$value["game_name"]."</h3>
                                                         </div>
                                                         <div class='blog-post-des'>
                                                                 <p>".$gameDescription[0]["description"]."</p>
