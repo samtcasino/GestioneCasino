@@ -37,7 +37,7 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="0" name="Gestione Casinò" color="#000000" meeting="false" start="2019-02-13" duration="29" complete="0" thirdDate="2019-02-13" thirdDate-constraint="1" expand="true">
-            <task id="76" name="Documentazione di progetto" color="#8cb6ce" meeting="false" start="2019-02-13" duration="28" complete="0" thirdDate="2019-02-22" thirdDate-constraint="0" expand="true"/>
+            <task id="76" name="Documentazione di progetto" color="#8cb6ce" meeting="false" start="2019-02-13" duration="29" complete="0" thirdDate="2019-02-22" thirdDate-constraint="0" expand="true"/>
             <task id="5" name="Stesura del Gantt" meeting="false" start="2019-02-15" duration="2" complete="0" expand="true">
                 <depend id="10" type="2" difference="0" hardness="Strong"/>
                 <task id="6" name="Discutere su eventuali attività" meeting="false" start="2019-02-15" duration="1" complete="0" expand="true"/>
