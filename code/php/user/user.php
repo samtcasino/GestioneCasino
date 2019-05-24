@@ -19,7 +19,7 @@
 
 		public function __construct($name,$surname,$birthday,$city,$zipCode,$address,$houseNumber,$telephoneNumber,$email,$gender,$password)
 		{
-			$this->name = User::tryName($name);
+			$this->name = User::tryName("eqw6e5q6e5%EEWE!!!");
 			$this->surname = User::tryName($surname);
 			$this->birthday = User::tryDate($birthday);
 			$this->city = User::tryName($city);
